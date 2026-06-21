@@ -15,10 +15,10 @@ interface Stat {
 const stats: Stat[] = [
   {
     icon: Award,
-    value: 25,
+    value: 30,
     suffix: "+",
     prefix: "",
-    label: "Years of Excellence",
+    label: "Years of Industrial Experience",
     description: "Trusted pharmaceutical expertise since 1998",
     color: "#e8732a",
   },
@@ -33,7 +33,7 @@ const stats: Stat[] = [
   },
   {
     icon: Globe,
-    value: 50,
+    value: 10,
     suffix: "+",
     prefix: "",
     label: "Countries",
@@ -42,10 +42,10 @@ const stats: Stat[] = [
   },
   {
     icon: Users,
-    value: 10,
-    suffix: "M+",
+    value: 50,
+    suffix: "+",
     prefix: "",
-    label: "Patients Served",
+    label: "Trusted Clients",
     description: "Lives improved through quality healthcare",
     color: "#e8732a",
   },

@@ -20,7 +20,7 @@ const slides: Slide[] = [
     badge: "Innovation in Healthcare",
     title: "Pioneering\nPharmaceutical\nExcellence",
     subtitle:
-      "Developing life-changing medications that improve health outcomes for millions of patients across 50+ countries worldwide.",
+      "Developing life-changing medications that improve health outcomes for millions of patients across 10+ countries worldwide.",
     cta: "Explore Our Products",
     ctaPath: "/products",
     accent: "#e8732a",
@@ -42,7 +42,7 @@ const slides: Slide[] = [
     badge: "Global Reach",
     title: "Delivering Health\nAcross Every\nContinent",
     subtitle:
-      "With a robust distribution network spanning 50+ countries, we ensure our life-saving medicines reach patients wherever they are.",
+      "With a robust distribution network spanning 10+ countries, we ensure our life-saving medicines reach patients wherever they are.",
     cta: "Partner With Us",
     ctaPath: "/contact",
     accent: "#e8732a",

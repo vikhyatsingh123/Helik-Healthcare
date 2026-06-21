@@ -81,7 +81,7 @@ const teamMembers = [
   {
     name: "James Whitfield",
     title: "Chief Commercial Officer",
-    bio: "Former VP at GSK, James drives Helik's global commercial strategy and partnership ecosystem across 50+ markets.",
+    bio: "Former VP at GSK, James drives Helik's global commercial strategy and partnership ecosystem across 10+ markets.",
     initial: "JW",
     color: "#8b5cf6",
   },
@@ -426,7 +426,7 @@ const AboutUs = () => {
                 <div className="relative z-10 text-center">
                   <Globe className="w-20 h-20 text-white/50 mx-auto mb-4" />
                   <p className="text-white/70 font-medium">
-                    50+ Countries Worldwide
+                    10+ Countries Worldwide
                   </p>
                   <p className="text-white/40 text-sm mt-1">5 Continents</p>
                 </div>

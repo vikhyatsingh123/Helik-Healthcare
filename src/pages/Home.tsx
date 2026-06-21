@@ -12,7 +12,6 @@ import {
   Lightbulb,
   Globe,
   ArrowRight,
-  Calendar,
 } from "lucide-react";
 import HeroSlider from "../components/HeroSlider";
 import StatsCounter from "../components/StatsCounter";
@@ -91,20 +90,20 @@ const productCategories = [
 const whyUsItems = [
   {
     icon: CheckCircle,
-    title: "Uncompromising Quality",
-    desc: "Every product undergoes rigorous QA testing. Our manufacturing facilities are WHO-GMP certified and FDA-inspected.",
+    title: "Wide Product Range & Accessibility",
+    desc: "We offer a wide range of medicines and healthcare products to meet your medical needs. From prescription medications to over-the-counter remedies, we provide quality products from trusted brands, ensuring reliable care and convenience for every customer.",
     color: "#1a3a6b",
   },
   {
     icon: Lightbulb,
-    title: "Continuous Innovation",
-    desc: "Investing 12% of revenue in R&D, our scientists work at the frontier of pharmaceutical science to create next-generation therapies.",
+    title: "Quality & Compliance",
+    desc: "We adhere to stringent quality systems, regulatory requirements, and international manufacturing standards to ensure safe, effective, and reliable healthcare products for global markets. Quality is embedded at every stage—from sourcing to final delivery.",
     color: "#e8732a",
   },
   {
     icon: Globe,
-    title: "Universal Accessibility",
-    desc: "We believe healthcare is a right. Our tiered pricing strategy ensures life-saving medications reach patients in developing markets.",
+    title: "Global Partnerships & Reliability",
+    desc: "We build long-term relationships through transparent communication, timely delivery, scalable manufacturing, and customized solutions that help partners grow confidently in international markets.",
     color: "#2ecc71",
   },
 ];
@@ -142,32 +141,6 @@ const testimonials = [
   },
 ];
 
-const newsItems = [
-  {
-    date: "May 15, 2026",
-    category: "Press Release",
-    title:
-      "Helik Healthcare Launches New Oncology Portfolio in European Markets",
-    excerpt:
-      "Helik Healthcare today announced the expansion of its oncology portfolio with three new targeted therapies, now available across 12 European countries.",
-  },
-  {
-    date: "April 28, 2026",
-    category: "Research",
-    title:
-      "Phase III Trial Results Show 94% Efficacy for HK-Cardio-Plus in Hypertension",
-    excerpt:
-      "Our latest clinical trial demonstrates breakthrough efficacy for the HK-Cardio-Plus formulation in managing resistant hypertension in adult patients.",
-  },
-  {
-    date: "March 10, 2026",
-    category: "Awards",
-    title: "Helik Named Among Top 10 Pharma Companies in Asia-Pacific",
-    excerpt:
-      "For the third consecutive year, Helik Healthcare has been recognised in the Asia-Pacific Pharmaceutical Excellence Awards for innovation and quality.",
-  },
-];
-
 const therapeuticAreaCards = [
   { icon: Heart, label: "Cardiology", color: "#e8732a" },
   { icon: Zap, label: "Oncology", color: "#8b5cf6" },
@@ -200,31 +173,38 @@ const Home = () => {
                   A Legacy of Trust, A Future of Innovation
                 </h2>
                 <p className="text-gray-600 leading-relaxed mb-4">
-                  Founded in 1998, Helik Healthcare has grown from a small
-                  domestic pharmaceutical company into a globally recognised
-                  leader. Our journey is defined by an unwavering commitment to
-                  scientific excellence and patient wellbeing.
+                  Established in 2020, Helik Healthcare Pvt. Ltd. has solidified
+                  its standing as an authoritative, high-integrity contract
+                  manufacturing and marketing partner operating within India.
                 </p>
                 <p className="text-gray-600 leading-relaxed mb-8">
-                  We operate state-of-the-art manufacturing facilities certified
-                  to the highest international standards, ensuring every product
-                  that reaches a patient meets our exacting quality benchmarks.
+                  While acting with the rapid flexibility of a modern
+                  enterprise, Helik's operational foundation is built on more
+                  than three decades of industrial experience through its core
+                  northern associate corporation, Gamete Healthcare Pvt. Ltd.,
+                  based in Delhi (North India).
+                </p>
+                <p className="text-gray-600 leading-relaxed mb-8">
+                  As a fully integrated entity, Helik Healthcare masterfully
+                  manages international market architecture, structural brand
+                  registration, and large-scale logistical supply networks. We
+                  focus entirely on driving maximum therapeutic efficacy and
+                  distribution security for advanced nutraceutical product
+                  suites and premium-grade herbal supplement systems across
+                  demanding global territories.
                 </p>
                 <div className="flex flex-wrap gap-3 mb-8">
-                  {[
-                    "WHO-GMP Certified",
-                    "ISO 9001:2015",
-                    "FDA Approved",
-                    "EU-GMP Compliant",
-                  ].map((badge) => (
-                    <span
-                      key={badge}
-                      className="flex items-center gap-1.5 text-sm font-medium text-[#1a3a6b] bg-blue-50 px-3 py-1.5 rounded-full"
-                    >
-                      <CheckCircle className="w-3.5 h-3.5 text-[#2ecc71]" />
-                      {badge}
-                    </span>
-                  ))}
+                  {["WHO Certified", "GMP Certified", "ISO 9001:2015"].map(
+                    (badge) => (
+                      <span
+                        key={badge}
+                        className="flex items-center gap-1.5 text-sm font-medium text-[#1a3a6b] bg-blue-50 px-3 py-1.5 rounded-full"
+                      >
+                        <CheckCircle className="w-3.5 h-3.5 text-[#2ecc71]" />
+                        {badge}
+                      </span>
+                    )
+                  )}
                 </div>
                 <Link
                   to="/about"
@@ -318,7 +298,7 @@ const Home = () => {
                   <div>
                     <div className="text-xs text-gray-500">Global Reach</div>
                     <div className="font-bold text-[#1a3a6b]">
-                      50+ Countries
+                      10+ Countries
                     </div>
                   </div>
                 </motion.div>
@@ -337,7 +317,7 @@ const Home = () => {
                 Our Portfolio
               </span>
               <h2 className="text-4xl font-bold text-[#1a3a6b] mb-4">
-                Therapeutic Categories
+                Our Product Range
               </h2>
               <p className="text-gray-500 max-w-xl mx-auto">
                 A diversified portfolio spanning critical product range, backed
@@ -408,7 +388,7 @@ const Home = () => {
           <FadeUp>
             <div className="text-center mb-10">
               <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-[#e8732a] bg-orange-50 px-4 py-1.5 rounded-full mb-3">
-                Therapeutic Expertise
+                Product Range Expertise
               </span>
               <h2 className="text-4xl font-bold text-[#1a3a6b]">
                 Areas We Serve
@@ -519,82 +499,6 @@ const Home = () => {
           <div className="grid md:grid-cols-3 gap-6">
             {testimonials.map((t, i) => (
               <TestimonialCard key={t.name} {...t} index={i} isVisible={true} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Latest News */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <FadeUp>
-            <div className="flex items-end justify-between mb-14 flex-wrap gap-4">
-              <div>
-                <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-[#e8732a] bg-orange-50 px-4 py-1.5 rounded-full mb-3">
-                  News & Updates
-                </span>
-                <h2 className="text-4xl font-bold text-[#1a3a6b]">
-                  Latest from Helik
-                </h2>
-              </div>
-              <a
-                href="#"
-                className="text-sm font-semibold text-[#e8732a] flex items-center gap-1 hover:gap-2 transition-all"
-              >
-                View All News <ArrowRight className="w-4 h-4" />
-              </a>
-            </div>
-          </FadeUp>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {newsItems.map((news, i) => (
-              <FadeUp key={news.title} delay={i * 0.1}>
-                <div className="bg-white border border-gray-100 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group cursor-pointer">
-                  {/* Image placeholder */}
-                  <div
-                    className="h-44 relative overflow-hidden"
-                    style={{
-                      background:
-                        i === 0
-                          ? "linear-gradient(135deg, #1a3a6b, #2a5298)"
-                          : i === 1
-                          ? "linear-gradient(135deg, #0d47a1, #1565c0)"
-                          : "linear-gradient(135deg, #4a0e8f, #7b1fa2)",
-                    }}
-                  >
-                    <div className="absolute inset-0 flex items-center justify-center opacity-20">
-                      {i === 0 ? (
-                        <Globe className="w-24 h-24 text-white" />
-                      ) : i === 1 ? (
-                        <Zap className="w-24 h-24 text-white" />
-                      ) : (
-                        <Heart className="w-24 h-24 text-white" />
-                      )}
-                    </div>
-                    <div className="absolute top-4 left-4">
-                      <span className="bg-white/20 backdrop-blur-sm text-white text-xs font-medium px-3 py-1 rounded-full">
-                        {news.category}
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="p-6">
-                    <div className="flex items-center gap-2 text-gray-400 text-xs mb-3">
-                      <Calendar className="w-3.5 h-3.5" />
-                      {news.date}
-                    </div>
-                    <h3 className="font-bold text-[#1a3a6b] mb-2 leading-snug group-hover:text-[#e8732a] transition-colors">
-                      {news.title}
-                    </h3>
-                    <p className="text-gray-500 text-sm leading-relaxed mb-4 line-clamp-2">
-                      {news.excerpt}
-                    </p>
-                    <div className="flex items-center gap-1 text-sm font-medium text-[#e8732a] group-hover:gap-2 transition-all">
-                      Read More <ArrowRight className="w-4 h-4" />
-                    </div>
-                  </div>
-                </div>
-              </FadeUp>
             ))}
           </div>
         </div>
