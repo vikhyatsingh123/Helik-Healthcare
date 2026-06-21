@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom';
-import { Cross, Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
+import { Link } from "react-router-dom";
+import { Cross, Mail, Phone, MapPin, ArrowRight } from "lucide-react";
 
 // Simple SVG social icons (lucide-react v1 dropped brand icons)
 const TwitterIcon = () => (
@@ -27,31 +27,34 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const quickLinks = [
-    { label: 'About Us', path: '/about' },
-    { label: 'Our Products', path: '/products' },
-    { label: 'Therapeutic Areas', path: '/therapeutic-areas' },
-    { label: 'Careers', path: '/careers' },
-    { label: 'Contact Us', path: '/contact' },
+    { label: "About Us", path: "/about" },
+    { label: "Our Products", path: "/products" },
+    { label: "Therapeutic Areas", path: "/therapeutic-areas" },
+    { label: "Careers", path: "/careers" },
+    { label: "Contact Us", path: "/contact" },
   ];
 
   const therapeuticAreas = [
-    { label: 'Cardiology', path: '/therapeutic-areas' },
-    { label: 'Oncology', path: '/therapeutic-areas' },
-    { label: 'Neurology', path: '/therapeutic-areas' },
-    { label: 'Dermatology', path: '/therapeutic-areas' },
-    { label: 'Antibiotics', path: '/therapeutic-areas' },
-    { label: 'Vitamins & Supplements', path: '/therapeutic-areas' },
+    {
+      label: "Nutraceuticals & Herbal Supplements",
+      path: "/therapeutic-areas",
+    },
+    { label: "Cardiology", path: "/therapeutic-areas" },
+    { label: "Oncology", path: "/therapeutic-areas" },
+    { label: "Neurology", path: "/therapeutic-areas" },
+    { label: "Dermatology", path: "/therapeutic-areas" },
+    { label: "Antibiotics", path: "/therapeutic-areas" },
   ];
 
   const socialLinks = [
-    { Icon: TwitterIcon, label: 'Twitter', href: '#' },
-    { Icon: LinkedInIcon, label: 'LinkedIn', href: '#' },
-    { Icon: FacebookIcon, label: 'Facebook', href: '#' },
-    { Icon: YoutubeIcon, label: 'YouTube', href: '#' },
+    { Icon: TwitterIcon, label: "Twitter", href: "#" },
+    { Icon: LinkedInIcon, label: "LinkedIn", href: "#" },
+    { Icon: FacebookIcon, label: "Facebook", href: "#" },
+    { Icon: YoutubeIcon, label: "YouTube", href: "#" },
   ];
 
   return (
-    <footer style={{ background: '#0f2347' }} className="text-white">
+    <footer style={{ background: "#0f2347" }} className="text-white">
       {/* Main footer */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
@@ -60,17 +63,24 @@ const Footer = () => {
             <Link to="/" className="flex items-center gap-2 mb-5">
               <div
                 className="w-10 h-10 rounded-xl flex items-center justify-center"
-                style={{ background: 'linear-gradient(135deg, #e8732a, #f5a623)' }}
+                style={{
+                  background: "linear-gradient(135deg, #e8732a, #f5a623)",
+                }}
               >
                 <Cross className="w-5 h-5 text-white" strokeWidth={2.5} />
               </div>
               <div>
                 <span className="text-xl font-bold text-white">Helik</span>
-                <span className="text-xl font-light text-white/70"> Healthcare</span>
+                <span className="text-xl font-light text-white/70">
+                  {" "}
+                  Healthcare
+                </span>
               </div>
             </Link>
             <p className="text-white/60 text-sm leading-relaxed mb-6">
-              Advancing health through innovative pharmaceutical solutions. Committed to quality, safety, and accessibility for patients worldwide.
+              Advancing health through innovative pharmaceutical solutions.
+              Committed to quality, safety, and accessibility for patients
+              worldwide.
             </p>
             {/* Social icons */}
             <div className="flex gap-3">
@@ -89,7 +99,9 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-widest text-white/40 mb-5">Quick Links</h3>
+            <h3 className="text-sm font-semibold uppercase tracking-widest text-white/40 mb-5">
+              Quick Links
+            </h3>
             <ul className="space-y-2.5">
               {quickLinks.map((link) => (
                 <li key={link.path}>
@@ -107,7 +119,9 @@ const Footer = () => {
 
           {/* Therapeutic Areas */}
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-widest text-white/40 mb-5">Therapeutic Areas</h3>
+            <h3 className="text-sm font-semibold uppercase tracking-widest text-white/40 mb-5">
+              Therapeutic Areas
+            </h3>
             <ul className="space-y-2.5">
               {therapeuticAreas.map((area) => (
                 <li key={area.label}>
@@ -125,12 +139,16 @@ const Footer = () => {
 
           {/* Contact info */}
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-widest text-white/40 mb-5">Contact Us</h3>
+            <h3 className="text-sm font-semibold uppercase tracking-widest text-white/40 mb-5">
+              Contact Us
+            </h3>
             <ul className="space-y-4">
               <li className="flex gap-3">
                 <MapPin className="w-4 h-4 text-[#e8732a] mt-0.5 shrink-0" />
                 <span className="text-white/70 text-sm">
-                  Helik Towers, Bandra Kurla Complex,<br />Mumbai 400 051, India
+                  Helik Towers, Bandra Kurla Complex,
+                  <br />
+                  Mumbai 400 051, India
                 </span>
               </li>
               <li className="flex gap-3">
@@ -139,7 +157,10 @@ const Footer = () => {
               </li>
               <li className="flex gap-3">
                 <Mail className="w-4 h-4 text-[#e8732a] mt-0.5 shrink-0" />
-                <a href="mailto:info@helikhealthcare.com" className="text-white/70 hover:text-white text-sm transition-colors">
+                <a
+                  href="mailto:info@helikhealthcare.com"
+                  className="text-white/70 hover:text-white text-sm transition-colors"
+                >
                   info@helikhealthcare.com
                 </a>
               </li>
@@ -147,7 +168,9 @@ const Footer = () => {
 
             {/* Newsletter */}
             <div className="mt-6">
-              <p className="text-sm text-white/60 mb-2">Subscribe to our newsletter</p>
+              <p className="text-sm text-white/60 mb-2">
+                Subscribe to our newsletter
+              </p>
               <div className="flex gap-2">
                 <input
                   type="email"
@@ -156,7 +179,7 @@ const Footer = () => {
                 />
                 <button
                   className="px-4 py-2 rounded-lg text-white text-sm font-medium transition-colors hover:opacity-90"
-                  style={{ background: '#e8732a' }}
+                  style={{ background: "#e8732a" }}
                 >
                   Go
                 </button>
@@ -173,8 +196,12 @@ const Footer = () => {
             &copy; {currentYear} Helik Healthcare Ltd. All rights reserved.
           </p>
           <div className="flex gap-5">
-            {['Privacy Policy', 'Terms of Use', 'Cookie Policy'].map((item) => (
-              <a key={item} href="#" className="text-white/40 hover:text-white/70 text-sm transition-colors">
+            {["Privacy Policy", "Terms of Use", "Cookie Policy"].map((item) => (
+              <a
+                key={item}
+                href="#"
+                className="text-white/40 hover:text-white/70 text-sm transition-colors"
+              >
                 {item}
               </a>
             ))}
