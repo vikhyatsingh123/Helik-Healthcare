@@ -275,7 +275,7 @@ const Products = () => {
             </h1>
             <p className="text-white/70 text-lg max-w-xl mb-8">
               Explore our comprehensive pharmaceutical portfolio spanning
-              critical therapeutic areas.
+              critical product range.
             </p>
 
             {/* Search */}

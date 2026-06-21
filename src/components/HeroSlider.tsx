@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface Slide {
   id: number;
@@ -17,33 +17,36 @@ interface Slide {
 const slides: Slide[] = [
   {
     id: 1,
-    badge: 'Innovation in Healthcare',
-    title: 'Pioneering\nPharmaceutical\nExcellence',
-    subtitle: 'Developing life-changing medications that improve health outcomes for millions of patients across 50+ countries worldwide.',
-    cta: 'Explore Our Products',
-    ctaPath: '/products',
-    accent: '#e8732a',
-    gradient: 'linear-gradient(135deg, #0f2347 0%, #1a3a6b 45%, #2a5298 100%)',
+    badge: "Innovation in Healthcare",
+    title: "Pioneering\nPharmaceutical\nExcellence",
+    subtitle:
+      "Developing life-changing medications that improve health outcomes for millions of patients across 50+ countries worldwide.",
+    cta: "Explore Our Products",
+    ctaPath: "/products",
+    accent: "#e8732a",
+    gradient: "linear-gradient(135deg, #0f2347 0%, #1a3a6b 45%, #2a5298 100%)",
   },
   {
     id: 2,
-    badge: 'Research & Development',
-    title: 'Science-Driven\nSolutions for\nBetter Health',
-    subtitle: 'Our state-of-the-art R&D facilities drive innovation in therapeutics, creating treatments that address the most critical healthcare challenges.',
-    cta: 'Our Therapeutic Areas',
-    ctaPath: '/therapeutic-areas',
-    accent: '#2ecc71',
-    gradient: 'linear-gradient(135deg, #0d1b2a 0%, #1b3a4b 45%, #1a5276 100%)',
+    badge: "Research & Development",
+    title: "Science-Driven\nSolutions for\nBetter Health",
+    subtitle:
+      "Our state-of-the-art R&D facilities drive innovation in therapeutics, creating treatments that address the most critical healthcare challenges.",
+    cta: "Our Product Range",
+    ctaPath: "/product-range",
+    accent: "#2ecc71",
+    gradient: "linear-gradient(135deg, #0d1b2a 0%, #1b3a4b 45%, #1a5276 100%)",
   },
   {
     id: 3,
-    badge: 'Global Reach',
-    title: 'Delivering Health\nAcross Every\nContinent',
-    subtitle: 'With a robust distribution network spanning 50+ countries, we ensure our life-saving medicines reach patients wherever they are.',
-    cta: 'Partner With Us',
-    ctaPath: '/contact',
-    accent: '#e8732a',
-    gradient: 'linear-gradient(135deg, #1a0533 0%, #2d1b69 45%, #1a3a6b 100%)',
+    badge: "Global Reach",
+    title: "Delivering Health\nAcross Every\nContinent",
+    subtitle:
+      "With a robust distribution network spanning 50+ countries, we ensure our life-saving medicines reach patients wherever they are.",
+    cta: "Partner With Us",
+    ctaPath: "/contact",
+    accent: "#e8732a",
+    gradient: "linear-gradient(135deg, #1a0533 0%, #2d1b69 45%, #1a3a6b 100%)",
   },
 ];
 
@@ -77,13 +80,16 @@ const HeroSlider = () => {
   const slide = slides[current];
 
   const variants = {
-    enter: (dir: number) => ({ x: dir > 0 ? '100%' : '-100%', opacity: 0 }),
+    enter: (dir: number) => ({ x: dir > 0 ? "100%" : "-100%", opacity: 0 }),
     center: { x: 0, opacity: 1 },
-    exit: (dir: number) => ({ x: dir > 0 ? '-100%' : '100%', opacity: 0 }),
+    exit: (dir: number) => ({ x: dir > 0 ? "-100%" : "100%", opacity: 0 }),
   };
 
   return (
-    <section className="relative overflow-hidden" style={{ height: '100vh', minHeight: 600 }}>
+    <section
+      className="relative overflow-hidden"
+      style={{ height: "100vh", minHeight: 600 }}
+    >
       <AnimatePresence custom={direction} mode="wait">
         <motion.div
           key={slide.id}
@@ -101,14 +107,14 @@ const HeroSlider = () => {
             {/* Large circle top-right */}
             <motion.div
               className="absolute -top-32 -right-32 w-[500px] h-[500px] rounded-full opacity-10"
-              style={{ border: '2px solid white' }}
+              style={{ border: "2px solid white" }}
               animate={{ rotate: 360 }}
-              transition={{ duration: 30, repeat: Infinity, ease: 'linear' }}
+              transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
             />
             {/* Medium circle */}
             <motion.div
               className="absolute top-20 right-20 w-[300px] h-[300px] rounded-full opacity-5"
-              style={{ background: 'white' }}
+              style={{ background: "white" }}
               animate={{ scale: [1, 1.1, 1] }}
               transition={{ duration: 4, repeat: Infinity }}
             />
@@ -122,15 +128,20 @@ const HeroSlider = () => {
                   top: `${20 + (i % 3) * 25}%`,
                 }}
                 animate={{ y: [-10, 10, -10] }}
-                transition={{ duration: 3 + i * 0.5, repeat: Infinity, delay: i * 0.3 }}
+                transition={{
+                  duration: 3 + i * 0.5,
+                  repeat: Infinity,
+                  delay: i * 0.3,
+                }}
               />
             ))}
             {/* Grid lines */}
             <div
               className="absolute inset-0 opacity-5"
               style={{
-                backgroundImage: 'linear-gradient(white 1px, transparent 1px), linear-gradient(90deg, white 1px, transparent 1px)',
-                backgroundSize: '60px 60px',
+                backgroundImage:
+                  "linear-gradient(white 1px, transparent 1px), linear-gradient(90deg, white 1px, transparent 1px)",
+                backgroundSize: "60px 60px",
               }}
             />
             {/* Abstract DNA shape right side */}
@@ -138,7 +149,11 @@ const HeroSlider = () => {
               <motion.div
                 className="relative w-72 h-72"
                 animate={{ rotate: [0, 5, -5, 0] }}
-                transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
+                transition={{
+                  duration: 6,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
               >
                 {/* Hexagon grid */}
                 {[...Array(12)].map((_, i) => (
@@ -148,13 +163,17 @@ const HeroSlider = () => {
                     style={{
                       width: 40 + (i % 3) * 10,
                       height: 40 + (i % 3) * 10,
-                      background: i % 2 === 0 ? 'white' : slide.accent,
+                      background: i % 2 === 0 ? "white" : slide.accent,
                       left: `${(i % 4) * 25}%`,
                       top: `${Math.floor(i / 4) * 33}%`,
-                      borderRadius: i % 3 === 0 ? '50%' : '8px',
+                      borderRadius: i % 3 === 0 ? "50%" : "8px",
                     }}
                     animate={{ opacity: [0.1, 0.25, 0.1] }}
-                    transition={{ duration: 2, delay: i * 0.2, repeat: Infinity }}
+                    transition={{
+                      duration: 2,
+                      delay: i * 0.2,
+                      repeat: Infinity,
+                    }}
                   />
                 ))}
               </motion.div>
@@ -172,8 +191,13 @@ const HeroSlider = () => {
                   transition={{ delay: 0.2 }}
                   className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-6"
                 >
-                  <span className="w-2 h-2 rounded-full" style={{ background: slide.accent }} />
-                  <span className="text-white/80 text-sm font-medium">{slide.badge}</span>
+                  <span
+                    className="w-2 h-2 rounded-full"
+                    style={{ background: slide.accent }}
+                  />
+                  <span className="text-white/80 text-sm font-medium">
+                    {slide.badge}
+                  </span>
                 </motion.div>
 
                 {/* Title */}
@@ -182,7 +206,7 @@ const HeroSlider = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3 }}
                   className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6"
-                  style={{ whiteSpace: 'pre-line' }}
+                  style={{ whiteSpace: "pre-line" }}
                 >
                   {slide.title}
                 </motion.h1>
@@ -246,7 +270,7 @@ const HeroSlider = () => {
             key={idx}
             onClick={() => goTo(idx)}
             className={`h-2 rounded-full transition-all ${
-              idx === current ? 'w-8 bg-white' : 'w-2 bg-white/40'
+              idx === current ? "w-8 bg-white" : "w-2 bg-white/40"
             }`}
           />
         ))}
@@ -258,7 +282,9 @@ const HeroSlider = () => {
         animate={{ y: [0, 8, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
       >
-        <span className="text-white/40 text-xs tracking-widest uppercase">Scroll</span>
+        <span className="text-white/40 text-xs tracking-widest uppercase">
+          Scroll
+        </span>
         <div className="w-px h-8 bg-gradient-to-b from-white/40 to-transparent" />
       </motion.div>
     </section>

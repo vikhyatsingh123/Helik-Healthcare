@@ -160,10 +160,10 @@ const TherapeuticAreas = () => {
                 Home
               </Link>
               <ChevronRight className="w-4 h-4" />
-              <span className="text-white">Therapeutic Areas</span>
+              <span className="text-white">Product Range</span>
             </div>
             <h1 className="text-5xl font-extrabold text-white mb-4">
-              Therapeutic Areas
+              Product Range
             </h1>
             <p className="text-white/70 text-lg max-w-xl">
               Focused expertise across six critical therapeutic domains, backed

@@ -340,8 +340,8 @@ const Home = () => {
                 Therapeutic Categories
               </h2>
               <p className="text-gray-500 max-w-xl mx-auto">
-                A diversified portfolio spanning critical therapeutic areas,
-                backed by decades of research and clinical excellence.
+                A diversified portfolio spanning critical product range, backed
+                by decades of research and clinical excellence.
               </p>
             </div>
           </FadeUp>
@@ -402,7 +402,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Therapeutic Areas Horizontal Scroll */}
+      {/* Product Range Horizontal Scroll */}
       <section className="py-16 bg-[#f8fafc] overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeUp>
@@ -431,7 +431,7 @@ const Home = () => {
                   viewport={{ once: true }}
                   className="snap-start shrink-0"
                 >
-                  <Link to="/therapeutic-areas">
+                  <Link to="/product-range">
                     <div className="w-44 bg-white rounded-2xl p-6 flex flex-col items-center gap-3 shadow-sm hover:shadow-lg transition-all hover:-translate-y-1 cursor-pointer border border-gray-100">
                       <div
                         className="w-14 h-14 rounded-2xl flex items-center justify-center"

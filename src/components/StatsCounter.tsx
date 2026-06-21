@@ -1,6 +1,6 @@
-import { useState, useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
-import { Award, Package, Globe, Users } from 'lucide-react';
+import { useState, useEffect, useRef } from "react";
+import { motion } from "framer-motion";
+import { Award, Package, Globe, Users } from "lucide-react";
 
 interface Stat {
   icon: React.ElementType;
@@ -16,38 +16,38 @@ const stats: Stat[] = [
   {
     icon: Award,
     value: 25,
-    suffix: '+',
-    prefix: '',
-    label: 'Years of Excellence',
-    description: 'Trusted pharmaceutical expertise since 1998',
-    color: '#e8732a',
+    suffix: "+",
+    prefix: "",
+    label: "Years of Excellence",
+    description: "Trusted pharmaceutical expertise since 1998",
+    color: "#e8732a",
   },
   {
     icon: Package,
     value: 500,
-    suffix: '+',
-    prefix: '',
-    label: 'Products',
-    description: 'Comprehensive portfolio across therapeutic areas',
-    color: '#1a3a6b',
+    suffix: "+",
+    prefix: "",
+    label: "Products",
+    description: "Comprehensive portfolio across Product Range",
+    color: "#1a3a6b",
   },
   {
     icon: Globe,
     value: 50,
-    suffix: '+',
-    prefix: '',
-    label: 'Countries',
-    description: 'Global presence serving diverse markets',
-    color: '#2ecc71',
+    suffix: "+",
+    prefix: "",
+    label: "Countries",
+    description: "Global presence serving diverse markets",
+    color: "#2ecc71",
   },
   {
     icon: Users,
     value: 10,
-    suffix: 'M+',
-    prefix: '',
-    label: 'Patients Served',
-    description: 'Lives improved through quality healthcare',
-    color: '#e8732a',
+    suffix: "M+",
+    prefix: "",
+    label: "Patients Served",
+    description: "Lives improved through quality healthcare",
+    color: "#e8732a",
   },
 ];
 
@@ -73,7 +73,15 @@ const useCounter = (target: number, duration: number, isActive: boolean) => {
   return count;
 };
 
-const StatItem = ({ stat, index, isActive }: { stat: Stat; index: number; isActive: boolean }) => {
+const StatItem = ({
+  stat,
+  index,
+  isActive,
+}: {
+  stat: Stat;
+  index: number;
+  isActive: boolean;
+}) => {
   const count = useCounter(stat.value, 1500, isActive);
   const Icon = stat.icon;
 
@@ -91,9 +99,13 @@ const StatItem = ({ stat, index, isActive }: { stat: Stat; index: number; isActi
         <Icon className="w-7 h-7" style={{ color: stat.color }} />
       </div>
       <div className="text-4xl font-extrabold text-[#1a3a6b] mb-1">
-        {stat.prefix}{count}{stat.suffix}
+        {stat.prefix}
+        {count}
+        {stat.suffix}
       </div>
-      <div className="text-base font-semibold text-gray-800 mb-1">{stat.label}</div>
+      <div className="text-base font-semibold text-gray-800 mb-1">
+        {stat.label}
+      </div>
       <div className="text-sm text-gray-500">{stat.description}</div>
     </motion.div>
   );
@@ -123,8 +135,9 @@ const StatsCounter = () => {
         <div
           className="absolute inset-0 opacity-[0.02]"
           style={{
-            backgroundImage: 'radial-gradient(circle, #1a3a6b 1px, transparent 1px)',
-            backgroundSize: '40px 40px',
+            backgroundImage:
+              "radial-gradient(circle, #1a3a6b 1px, transparent 1px)",
+            backgroundSize: "40px 40px",
           }}
         />
       </div>
@@ -139,15 +152,14 @@ const StatsCounter = () => {
           <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-[#e8732a] bg-orange-50 px-4 py-1.5 rounded-full mb-3">
             Our Impact
           </span>
-          <h2 className="text-3xl font-bold text-[#1a3a6b]">Numbers That Define Us</h2>
+          <h2 className="text-3xl font-bold text-[#1a3a6b]">
+            Numbers That Define Us
+          </h2>
         </motion.div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {stats.map((stat, i) => (
-            <div
-              key={stat.label}
-              className="relative"
-            >
+            <div key={stat.label} className="relative">
               {i < stats.length - 1 && (
                 <div className="hidden md:block absolute right-0 top-1/4 bottom-1/4 w-px bg-gray-100" />
               )}

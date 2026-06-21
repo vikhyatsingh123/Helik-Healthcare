@@ -1,21 +1,21 @@
-import { useState, useEffect, useRef } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Cross, Menu, X, ChevronDown, Package, Layers } from 'lucide-react';
+import { useState, useEffect, useRef } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
+import { Cross, Menu, X, ChevronDown, Package, Layers } from "lucide-react";
 
 const navLinks = [
-  { label: 'Home', path: '/' },
-  { label: 'About Us', path: '/about' },
+  { label: "Home", path: "/" },
+  { label: "About Us", path: "/about" },
   {
-    label: 'Products',
-    path: '/products',
+    label: "Products",
+    path: "/products",
     dropdown: [
-      { label: 'All Products', path: '/products', icon: Package },
-      { label: 'By Therapeutic Area', path: '/therapeutic-areas', icon: Layers },
+      { label: "All Products", path: "/products", icon: Package },
+      { label: "By Product Range", path: "/product-range", icon: Layers },
     ],
   },
-  { label: 'Careers', path: '/careers' },
-  { label: 'Contact Us', path: '/contact' },
+  { label: "Careers", path: "/careers" },
+  { label: "Contact Us", path: "/contact" },
 ];
 
 const Navbar = () => {
@@ -27,8 +27,8 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
@@ -38,15 +38,18 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(e.target as Node)
+      ) {
         setDropdownOpen(false);
       }
     };
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const isHomePage = location.pathname === '/';
+  const isHomePage = location.pathname === "/";
   const isTransparent = isHomePage && !scrolled;
 
   return (
@@ -54,14 +57,14 @@ const Navbar = () => {
       <motion.header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled
-            ? 'bg-white shadow-lg'
+            ? "bg-white shadow-lg"
             : isTransparent
-            ? 'bg-transparent'
-            : 'bg-white shadow-md'
+            ? "bg-transparent"
+            : "bg-white shadow-md"
         }`}
         initial={{ y: -80 }}
         animate={{ y: 0 }}
-        transition={{ duration: 0.6, ease: 'easeOut' }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-18 py-3">
@@ -69,24 +72,27 @@ const Navbar = () => {
             <Link to="/" className="flex items-center gap-2 group">
               <div
                 className="w-10 h-10 rounded-xl flex items-center justify-center transition-transform group-hover:scale-105"
-                style={{ background: 'linear-gradient(135deg, #e8732a, #f5a623)' }}
+                style={{
+                  background: "linear-gradient(135deg, #e8732a, #f5a623)",
+                }}
               >
                 <Cross className="w-5 h-5 text-white" strokeWidth={2.5} />
               </div>
               <div>
                 <span
                   className={`text-xl font-bold transition-colors ${
-                    isTransparent ? 'text-white' : 'text-[#1a3a6b]'
+                    isTransparent ? "text-white" : "text-[#1a3a6b]"
                   }`}
                 >
                   Helik
                 </span>
                 <span
                   className={`text-xl font-light transition-colors ${
-                    isTransparent ? 'text-white/80' : 'text-gray-500'
+                    isTransparent ? "text-white/80" : "text-gray-500"
                   }`}
                 >
-                  {' '}Healthcare
+                  {" "}
+                  Healthcare
                 </span>
               </div>
             </Link>
@@ -100,13 +106,17 @@ const Navbar = () => {
                       onClick={() => setDropdownOpen(!dropdownOpen)}
                       className={`flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-medium transition-all ${
                         isTransparent
-                          ? 'text-white/90 hover:text-white hover:bg-white/10'
-                          : 'text-gray-700 hover:text-[#1a3a6b] hover:bg-blue-50'
-                      } ${location.pathname === link.path ? 'text-[#e8732a]!' : ''}`}
+                          ? "text-white/90 hover:text-white hover:bg-white/10"
+                          : "text-gray-700 hover:text-[#1a3a6b] hover:bg-blue-50"
+                      } ${
+                        location.pathname === link.path ? "text-[#e8732a]!" : ""
+                      }`}
                     >
                       {link.label}
                       <ChevronDown
-                        className={`w-4 h-4 transition-transform ${dropdownOpen ? 'rotate-180' : ''}`}
+                        className={`w-4 h-4 transition-transform ${
+                          dropdownOpen ? "rotate-180" : ""
+                        }`}
                       />
                     </button>
 
@@ -139,14 +149,14 @@ const Navbar = () => {
                     to={link.path}
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
                       isTransparent
-                        ? 'text-white/90 hover:text-white hover:bg-white/10'
-                        : 'text-gray-700 hover:text-[#1a3a6b] hover:bg-blue-50'
+                        ? "text-white/90 hover:text-white hover:bg-white/10"
+                        : "text-gray-700 hover:text-[#1a3a6b] hover:bg-blue-50"
                     } ${
                       location.pathname === link.path
                         ? isTransparent
-                          ? 'text-white! font-semibold!'
-                          : 'text-[#1a3a6b]! font-semibold!'
-                        : ''
+                          ? "text-white! font-semibold!"
+                          : "text-[#1a3a6b]! font-semibold!"
+                        : ""
                     }`}
                   >
                     {link.label}
@@ -160,7 +170,9 @@ const Navbar = () => {
               <Link
                 to="/contact"
                 className="hidden sm:inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm font-semibold text-white transition-all hover:shadow-lg hover:-translate-y-0.5"
-                style={{ background: 'linear-gradient(135deg, #e8732a, #f5a623)' }}
+                style={{
+                  background: "linear-gradient(135deg, #e8732a, #f5a623)",
+                }}
               >
                 Get In Touch
               </Link>
@@ -169,11 +181,15 @@ const Navbar = () => {
                 onClick={() => setMobileOpen(!mobileOpen)}
                 className={`lg:hidden p-2 rounded-lg transition-colors ${
                   isTransparent
-                    ? 'text-white hover:bg-white/10'
-                    : 'text-gray-700 hover:bg-gray-100'
+                    ? "text-white hover:bg-white/10"
+                    : "text-gray-700 hover:bg-gray-100"
                 }`}
               >
-                {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+                {mobileOpen ? (
+                  <X className="w-5 h-5" />
+                ) : (
+                  <Menu className="w-5 h-5" />
+                )}
               </button>
             </div>
           </div>
@@ -184,7 +200,7 @@ const Navbar = () => {
           {mobileOpen && (
             <motion.div
               initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
+              animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               className="lg:hidden bg-white border-t border-gray-100 shadow-lg overflow-hidden"
             >
@@ -212,8 +228,8 @@ const Navbar = () => {
                       to={link.path}
                       className={`block px-3 py-2.5 rounded-lg text-sm font-medium transition-colors ${
                         location.pathname === link.path
-                          ? 'bg-blue-50 text-[#1a3a6b] font-semibold'
-                          : 'text-gray-700 hover:bg-blue-50 hover:text-[#1a3a6b]'
+                          ? "bg-blue-50 text-[#1a3a6b] font-semibold"
+                          : "text-gray-700 hover:bg-blue-50 hover:text-[#1a3a6b]"
                       }`}
                     >
                       {link.label}
@@ -223,7 +239,9 @@ const Navbar = () => {
                 <Link
                   to="/contact"
                   className="block w-full text-center px-4 py-2.5 rounded-full text-sm font-semibold text-white mt-2"
-                  style={{ background: 'linear-gradient(135deg, #e8732a, #f5a623)' }}
+                  style={{
+                    background: "linear-gradient(135deg, #e8732a, #f5a623)",
+                  }}
                 >
                   Get In Touch
                 </Link>

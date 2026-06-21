@@ -29,7 +29,7 @@ const Footer = () => {
   const quickLinks = [
     { label: "About Us", path: "/about" },
     { label: "Our Products", path: "/products" },
-    { label: "Therapeutic Areas", path: "/therapeutic-areas" },
+    { label: "Product Range", path: "/product-range" },
     { label: "Careers", path: "/careers" },
     { label: "Contact Us", path: "/contact" },
   ];
@@ -37,13 +37,13 @@ const Footer = () => {
   const therapeuticAreas = [
     {
       label: "Nutraceuticals & Herbal Supplements",
-      path: "/therapeutic-areas",
+      path: "/product-range",
     },
-    { label: "Cardiology", path: "/therapeutic-areas" },
-    { label: "Oncology", path: "/therapeutic-areas" },
-    { label: "Neurology", path: "/therapeutic-areas" },
-    { label: "Dermatology", path: "/therapeutic-areas" },
-    { label: "Antibiotics", path: "/therapeutic-areas" },
+    { label: "Cardiology", path: "/product-range" },
+    { label: "Oncology", path: "/product-range" },
+    { label: "Neurology", path: "/product-range" },
+    { label: "Dermatology", path: "/product-range" },
+    { label: "Antibiotics", path: "/product-range" },
   ];
 
   const socialLinks = [
@@ -117,10 +117,10 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Therapeutic Areas */}
+          {/* Product Range */}
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-widest text-white/40 mb-5">
-              Therapeutic Areas
+              Product Range
             </h3>
             <ul className="space-y-2.5">
               {therapeuticAreas.map((area) => (
