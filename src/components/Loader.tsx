@@ -51,7 +51,7 @@ const Loader = () => {
               animate={{ rotateY: [0, 360] }}
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
             >
-              <img src="./helik_logo.jpeg" alt="logo" />
+              <img src="./helik_logo.png" alt="logo" />
             </motion.div>
 
             {/* Company name */}

@@ -62,7 +62,7 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center gap-2 mb-5">
               <div className="w-40 h-10 rounded-xl flex items-center justify-center">
-                <img src="./helik3.jpeg" alt="logo" />
+                <img src="./helik_logo.png" alt="logo" />
               </div>
               {/* <div>
                 <span className="text-xl font-bold text-white">Helik</span>

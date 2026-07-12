@@ -114,7 +114,7 @@ const Products = () => {
       </section>
 
       {/* Main tabs */}
-      <section className="bg-white border-b border-gray-100 sticky top-[72px] z-30">
+      <section className="bg-white border-b border-gray-100 top-[72px] z-30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap py-3 gap-1">
             {tabsConfig.map((tab) => {
@@ -190,6 +190,28 @@ const Products = () => {
                   <X className="w-4 h-4" />
                 </button>
               )}
+            </div>
+            <div className="flex gap-2">
+              <button
+                className="px-4 py-2 rounded-full text-sm font-medium text-white transition-all hover:shadow-lg hover:-translate-y-0.5"
+                style={{
+                  background: "linear-gradient(135deg, #e8732a, #f5a623)",
+                }}
+              >
+                <a href="/Helik_demo.pdf" download>
+                  Download Nutra
+                </a>
+              </button>
+              <button
+                className="px-4 py-2 rounded-full text-sm font-medium text-white transition-all hover:shadow-lg hover:-translate-y-0.5"
+                style={{
+                  background: "linear-gradient(135deg, #e8732a, #f5a623)",
+                }}
+              >
+                <a href="/Product List Export Drug.pdf" download>
+                  Download Drug
+                </a>
+              </button>
             </div>
             <p className="text-gray-500 text-sm">
               Showing{" "}

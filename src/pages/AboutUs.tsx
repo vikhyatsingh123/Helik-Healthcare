@@ -138,9 +138,18 @@ const AboutUs = () => {
             <h1 className="text-5xl font-extrabold text-white mb-4">
               Our Story
             </h1>
-            <p className="text-white/70 text-lg max-w-xl">
-              Nearly three decades of dedication to pharmaceutical innovation,
-              quality, and patient welfare.
+            <p className="text-white/70 text-lg">
+              Established in 2020, Helik Healthcare Pvt. Ltd. has solidified its
+              standing as an authoritative, high-integrity contract
+              manufacturing and marketing partner operating within India. While
+              acting with the rapid flexibility of a modern enterprise, Helik's
+              operational foundation is built on more than three decades of
+              industrial experience through its associate organization, Gamete
+              Healthcare Pvt. Ltd. As a fully integrated entity, Helik
+              Healthcare manages international market architecture, structural
+              brand registration, and large-scale logistical supply networks,
+              focusing on advanced nutraceutical products and premium herbal
+              supplement systems across global markets.
             </p>
           </motion.div>
         </div>
