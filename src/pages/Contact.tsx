@@ -37,8 +37,15 @@ const FadeUp = ({
 const contactInfo = [
   {
     icon: MapPin,
-    label: "Headquarters",
-    value: "Helik Towers, Bandra Kurla Complex, Mumbai 400 051, India",
+    label: "India Office",
+    value:
+      "C-502, Hotech Commercial, C-Block, Defence Enclave, Noida Sector-44, Uttar Pradesh 201301, India",
+    color: "#1a3a6b",
+  },
+  {
+    icon: MapPin,
+    label: "Dubai Office",
+    value: "Owaisi Building, 302, Golden Sands, Mankhool, Dubai, UAE",
     color: "#1a3a6b",
   },
   {
@@ -63,27 +70,20 @@ const contactInfo = [
 
 const offices = [
   {
-    city: "Mumbai — HQ",
-    address: "Helik Towers, Bandra Kurla Complex, Mumbai 400 051",
+    city: "Noida, India",
+    address:
+      "C-502, Hotech Commercial, C-Block, Defence Enclave, Noida Sector-44, Uttar Pradesh 201301, India",
     phone: "+91 9415812557\n+91 9793142303",
     email: "helikhealthcare@gmail.com",
-    type: "Global Headquarters",
+    type: "North India Headquarters",
     color: "#1a3a6b",
   },
   {
-    city: "Delhi",
-    address: "DLF Cyber City, Gurugram, Haryana 122 002",
-    phone: "+91 11 4500 6789",
+    city: "Dubai, UAE",
+    address: "Owaisi Building, 302, Golden Sands, Mankhool, Dubai, UAE",
+    phone: "+91 9415812557\n+91 9793142303",
     email: "helikhealthcare@gmail.com",
-    type: "North India Office",
-    color: "#e8732a",
-  },
-  {
-    city: "Bangalore",
-    address: "Embassy Tech Village, Outer Ring Road, Bangalore 560 103",
-    phone: "+91 80 6700 9012",
-    email: "helikhealthcare@gmail.com",
-    type: "South India & Tech Hub",
+    type: "International Headquarters",
     color: "#2ecc71",
   },
 ];
@@ -427,11 +427,11 @@ const Contact = () => {
                 Our Offices
               </span>
               <h2 className="text-4xl font-bold text-[#1a3a6b] mb-4">
-                India Office Locations
+                Office Locations
               </h2>
               <p className="text-gray-500 max-w-xl mx-auto">
-                Three strategic offices across India's key commercial and
-                research hubs.
+                Two strategic offices across World's key commercial and research
+                hubs.
               </p>
             </div>
           </FadeUp>
@@ -487,10 +487,6 @@ const Contact = () => {
                           {office.email}
                         </a>
                       </div>
-                    </div>
-                    <div className="mt-5 pt-4 border-t border-gray-100 flex items-center gap-2 text-sm text-gray-500">
-                      <Globe className="w-4 h-4" />
-                      <span>+{i + 2} international offices nearby</span>
                     </div>
                   </div>
                 </div>

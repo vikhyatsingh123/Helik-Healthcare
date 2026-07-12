@@ -100,24 +100,7 @@ const certifications = [
   { label: "GMP", sublabel: "Approved Facility", color: "#2ecc71" },
 ];
 
-const countries = [
-  "India",
-  "United States",
-  "United Kingdom",
-  "Germany",
-  "France",
-  "Brazil",
-  "South Africa",
-  "Nigeria",
-  "Kenya",
-  "UAE",
-  "Saudi Arabia",
-  "Singapore",
-  "Australia",
-  "Canada",
-  "Mexico",
-  "Russia",
-];
+const countries = ["India", "UAE"];
 
 const AboutUs = () => {
   return (
@@ -399,8 +382,7 @@ const AboutUs = () => {
                 Global Presence
               </h2>
               <p className="text-gray-500 max-w-xl mx-auto">
-                Our products reach patients in over 50 countries across 5
-                continents.
+                Our products reach patients in over 2 countries
               </p>
             </div>
           </FadeUp>
@@ -426,9 +408,9 @@ const AboutUs = () => {
                 <div className="relative z-10 text-center">
                   <Globe className="w-20 h-20 text-white/50 mx-auto mb-4" />
                   <p className="text-white/70 font-medium">
-                    10+ Countries Worldwide
+                    2 Countries Worldwide
                   </p>
-                  <p className="text-white/40 text-sm mt-1">5 Continents</p>
+                  <p className="text-white/40 text-sm mt-1">2 Continents</p>
                 </div>
                 {/* Animated dots */}
                 {[...Array(8)].map((_, i) => (
@@ -466,9 +448,6 @@ const AboutUs = () => {
                       {country}
                     </span>
                   ))}
-                  <span className="flex items-center gap-1.5 bg-[#1a3a6b] px-3 py-1.5 rounded-full text-sm text-white font-medium">
-                    +34 More
-                  </span>
                 </div>
               </div>
             </FadeUp>

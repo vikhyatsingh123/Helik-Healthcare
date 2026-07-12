@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Cross, Mail, Phone, MapPin, ArrowRight } from "lucide-react";
+import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
 
 // Simple SVG social icons (lucide-react v1 dropped brand icons)
 const TwitterIcon = () => (
@@ -61,21 +61,16 @@ const Footer = () => {
           {/* Brand column */}
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center gap-2 mb-5">
-              <div
-                className="w-10 h-10 rounded-xl flex items-center justify-center"
-                style={{
-                  background: "linear-gradient(135deg, #e8732a, #f5a623)",
-                }}
-              >
-                <Cross className="w-5 h-5 text-white" strokeWidth={2.5} />
+              <div className="w-40 h-10 rounded-xl flex items-center justify-center">
+                <img src="./helik3.jpeg" alt="logo" />
               </div>
-              <div>
+              {/* <div>
                 <span className="text-xl font-bold text-white">Helik</span>
                 <span className="text-xl font-light text-white/70">
                   {" "}
                   Healthcare
                 </span>
-              </div>
+              </div> */}
             </Link>
             <p className="text-white/60 text-sm leading-relaxed mb-6">
               Advancing health through innovative pharmaceutical solutions.

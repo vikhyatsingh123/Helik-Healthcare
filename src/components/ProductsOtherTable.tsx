@@ -94,7 +94,7 @@ const ProductsTable = ({ data, accentColor }: ProductsTableProps) => {
       <div
         ref={tableContainerRef}
         className="overflow-auto"
-        style={{ maxHeight: 560 }}
+        style={{ maxHeight: 860 }}
       >
         <table
           style={{ width: table.getTotalSize(), tableLayout: "fixed" }}

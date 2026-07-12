@@ -81,7 +81,7 @@ const jobListings = [
   {
     id: 1,
     title: "Senior Research Scientist — Oncology",
-    location: "Hyderabad",
+    location: "Noida",
     type: "Full-time",
     dept: "R&D",
     experience: "6-10 years",
@@ -89,7 +89,7 @@ const jobListings = [
   {
     id: 2,
     title: "Medical Affairs Manager",
-    location: "Mumbai",
+    location: "Noida",
     type: "Full-time",
     dept: "Medical Affairs",
     experience: "4-7 years",
@@ -97,7 +97,7 @@ const jobListings = [
   {
     id: 3,
     title: "Regulatory Affairs Specialist",
-    location: "Mumbai",
+    location: "Noida",
     type: "Full-time",
     dept: "Regulatory",
     experience: "3-5 years",
@@ -113,7 +113,7 @@ const jobListings = [
   {
     id: 5,
     title: "Quality Assurance Analyst",
-    location: "Pune",
+    location: "Noida",
     type: "Full-time",
     dept: "Quality",
     experience: "2-4 years",
@@ -121,7 +121,7 @@ const jobListings = [
   {
     id: 6,
     title: "Digital Marketing Specialist",
-    location: "Bangalore / Remote",
+    location: "Remote",
     type: "Hybrid",
     dept: "Marketing",
     experience: "3-5 years",
@@ -129,7 +129,7 @@ const jobListings = [
   {
     id: 7,
     title: "Clinical Data Manager",
-    location: "Hyderabad",
+    location: "Dubai, UAE",
     type: "Full-time",
     dept: "Clinical Operations",
     experience: "4-6 years",
@@ -137,7 +137,7 @@ const jobListings = [
   {
     id: 8,
     title: "Supply Chain Analyst",
-    location: "Mumbai",
+    location: "Noida",
     type: "Full-time",
     dept: "Operations",
     experience: "2-4 years",

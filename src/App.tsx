@@ -7,7 +7,6 @@ import ScrollToTop from "./components/ScrollToTop";
 import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
 import Products from "./pages/Products";
-import TherapeuticAreas from "./pages/TherapeuticAreas";
 import Careers from "./pages/Careers";
 import Contact from "./pages/Contact";
 
@@ -41,7 +40,6 @@ const AppContent = () => {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<AboutUs />} />
             <Route path="/products" element={<Products />} />
-            <Route path="/product-range" element={<TherapeuticAreas />} />
             <Route path="/careers" element={<Careers />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>

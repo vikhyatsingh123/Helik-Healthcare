@@ -33,7 +33,7 @@ const slides: Slide[] = [
     subtitle:
       "Our state-of-the-art R&D facilities drive innovation in therapeutics, creating treatments that address the most critical healthcare challenges.",
     cta: "Our Product Range",
-    ctaPath: "/product-range",
+    ctaPath: "/products",
     accent: "#2ecc71",
     gradient: "linear-gradient(135deg, #0d1b2a 0%, #1b3a4b 45%, #1a5276 100%)",
   },

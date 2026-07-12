@@ -103,7 +103,7 @@ const Products = () => {
               <span className="text-white">Products</span>
             </div>
             <h1 className="text-5xl font-extrabold text-white mb-4">
-              Our Products
+              Products for Export
             </h1>
             <p className="text-white/70 text-lg max-w-xl">
               Explore our comprehensive pharmaceutical portfolio spanning
@@ -116,10 +116,7 @@ const Products = () => {
       {/* Main tabs */}
       <section className="bg-white border-b border-gray-100 sticky top-[72px] z-30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div
-            className="flex gap-1 overflow-x-auto py-3"
-            style={{ scrollbarWidth: "none" }}
-          >
+          <div className="flex flex-wrap py-3 gap-1">
             {tabsConfig.map((tab) => {
               const Icon = tab.icon;
               const isActive = activeTabId === tab.id;

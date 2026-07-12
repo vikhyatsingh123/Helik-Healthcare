@@ -1,6 +1,5 @@
-import { useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Cross } from 'lucide-react';
+import { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Loader = () => {
   const [visible, setVisible] = useState(true);
@@ -19,7 +18,10 @@ const Loader = () => {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
           className="fixed inset-0 z-[9999] flex items-center justify-center"
-          style={{ background: 'linear-gradient(135deg, #0f2347 0%, #1a3a6b 60%, #2a5298 100%)' }}
+          style={{
+            background:
+              "linear-gradient(135deg, #0f2347 0%, #1a3a6b 60%, #2a5298 100%)",
+          }}
         >
           {/* Animated rings */}
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
@@ -43,27 +45,35 @@ const Loader = () => {
             {/* Logo icon */}
             <motion.div
               className="relative w-20 h-20 rounded-2xl flex items-center justify-center"
-              style={{ background: 'linear-gradient(135deg, #e8732a, #f5a623)' }}
+              style={{
+                background: "linear-gradient(135deg, #e8732a, #f5a623)",
+              }}
               animate={{ rotateY: [0, 360] }}
-              transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
             >
-              <Cross className="w-10 h-10 text-white" strokeWidth={2.5} />
+              <img src="./helik_logo.jpeg" alt="logo" />
             </motion.div>
 
             {/* Company name */}
             <div className="text-center">
-              <h1 className="text-3xl font-bold text-white tracking-wide">Helik Healthcare</h1>
-              <p className="text-white/60 text-sm mt-1 tracking-widest uppercase">Advancing Health, Improving Lives</p>
+              <h1 className="text-3xl font-bold text-white tracking-wide">
+                Helik Healthcare
+              </h1>
+              <p className="text-white/60 text-sm mt-1 tracking-widest uppercase">
+                Advancing Health, Improving Lives
+              </p>
             </div>
 
             {/* Progress bar */}
             <div className="w-48 h-1 bg-white/20 rounded-full overflow-hidden">
               <motion.div
                 className="h-full rounded-full"
-                style={{ background: 'linear-gradient(90deg, #e8732a, #f5a623)' }}
-                initial={{ width: '0%' }}
-                animate={{ width: '100%' }}
-                transition={{ duration: 1.8, ease: 'easeInOut' }}
+                style={{
+                  background: "linear-gradient(90deg, #e8732a, #f5a623)",
+                }}
+                initial={{ width: "0%" }}
+                animate={{ width: "100%" }}
+                transition={{ duration: 1.8, ease: "easeInOut" }}
               />
             </div>
           </motion.div>

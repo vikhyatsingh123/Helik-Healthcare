@@ -411,7 +411,7 @@ const Home = () => {
                   viewport={{ once: true }}
                   className="snap-start shrink-0"
                 >
-                  <Link to="/product-range">
+                  <Link to="/products">
                     <div className="w-44 bg-white rounded-2xl p-6 flex flex-col items-center gap-3 shadow-sm hover:shadow-lg transition-all hover:-translate-y-1 cursor-pointer border border-gray-100">
                       <div
                         className="w-14 h-14 rounded-2xl flex items-center justify-center"
