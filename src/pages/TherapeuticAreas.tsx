@@ -38,7 +38,7 @@ const therapeuticAreas = [
     icon: Heart,
     title: "Cardiology",
     products: 85,
-    color: "#e8732a",
+    color: "#276f4b",
     description:
       "Our cardiovascular portfolio addresses hypertension, heart failure, arrhythmias, and lipid disorders. We offer branded and generic options including beta-blockers, ACE inhibitors, statins, and novel SGLT2 inhibitors.",
     highlights: [
@@ -178,7 +178,7 @@ const TherapeuticAreas = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeUp>
             <div className="text-center mb-14">
-              <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-[#e8732a] bg-orange-50 px-4 py-1.5 rounded-full mb-3">
+              <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-[#276f4b] bg-[#cfedd0] px-4 py-1.5 rounded-full mb-3">
                 Our Focus Areas
               </span>
               <h2 className="text-4xl font-bold text-[#1a3a6b] mb-4">

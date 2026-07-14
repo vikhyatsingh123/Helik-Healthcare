@@ -49,7 +49,7 @@ const benefits = [
     icon: Heart,
     title: "Health & Wellness",
     desc: "Comprehensive health insurance covering employee and family. Mental wellness programmes.",
-    color: "#e8732a",
+    color: "#276f4b",
   },
   {
     icon: Lightbulb,
@@ -147,7 +147,7 @@ const jobListings = [
 const deptColors: Record<string, string> = {
   "R&D": "#8b5cf6",
   "Medical Affairs": "#1a3a6b",
-  Regulatory: "#e8732a",
+  Regulatory: "#276f4b",
   Commercial: "#2ecc71",
   Quality: "#ec4899",
   Marketing: "#f59e0b",
@@ -168,6 +168,10 @@ const Careers = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitted(true);
+    const formData = new FormData(e.target as HTMLFormElement);
+    const recipient = formData.get("email");
+    const message = formData.get("message");
+    window.location.href = `mailto:${recipient}?subject=""&body=${message}`;
     setTimeout(() => setSubmitted(false), 4000);
     setForm({ name: "", email: "", position: "", message: "" });
     setFileName("");
@@ -230,10 +234,10 @@ const Careers = () => {
             </p>
             <div className="flex flex-wrap gap-4">
               <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-white/80 text-sm">
-                <Globe className="w-4 h-4 text-[#e8732a]" /> 10 Countries
+                <Globe className="w-4 h-4 text-[#276f4b]" /> 10 Countries
               </div>
               <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-white/80 text-sm">
-                <Award className="w-4 h-4 text-[#e8732a]" /> Great Place to Work
+                <Award className="w-4 h-4 text-[#276f4b]" /> Great Place to Work
                 Certified
               </div>
             </div>
@@ -246,7 +250,7 @@ const Careers = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeUp>
             <div className="text-center mb-14">
-              <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-[#e8732a] bg-orange-50 px-4 py-1.5 rounded-full mb-3">
+              <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-[#276f4b] bg-[#cfedd0] px-4 py-1.5 rounded-full mb-3">
                 Why Helik
               </span>
               <h2 className="text-4xl font-bold text-[#1a3a6b] mb-4">
@@ -293,7 +297,7 @@ const Careers = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeUp>
             <div className="text-center mb-14">
-              <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-[#e8732a] bg-orange-50 px-4 py-1.5 rounded-full mb-3">
+              <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-[#276f4b] bg-[#cfedd0] px-4 py-1.5 rounded-full mb-3">
                 Open Roles
               </span>
               <h2 className="text-4xl font-bold text-[#1a3a6b] mb-4">
@@ -326,16 +330,16 @@ const Careers = () => {
                           <Clock className="w-3 h-3" /> {job.type}
                         </span>
                       </div>
-                      <h3 className="font-bold text-[#1a3a6b] mb-1 group-hover:text-[#e8732a] transition-colors">
+                      <h3 className="font-bold text-[#1a3a6b] mb-1 group-hover:text-[#276f4b] transition-colors">
                         {job.title}
                       </h3>
                       <div className="flex items-center gap-4 text-sm text-gray-500">
                         <span className="flex items-center gap-1">
-                          <MapPin className="w-3.5 h-3.5 text-[#e8732a]" />{" "}
+                          <MapPin className="w-3.5 h-3.5 text-[#276f4b]" />{" "}
                           {job.location}
                         </span>
                         <span className="flex items-center gap-1">
-                          <Briefcase className="w-3.5 h-3.5 text-[#e8732a]" />{" "}
+                          <Briefcase className="w-3.5 h-3.5 text-[#276f4b]" />{" "}
                           {job.experience}
                         </span>
                       </div>
@@ -362,7 +366,7 @@ const Careers = () => {
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeUp>
             <div className="text-center mb-12">
-              <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-[#e8732a] bg-orange-50 px-4 py-1.5 rounded-full mb-3">
+              <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-[#276f4b] bg-[#cfedd0] px-4 py-1.5 rounded-full mb-3">
                 Apply
               </span>
               <h2 className="text-4xl font-bold text-[#1a3a6b] mb-4">
@@ -382,12 +386,16 @@ const Careers = () => {
             >
               <div className="grid sm:grid-cols-2 gap-5">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium text-gray-700 mb-1.5"
+                  >
                     Full Name *
                   </label>
                   <input
                     type="text"
                     required
+                    name="name"
                     value={form.name}
                     onChange={(e) => setForm({ ...form, name: e.target.value })}
                     placeholder="Dr. Ananya Sharma"
@@ -395,12 +403,16 @@ const Careers = () => {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-gray-700 mb-1.5"
+                  >
                     Email Address *
                   </label>
                   <input
                     type="email"
                     required
+                    name="email"
                     value={form.email}
                     onChange={(e) =>
                       setForm({ ...form, email: e.target.value })
@@ -412,11 +424,15 @@ const Careers = () => {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                <label
+                  htmlFor="position"
+                  className="block text-sm font-medium text-gray-700 mb-1.5"
+                >
                   Position Applying For *
                 </label>
                 <select
                   required
+                  name="position"
                   value={form.position}
                   onChange={(e) =>
                     setForm({ ...form, position: e.target.value })
@@ -434,7 +450,10 @@ const Careers = () => {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                <label
+                  htmlFor="cv"
+                  className="block text-sm font-medium text-gray-700 mb-1.5"
+                >
                   Upload Resume/CV
                 </label>
                 <label className="w-full border-2 border-dashed border-gray-200 rounded-xl p-5 flex flex-col items-center justify-center gap-2 cursor-pointer hover:border-[#1a3a6b] transition-colors group">
@@ -445,6 +464,7 @@ const Careers = () => {
                   <span className="text-xs text-gray-400">Max size: 5MB</span>
                   <input
                     type="file"
+                    name="cv"
                     accept=".pdf,.doc,.docx"
                     className="hidden"
                     onChange={(e) =>
@@ -455,11 +475,15 @@ const Careers = () => {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-gray-700 mb-1.5"
+                >
                   Cover Letter / Message
                 </label>
                 <textarea
                   rows={4}
+                  name="message"
                   value={form.message}
                   onChange={(e) =>
                     setForm({ ...form, message: e.target.value })

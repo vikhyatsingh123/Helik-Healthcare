@@ -20,7 +20,7 @@ const stats: Stat[] = [
     prefix: "",
     label: "Years of Industrial Experience",
     description: "Trusted pharmaceutical expertise since 1998",
-    color: "#e8732a",
+    color: "#276f4b",
   },
   {
     icon: Package,
@@ -38,7 +38,7 @@ const stats: Stat[] = [
     prefix: "",
     label: "Countries",
     description: "Global presence serving diverse markets",
-    color: "#2ecc71",
+    color: "#1a3a6b",
   },
   {
     icon: Users,
@@ -47,7 +47,7 @@ const stats: Stat[] = [
     prefix: "",
     label: "Trusted Clients",
     description: "Lives improved through quality healthcare",
-    color: "#e8732a",
+    color: "#276f4b",
   },
 ];
 
@@ -149,7 +149,7 @@ const StatsCounter = () => {
           animate={isVisible ? { opacity: 1 } : {}}
           className="text-center mb-12"
         >
-          <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-[#e8732a] bg-orange-50 px-4 py-1.5 rounded-full mb-3">
+          <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-[#276f4b] bg-[#cfedd0] px-4 py-1.5 rounded-full mb-3">
             Our Impact
           </span>
           <h2 className="text-3xl font-bold text-[#1a3a6b]">

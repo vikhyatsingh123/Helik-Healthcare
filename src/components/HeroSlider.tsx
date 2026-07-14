@@ -23,7 +23,7 @@ const slides: Slide[] = [
       "Developing life-changing medications that improve health outcomes for millions of patients across 10+ countries worldwide.",
     cta: "Explore Our Products",
     ctaPath: "/products",
-    accent: "#e8732a",
+    accent: "#276f4b",
     gradient: "linear-gradient(135deg, #0f2347 0%, #1a3a6b 45%, #2a5298 100%)",
   },
   {
@@ -45,7 +45,7 @@ const slides: Slide[] = [
       "With a robust distribution network spanning 10+ countries, we ensure our life-saving medicines reach patients wherever they are.",
     cta: "Partner With Us",
     ctaPath: "/contact",
-    accent: "#e8732a",
+    accent: "#276f4b",
     gradient: "linear-gradient(135deg, #1a0533 0%, #2d1b69 45%, #1a3a6b 100%)",
   },
 ];

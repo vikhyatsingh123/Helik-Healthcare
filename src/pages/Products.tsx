@@ -195,7 +195,7 @@ const Products = () => {
               <button
                 className="px-4 py-2 rounded-full text-sm font-medium text-white transition-all hover:shadow-lg hover:-translate-y-0.5"
                 style={{
-                  background: "linear-gradient(135deg, #e8732a, #f5a623)",
+                  background: "linear-gradient(135deg, #276f4b, #f5a623)",
                 }}
               >
                 <a href="/Helik_demo.pdf" download>
@@ -205,7 +205,7 @@ const Products = () => {
               <button
                 className="px-4 py-2 rounded-full text-sm font-medium text-white transition-all hover:shadow-lg hover:-translate-y-0.5"
                 style={{
-                  background: "linear-gradient(135deg, #e8732a, #f5a623)",
+                  background: "linear-gradient(135deg, #276f4b, #f5a623)",
                 }}
               >
                 <a href="/Product List Export Drug.pdf" download>

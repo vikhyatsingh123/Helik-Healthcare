@@ -10,7 +10,6 @@ import {
   Send,
   CheckCircle,
   Building2,
-  Globe,
 } from "lucide-react";
 
 const FadeUp = ({
@@ -52,7 +51,7 @@ const contactInfo = [
     icon: Phone,
     label: "Phone",
     value: "+91 9415812557\n+91 9793142303",
-    color: "#e8732a",
+    color: "#276f4b",
   },
   {
     icon: Mail,
@@ -196,7 +195,7 @@ const Contact = () => {
             {/* Contact Form */}
             <FadeUp>
               <div>
-                <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-[#e8732a] bg-orange-50 px-4 py-1.5 rounded-full mb-4">
+                <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-[#276f4b] bg-[#cfedd0] px-4 py-1.5 rounded-full mb-4">
                   Send Us a Message
                 </span>
                 <h2 className="text-3xl font-bold text-[#1a3a6b] mb-6">
@@ -349,7 +348,7 @@ const Contact = () => {
             {/* Map placeholder */}
             <FadeUp delay={0.2}>
               <div className="h-full min-h-80">
-                <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-[#e8732a] bg-orange-50 px-4 py-1.5 rounded-full mb-4">
+                <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-[#276f4b] bg-[#cfedd0] px-4 py-1.5 rounded-full mb-4">
                   Our Location
                 </span>
                 <h2 className="text-3xl font-bold text-[#1a3a6b] mb-6">
@@ -379,7 +378,7 @@ const Contact = () => {
                       animate={{ y: [0, -8, 0] }}
                       transition={{ duration: 2, repeat: Infinity }}
                       className="w-12 h-12 rounded-full flex items-center justify-center shadow-xl"
-                      style={{ background: "#e8732a" }}
+                      style={{ background: "#276f4b" }}
                     >
                       <MapPin className="w-6 h-6 text-white" />
                     </motion.div>
@@ -423,7 +422,7 @@ const Contact = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeUp>
             <div className="text-center mb-12">
-              <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-[#e8732a] bg-orange-50 px-4 py-1.5 rounded-full mb-3">
+              <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-[#276f4b] bg-[#cfedd0] px-4 py-1.5 rounded-full mb-3">
                 Our Offices
               </span>
               <h2 className="text-4xl font-bold text-[#1a3a6b] mb-4">

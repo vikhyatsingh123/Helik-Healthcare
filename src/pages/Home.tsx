@@ -55,7 +55,7 @@ const productCategories = [
     title: "Cardiology",
     desc: "Comprehensive cardiac care solutions including antihypertensives and anticoagulants.",
     count: 85,
-    color: "#e8732a",
+    color: "#276f4b",
   },
   {
     icon: Zap,
@@ -98,7 +98,7 @@ const whyUsItems = [
     icon: Lightbulb,
     title: "Quality & Compliance",
     desc: "We adhere to stringent quality systems, regulatory requirements, and international manufacturing standards to ensure safe, effective, and reliable healthcare products for global markets. Quality is embedded at every stage—from sourcing to final delivery.",
-    color: "#e8732a",
+    color: "#276f4b",
   },
   {
     icon: Globe,
@@ -110,39 +110,87 @@ const whyUsItems = [
 
 const testimonials = [
   {
-    name: "Dr. Priya Mehta",
-    role: "Cardiologist",
-    organization: "Apollo Hospitals",
+    name: "Mr. Sunil Kumar Singh",
+    role: "Director",
+    organization: "Shiva Sai Enterprises",
     quote:
-      "Helik's cardiac portfolio has been exceptional. The consistency in quality across their antihypertensive range has made them my preferred pharmaceutical partner.",
+      "Since 2020, Helik Healthcare has consistently delivered quality products with timely service, making them one of our most trusted pharmaceutical partners.",
     rating: 5,
-    initial: "PM",
+    initial: "SK",
+    country: "Nepal",
     color: "#1a3a6b",
   },
   {
-    name: "Dr. Rajesh Kumar",
-    role: "Oncologist",
-    organization: "Tata Memorial Centre",
+    name: "Mr. Om Bahadur Khadka",
+    role: "Director",
+    organization: "Kamakhya Traders",
     quote:
-      "The oncology line from Helik Healthcare demonstrates genuine commitment to patient outcomes. Their clinical support team is responsive and knowledgeable.",
+      "Reliable product quality, prompt deliveries, and professional support have made Helik Healthcare a dependable business partner since 2023.",
     rating: 5,
-    initial: "RK",
-    color: "#e8732a",
+    country: "Kathmandu",
+    initial: "OB",
+    color: "#276f4b",
   },
   {
-    name: "Ms. Sarah Williams",
-    role: "Procurement Director",
-    organization: "MedEx Distributors UK",
+    name: "Mr. Suprem Kumar Shrestha",
+    role: "Director",
+    organization: "Jakarta Traders & Suppliers Pvt. Ltd.",
     quote:
-      "As a distributor, Helik stands out for reliability. On-time delivery, stringent cold-chain management, and proactive communication make them a true partner.",
+      "Helik Healthcare has consistently delivered high-quality pharmaceutical products with dependable service, making them a trusted and reliable business partner.",
     rating: 5,
-    initial: "SW",
+    country: "Jakarta, Indonesia",
+    initial: "SK",
+    color: "#8b5cf6",
+  },
+  {
+    name: "Mr. Spandan",
+    role: "Director",
+    organization: "Shiv Shakti Trading",
+    quote:
+      "Helik Healthcare's consistent quality and dependable supply chain have helped us serve our customers with confidence across Eastern Nepal.",
+    rating: 5,
+    country: "Itahari, Nepal",
+    initial: "S",
+    color: "#8b5cf6",
+  },
+  {
+    name: "Mr. Krishna Adhikari",
+    role: "Director",
+    organization: "Blue Moon International",
+    quote:
+      "Efficient order management, secure packaging, and timely deliveries reflect Helik Healthcare's commitment to excellence.",
+    rating: 5,
+    initial: "KA",
+    country: "Kathmandu, Nepal",
+    color: "#8b5cf6",
+  },
+
+  {
+    name: "Dr. Vijay",
+    role: "Doctor",
+    organization: "General Physician",
+    quote:
+      "Helik Healthcare delivers quality pharmaceutical products with reliable service, earning our trust as a dependable healthcare partner.",
+    rating: 5,
+    country: "Thimphu, Bhutan",
+    initial: "V",
+    color: "#8b5cf6",
+  },
+  {
+    name: "Mr. Leki",
+    role: "Owner",
+    organization: "Kuenphen Supplies Bhutan",
+    quote:
+      "Consistent quality, timely deliveries, and professional support make Helik Healthcare a trusted pharmaceutical supplier in Bhutan.",
+    rating: 5,
+    country: "Thimphu, Bhutan",
+    initial: "L",
     color: "#8b5cf6",
   },
 ];
 
 const therapeuticAreaCards = [
-  { icon: Heart, label: "Cardiology", color: "#e8732a" },
+  { icon: Heart, label: "Cardiology", color: "#276f4b" },
   { icon: Zap, label: "Oncology", color: "#8b5cf6" },
   { icon: Brain, label: "Neurology", color: "#1a3a6b" },
   { icon: Sparkles, label: "Dermatology", color: "#ec4899" },
@@ -166,7 +214,7 @@ const Home = () => {
             {/* Text */}
             <div>
               <FadeUp>
-                <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-[#e8732a] bg-orange-50 px-4 py-1.5 rounded-full mb-4">
+                <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-[#276f4b] bg-[#cfedd0] px-4 py-1.5 rounded-full mb-4">
                   About Helik Healthcare
                 </span>
                 <h2 className="text-4xl font-bold text-[#1a3a6b] leading-tight mb-5">
@@ -292,8 +340,8 @@ const Home = () => {
                   animate={{ y: [4, -4, 4] }}
                   transition={{ duration: 3.5, repeat: Infinity }}
                 >
-                  <div className="w-10 h-10 rounded-xl bg-orange-50 flex items-center justify-center">
-                    <Globe className="w-5 h-5 text-[#e8732a]" />
+                  <div className="w-10 h-10 rounded-xl bg-[#cfedd0] flex items-center justify-center">
+                    <Globe className="w-5 h-5 text-[#276f4b]" />
                   </div>
                   <div>
                     <div className="text-xs text-gray-500">Global Reach</div>
@@ -313,7 +361,7 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeUp>
             <div className="text-center mb-14">
-              <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-[#e8732a] bg-orange-50 px-4 py-1.5 rounded-full mb-3">
+              <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-[#276f4b] bg-[#cfedd0] px-4 py-1.5 rounded-full mb-3">
                 Our Portfolio
               </span>
               <h2 className="text-4xl font-bold text-[#1a3a6b] mb-4">
@@ -387,7 +435,7 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeUp>
             <div className="text-center mb-10">
-              <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-[#e8732a] bg-orange-50 px-4 py-1.5 rounded-full mb-3">
+              <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-[#276f4b] bg-[#cfedd0] px-4 py-1.5 rounded-full mb-3">
                 Product Range Expertise
               </span>
               <h2 className="text-4xl font-bold text-[#1a3a6b]">
@@ -439,7 +487,7 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeUp>
             <div className="text-center mb-14">
-              <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-[#e8732a] bg-orange-50 px-4 py-1.5 rounded-full mb-3">
+              <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-[#276f4b] bg-[#cfedd0] px-4 py-1.5 rounded-full mb-3">
                 Why Helik
               </span>
               <h2 className="text-4xl font-bold text-[#1a3a6b] mb-4">
@@ -483,7 +531,7 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeUp>
             <div className="text-center mb-14">
-              <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-[#e8732a] bg-orange-50 px-4 py-1.5 rounded-full mb-3">
+              <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-[#276f4b] bg-[#cfedd0] px-4 py-1.5 rounded-full mb-3">
                 Testimonials
               </span>
               <h2 className="text-4xl font-bold text-[#1a3a6b] mb-4">
@@ -552,7 +600,7 @@ const Home = () => {
               <Link
                 to="/contact"
                 className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-white transition-all hover:shadow-xl hover:-translate-y-1"
-                style={{ background: "#e8732a" }}
+                style={{ background: "#276f4b" }}
               >
                 Partner With Us <ArrowRight className="w-4 h-4" />
               </Link>

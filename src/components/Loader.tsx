@@ -46,7 +46,7 @@ const Loader = () => {
             <motion.div
               className="relative w-20 h-20 rounded-2xl flex items-center justify-center"
               style={{
-                background: "linear-gradient(135deg, #e8732a, #f5a623)",
+                background: "linear-gradient(135deg, #276f4b, #f5a623)",
               }}
               animate={{ rotateY: [0, 360] }}
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
@@ -60,7 +60,7 @@ const Loader = () => {
                 Helik Healthcare
               </h1>
               <p className="text-white/60 text-sm mt-1 tracking-widest uppercase">
-                Advancing Health, Improving Lives
+                Excellence in Every Molecule
               </p>
             </div>
 
@@ -69,7 +69,7 @@ const Loader = () => {
               <motion.div
                 className="h-full rounded-full"
                 style={{
-                  background: "linear-gradient(90deg, #e8732a, #f5a623)",
+                  background: "linear-gradient(90deg, #276f4b, #f5a623)",
                 }}
                 initial={{ width: "0%" }}
                 animate={{ width: "100%" }}

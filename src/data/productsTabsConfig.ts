@@ -41,7 +41,7 @@ export const tabsConfig: TabConfig[] = [
     id: "Cardiovascular System",
     label: "Cardiovascular System",
     icon: Heart,
-    color: "#e8732a",
+    color: "#276f4b",
     tabName: "Cardiovascular System",
   },
   {

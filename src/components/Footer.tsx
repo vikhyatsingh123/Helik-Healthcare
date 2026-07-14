@@ -84,7 +84,7 @@ const Footer = () => {
                   key={label}
                   href={href}
                   aria-label={label}
-                  className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-[#e8732a] transition-colors"
+                  className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-[#276f4b] transition-colors"
                 >
                   <Icon />
                 </a>
@@ -104,7 +104,7 @@ const Footer = () => {
                     to={link.path}
                     className="flex items-center gap-2 text-white/70 hover:text-white text-sm transition-colors group"
                   >
-                    <ArrowRight className="w-3 h-3 text-[#e8732a] transition-transform group-hover:translate-x-1" />
+                    <ArrowRight className="w-3 h-3 text-[#276f4b] transition-transform group-hover:translate-x-1" />
                     {link.label}
                   </Link>
                 </li>
@@ -124,7 +124,7 @@ const Footer = () => {
                     to={area.path}
                     className="flex items-center gap-2 text-white/70 hover:text-white text-sm transition-colors group"
                   >
-                    <ArrowRight className="w-3 h-3 text-[#e8732a] transition-transform group-hover:translate-x-1" />
+                    <ArrowRight className="w-3 h-3 text-[#276f4b] transition-transform group-hover:translate-x-1" />
                     {area.label}
                   </Link>
                 </li>
@@ -139,7 +139,7 @@ const Footer = () => {
             </h3>
             <ul className="space-y-4">
               <li className="flex gap-3">
-                <MapPin className="w-4 h-4 text-[#e8732a] mt-0.5 shrink-0" />
+                <MapPin className="w-4 h-4 text-[#276f4b] mt-0.5 shrink-0" />
                 <span className="text-white/70 text-sm">
                   Helik Towers, Bandra Kurla Complex,
                   <br />
@@ -147,12 +147,12 @@ const Footer = () => {
                 </span>
               </li>
               <li className="flex gap-3">
-                <Phone className="w-4 h-4 text-[#e8732a] mt-0.5 shrink-0" />
+                <Phone className="w-4 h-4 text-[#276f4b] mt-0.5 shrink-0" />
                 <span className="text-white/70 text-sm">+91 9415812557</span>
                 <span className="text-white/70 text-sm">+91 9793142303</span>
               </li>
               <li className="flex gap-3">
-                <Mail className="w-4 h-4 text-[#e8732a] mt-0.5 shrink-0" />
+                <Mail className="w-4 h-4 text-[#276f4b] mt-0.5 shrink-0" />
                 <a
                   href="mailto:info@helikhealthcare.com"
                   className="text-white/70 hover:text-white text-sm transition-colors"

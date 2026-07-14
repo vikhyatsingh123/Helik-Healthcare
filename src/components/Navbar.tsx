@@ -58,9 +58,7 @@ const Navbar = () => {
                 Helik
               </span>
               <span
-                className={`text-3xl font-light transition-colors ${
-                  isTransparent ? "text-white/80" : "text-gray-500"
-                }`}
+                className={`text-3xl font-light transition-colors text-[#276f4b]`}
               >
                 {" "}
                 Healthcare
@@ -97,7 +95,7 @@ const Navbar = () => {
               to="/contact"
               className="hidden sm:inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm font-semibold text-white transition-all hover:shadow-lg hover:-translate-y-0.5"
               style={{
-                background: "linear-gradient(135deg, #e8732a, #f5a623)",
+                background: "#276f4b",
               }}
             >
               Get In Touch
@@ -148,7 +146,7 @@ const Navbar = () => {
                 to="/contact"
                 className="block w-full text-center px-4 py-2.5 rounded-full text-sm font-semibold text-white mt-2"
                 style={{
-                  background: "linear-gradient(135deg, #e8732a, #f5a623)",
+                  background: "#276f4b",
                 }}
               >
                 Get In Touch

@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion';
-import { Quote } from 'lucide-react';
+import { motion } from "framer-motion";
+import { Quote } from "lucide-react";
 
 interface TestimonialCardProps {
   name: string;
@@ -7,6 +7,7 @@ interface TestimonialCardProps {
   organization: string;
   quote: string;
   rating: number;
+  country: string;
   initial: string;
   color: string;
   index: number;
@@ -17,6 +18,7 @@ const TestimonialCard = ({
   name,
   role,
   organization,
+  country,
   quote,
   rating,
   initial,
@@ -32,8 +34,8 @@ const TestimonialCard = ({
       className="bg-white rounded-2xl p-7 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col"
     >
       {/* Quote icon */}
-      <div className="w-10 h-10 rounded-xl bg-orange-50 flex items-center justify-center mb-5">
-        <Quote className="w-5 h-5 text-[#e8732a]" />
+      <div className="w-10 h-10 rounded-xl bg-[#cfedd0] flex items-center justify-center mb-5">
+        <Quote className="w-5 h-5 text-[#276f4b]" />
       </div>
 
       {/* Stars */}
@@ -41,7 +43,9 @@ const TestimonialCard = ({
         {[...Array(5)].map((_, i) => (
           <svg
             key={i}
-            className={`w-4 h-4 ${i < rating ? 'text-amber-400' : 'text-gray-200'}`}
+            className={`w-4 h-4 ${
+              i < rating ? "text-amber-400" : "text-gray-200"
+            }`}
             fill="currentColor"
             viewBox="0 0 20 20"
           >
@@ -65,7 +69,10 @@ const TestimonialCard = ({
         </div>
         <div>
           <div className="font-semibold text-[#1a3a6b] text-sm">{name}</div>
-          <div className="text-xs text-gray-500">{role}, {organization}</div>
+          <div className="text-xs text-gray-700">
+            {role}, {organization}
+          </div>
+          <div className="text-xs text-gray-500">{country}</div>
         </div>
       </div>
     </motion.div>

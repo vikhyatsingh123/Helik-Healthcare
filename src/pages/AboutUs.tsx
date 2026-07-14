@@ -4,7 +4,6 @@ import { motion, useInView } from "framer-motion";
 import {
   Target,
   Eye,
-  Award,
   Globe,
   Lightbulb,
   Heart,
@@ -47,7 +46,7 @@ const values = [
     icon: Lightbulb,
     title: "Innovation",
     desc: "Relentless pursuit of new ideas and technologies to advance pharmaceutical science.",
-    color: "#e8732a",
+    color: "#276f4b",
   },
   {
     icon: Heart,
@@ -65,42 +64,109 @@ const values = [
 
 const teamMembers = [
   {
-    name: "Arvind Mehta",
+    name: "Sudhir Kumar Pandey",
     title: "Chairman & CEO",
-    bio: "A visionary leader with 30+ years in pharma. Arvind co-founded Helik in 1998 and has guided its growth into a global organisation.",
-    initial: "AM",
+    bio: "A visionary leader with 30+ years in pharma. Sudhir founded Helik in 2020 and has guided its growth into a global organisation after running successfully Gamete Healthcare Pvt. Ltd. for 30+ years.",
+    initial: "SK",
     color: "#1a3a6b",
   },
   {
-    name: "Dr. Sunita Rao",
-    title: "Chief Scientific Officer",
-    bio: "PhD in Medicinal Chemistry from IIT Mumbai. Dr. Rao leads a team of 400 scientists across our global R&D centres.",
-    initial: "SR",
-    color: "#e8732a",
+    name: "Tushar Pandey",
+    title: "Director",
+    bio: "An MBA in International Marketing, Tushar leads Helik Healthcare with a vision for sustainable growth and global expansion. He focuses on strengthening international partnerships, and driving strategic business initiatives.",
+    initial: "TP",
+    color: "#276f4b",
   },
   {
-    name: "James Whitfield",
-    title: "Chief Commercial Officer",
-    bio: "Former VP at GSK, James drives Helik's global commercial strategy and partnership ecosystem across 10+ markets.",
-    initial: "JW",
+    name: "Rahul Pandey",
+    title: "Executive Director",
+    bio: "Worked at Accenture, a leading global technology and consulting company, for over two years as a Software Engineer. Rahul Pandey brings together technology expertise and business acumen to lead marketing, and business operations.",
+    initial: "RP",
     color: "#8b5cf6",
   },
   {
-    name: "Priya Shankar",
-    title: "Chief Financial Officer",
-    bio: "A CFA charterholder with 20 years in pharmaceutical finance. Priya oversees Helik's financial strategy and investor relations.",
-    initial: "PS",
+    name: "Vikhyat Singh",
+    title: "Website & Digital Marketing Head",
+    bio: "Leads Helik's digital presence, overseeing website development, online marketing campaigns, and social media strategy to enhance brand visibility and engagement.",
+    initial: "VS",
     color: "#2ecc71",
   },
 ];
 
 const certifications = [
-  { label: "WHO", sublabel: "World Health Organization", color: "#8b5cf6" },
-  { label: "ISO 9001", sublabel: "2015 Certified", color: "#e8732a" },
-  { label: "GMP", sublabel: "Approved Facility", color: "#2ecc71" },
+  {
+    label: "GMP",
+    sublabel: "Approved Facility",
+    color: "#2ecc71",
+    logo: "./gmp.png",
+  },
+  {
+    label: "WHO",
+    sublabel: "World Health Organization",
+    color: "#8b5cf6",
+    logo: "./who.jpg",
+  },
+
+  {
+    label: "ISO 9001",
+    sublabel: "2015 Certified",
+    color: "#276f4b",
+    logo: "./iso.png",
+  },
 ];
 
-const countries = ["India", "UAE"];
+const countries = [
+  {
+    id: 1,
+    name: "India",
+    flag: "https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg",
+  },
+  {
+    id: 2,
+    name: "Nepal",
+    flag: "https://upload.wikimedia.org/wikipedia/commons/9/9b/Flag_of_Nepal.svg",
+  },
+  {
+    id: 3,
+    name: "Bhutan",
+    flag: "https://upload.wikimedia.org/wikipedia/commons/9/91/Flag_of_Bhutan.svg",
+  },
+  {
+    id: 4,
+    name: "Dubai",
+    flag: "https://upload.wikimedia.org/wikipedia/commons/c/cb/Flag_of_the_United_Arab_Emirates.svg",
+  },
+  {
+    id: 5,
+    name: "Canada",
+    flag: "https://upload.wikimedia.org/wikipedia/commons/c/cf/Flag_of_Canada.svg",
+  },
+  {
+    id: 6,
+    name: "Myanmar",
+    flag: "https://upload.wikimedia.org/wikipedia/commons/8/8c/Flag_of_Myanmar.svg",
+  },
+  {
+    id: 7,
+    name: "Romania",
+    flag: "https://upload.wikimedia.org/wikipedia/commons/7/73/Flag_of_Romania.svg",
+  },
+  {
+    id: 8,
+    name: "Qatar",
+    flag: "https://upload.wikimedia.org/wikipedia/commons/6/65/Flag_of_Qatar.svg",
+  },
+  {
+    id: 9,
+    name: "Ethiopia",
+    flag: "https://upload.wikimedia.org/wikipedia/commons/7/71/Flag_of_Ethiopia.svg",
+  },
+  {
+    id: 10,
+    name: "Sudan",
+    flag: "https://upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_Sudan.svg",
+  },
+];
 
 const AboutUs = () => {
   return (
@@ -160,7 +226,7 @@ const AboutUs = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeUp>
             <div className="text-center mb-14">
-              <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-[#e8732a] bg-orange-50 px-4 py-1.5 rounded-full mb-3">
+              <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-[#276f4b] bg-[#cfedd0] px-4 py-1.5 rounded-full mb-3">
                 Purpose & Direction
               </span>
               <h2 className="text-4xl font-bold text-[#1a3a6b]">
@@ -185,16 +251,17 @@ const AboutUs = () => {
                     Our Mission
                   </h3>
                   <p className="text-white/80 leading-relaxed text-base">
-                    To discover, develop, and deliver pharmaceutical innovations
-                    that meaningfully improve patient outcomes globally. We are
-                    committed to making high-quality healthcare accessible to
-                    every individual, regardless of geography or economic
-                    status.
+                    To make high-quality healthcare accessible by delivering
+                    safe, effective, and affordable pharmaceutical products
+                    across the globe. Through WHO-GMP and ISO-certified contract
+                    manufacturing partners, we are committed to maintaining
+                    world-class quality standards while building lasting trust
+                    with healthcare professionals, distributors, and consumers
+                    in every market we serve.
                   </p>
                   <div className="mt-8 pt-6 border-t border-white/20">
                     <p className="text-white/60 text-sm italic">
-                      "Advancing Health, Improving Lives — one patient at a
-                      time."
+                      "Excellence in Every Molecule"
                     </p>
                   </div>
                 </div>
@@ -206,23 +273,23 @@ const AboutUs = () => {
                 <div className="p-10">
                   <div
                     className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6"
-                    style={{ background: "#e8732a20" }}
+                    style={{ background: "#276f4b20" }}
                   >
-                    <Eye className="w-7 h-7 text-[#e8732a]" />
+                    <Eye className="w-7 h-7 text-[#276f4b]" />
                   </div>
                   <h3 className="text-2xl font-bold text-[#1a3a6b] mb-4">
                     Our Vision
                   </h3>
                   <p className="text-gray-600 leading-relaxed text-base">
-                    To be the world's most trusted pharmaceutical company,
-                    recognised for our scientific excellence, ethical practices,
-                    and transformative impact on global health. By 2030, we aim
-                    to serve 100 million patients across 80 countries.
+                    To become a leading global pharmaceutical company by setting
+                    new benchmarks in quality, reliability, and customer
+                    satisfaction through internationally certified manufacturing
+                    and ethical business practices.
                   </p>
                   <div className="mt-8 pt-6 border-t border-gray-100">
                     <div className="flex gap-6">
                       <div>
-                        <div className="text-2xl font-bold text-[#e8732a]">
+                        <div className="text-2xl font-bold text-[#276f4b]">
                           2030
                         </div>
                         <div className="text-xs text-gray-500">Target Year</div>
@@ -253,7 +320,7 @@ const AboutUs = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeUp>
             <div className="text-center mb-14">
-              <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-[#e8732a] bg-orange-50 px-4 py-1.5 rounded-full mb-3">
+              <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-[#276f4b] bg-[#cfedd0] px-4 py-1.5 rounded-full mb-3">
                 What We Stand For
               </span>
               <h2 className="text-4xl font-bold text-[#1a3a6b]">Core Values</h2>
@@ -291,7 +358,7 @@ const AboutUs = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeUp>
             <div className="text-center mb-14">
-              <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-[#e8732a] bg-orange-50 px-4 py-1.5 rounded-full mb-3">
+              <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-[#276f4b] bg-[#cfedd0] px-4 py-1.5 rounded-full mb-3">
                 Leadership
               </span>
               <h2 className="text-4xl font-bold text-[#1a3a6b] mb-4">
@@ -321,7 +388,7 @@ const AboutUs = () => {
                   </div>
                   <div className="p-5">
                     <h3 className="font-bold text-[#1a3a6b]">{member.name}</h3>
-                    <div className="text-xs font-medium text-[#e8732a] mb-3">
+                    <div className="text-xs font-medium text-[#276f4b] mb-3">
                       {member.title}
                     </div>
                     <p className="text-xs text-gray-500 leading-relaxed">
@@ -340,7 +407,7 @@ const AboutUs = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeUp>
             <div className="text-center mb-14">
-              <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-[#e8732a] bg-orange-50 px-4 py-1.5 rounded-full mb-3">
+              <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-[#276f4b] bg-[#cfedd0] px-4 py-1.5 rounded-full mb-3">
                 Recognition
               </span>
               <h2 className="text-4xl font-bold text-[#1a3a6b] mb-4">
@@ -360,12 +427,7 @@ const AboutUs = () => {
                   className="flex flex-col items-center justify-center p-6 rounded-2xl border-2 border-dashed hover:shadow-lg transition-all"
                   style={{ borderColor: `${cert.color}40` }}
                 >
-                  <div
-                    className="w-12 h-12 rounded-xl flex items-center justify-center mb-3"
-                    style={{ background: `${cert.color}15` }}
-                  >
-                    <Award className="w-6 h-6" style={{ color: cert.color }} />
-                  </div>
+                  <img src={cert.logo} alt="logo" width="100px" />
                   <div className="font-bold text-sm text-[#1a3a6b] text-center">
                     {cert.label}
                   </div>
@@ -384,14 +446,14 @@ const AboutUs = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeUp>
             <div className="text-center mb-14">
-              <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-[#e8732a] bg-orange-50 px-4 py-1.5 rounded-full mb-3">
+              <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-[#276f4b] bg-[#cfedd0] px-4 py-1.5 rounded-full mb-3">
                 Worldwide
               </span>
               <h2 className="text-4xl font-bold text-[#1a3a6b] mb-4">
                 Global Presence
               </h2>
               <p className="text-gray-500 max-w-xl mx-auto">
-                Our products reach patients in over 2 countries
+                Our products reach patients in over 10 countries
               </p>
             </div>
           </FadeUp>
@@ -405,39 +467,12 @@ const AboutUs = () => {
                   background: "linear-gradient(135deg, #1a3a6b, #2a5298)",
                 }}
               >
-                <div
-                  className="absolute inset-0 opacity-10"
-                  style={{
-                    backgroundImage:
-                      "radial-gradient(circle, white 1.5px, transparent 1.5px)",
-                    backgroundSize: "30px 30px",
-                  }}
+                <img
+                  src="./map.png"
+                  alt="world map"
+                  style={{ height: "stretch" }}
                 />
-                {/* Continent shapes using CSS */}
-                <div className="relative z-10 text-center">
-                  <Globe className="w-20 h-20 text-white/50 mx-auto mb-4" />
-                  <p className="text-white/70 font-medium">
-                    2 Countries Worldwide
-                  </p>
-                  <p className="text-white/40 text-sm mt-1">2 Continents</p>
-                </div>
                 {/* Animated dots */}
-                {[...Array(8)].map((_, i) => (
-                  <motion.div
-                    key={i}
-                    className="absolute w-2 h-2 bg-[#e8732a] rounded-full"
-                    style={{
-                      left: `${15 + ((i * 10) % 75)}%`,
-                      top: `${20 + ((i * 15) % 60)}%`,
-                    }}
-                    animate={{ scale: [1, 1.5, 1], opacity: [0.7, 1, 0.7] }}
-                    transition={{
-                      duration: 2,
-                      delay: i * 0.3,
-                      repeat: Infinity,
-                    }}
-                  />
-                ))}
               </div>
             </FadeUp>
 
@@ -450,11 +485,15 @@ const AboutUs = () => {
                 <div className="flex flex-wrap gap-2">
                   {countries.map((country) => (
                     <span
-                      key={country}
-                      className="flex items-center gap-1.5 bg-white border border-gray-100 shadow-sm px-3 py-1.5 rounded-full text-sm text-gray-700 hover:border-[#1a3a6b] hover:text-[#1a3a6b] transition-colors cursor-default"
+                      key={country.id}
+                      className="flex items-center gap-1.5 bg-white border border-gray-100 shadow-sm px-3 py-1.5 rounded-2xl text-sm text-gray-700 hover:border-[#1a3a6b] hover:text-[#1a3a6b] transition-colors cursor-default"
                     >
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#e8732a]" />
-                      {country}
+                      <img
+                        src={country.flag}
+                        alt={`${country.name} flag`}
+                        className="w-12 h-12 rounded-full object-cover"
+                      />
+                      {country.name}
                     </span>
                   ))}
                 </div>
