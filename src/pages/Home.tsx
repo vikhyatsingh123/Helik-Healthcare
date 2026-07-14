@@ -3,15 +3,25 @@ import { Link } from "react-router-dom";
 import { motion, useInView } from "framer-motion";
 import {
   Heart,
-  Zap,
   Brain,
   Sparkles,
-  Pill,
   Leaf,
   CheckCircle,
   Lightbulb,
   Globe,
   ArrowRight,
+  TestTube2,
+  Package,
+  Hand,
+  Syringe,
+  Eye,
+  Baby,
+  FlaskConical,
+  Bone,
+  ShieldPlus,
+  Activity,
+  Soup,
+  ZapIcon,
 } from "lucide-react";
 import HeroSlider from "../components/HeroSlider";
 import StatsCounter from "../components/StatsCounter";
@@ -46,44 +56,121 @@ const productCategories = [
   {
     icon: Leaf,
     title: "Nutraceuticals & Herbal Supplements",
-    desc: "Evidence-based nutritional supplements supporting overall wellbeing.",
+    desc: "Evidence-based nutritional and herbal supplements supporting overall health and wellness.",
     count: 90,
     color: "#f59e0b",
   },
   {
     icon: Heart,
-    title: "Cardiology",
-    desc: "Comprehensive cardiac care solutions including antihypertensives and anticoagulants.",
+    title: "Cardiovascular System",
+    desc: "Medicines for hypertension, heart failure, cholesterol management, and other cardiovascular conditions.",
     count: 85,
     color: "#276f4b",
   },
   {
-    icon: Zap,
-    title: "Oncology",
-    desc: "Advanced cancer therapies targeting solid tumors and haematological malignancies.",
+    icon: Brain,
+    title: "Central Nervous System",
+    desc: "Therapies for neurological and psychiatric disorders including epilepsy, anxiety, and depression.",
     count: 62,
     color: "#8b5cf6",
   },
   {
-    icon: Brain,
-    title: "Neurology",
-    desc: "Treatments for neurological disorders including epilepsy, migraine and Parkinson's.",
+    icon: Activity,
+    title: "Anti-diabetic",
+    desc: "Tablets and capsules for effective blood glucose control and diabetes management.",
     count: 47,
     color: "#1a3a6b",
   },
   {
-    icon: Sparkles,
-    title: "Dermatology",
-    desc: "Skincare and dermatological solutions for chronic and acute conditions.",
-    count: 38,
-    color: "#ec4899",
-  },
-  {
-    icon: Pill,
-    title: "Antibiotics",
-    desc: "Broad-spectrum and targeted antibiotics addressing resistant pathogens.",
+    icon: ShieldPlus,
+    title: "Antibiotic & Anti-Infective",
+    desc: "Broad-spectrum antibiotics and anti-infective medicines for bacterial and other infections.",
     count: 55,
     color: "#2ecc71",
+  },
+  {
+    icon: Soup,
+    title: "Alimentary System",
+    desc: "Medicines for digestive health, acidity, ulcers, constipation, and gastrointestinal disorders.",
+    count: 40,
+    color: "#f97316",
+  },
+  {
+    icon: Bone,
+    title: "Analgesics & Musculo Skeletal Disorders",
+    desc: "Pain management and anti-inflammatory medicines for muscles, joints, and bones.",
+    count: 50,
+    color: "#ef4444",
+  },
+  {
+    icon: ZapIcon,
+    title: "RI Tract & Anti-Allergic",
+    desc: "Treatments for respiratory infections, allergies, asthma, and cough-related conditions.",
+    count: 36,
+    color: "#0ea5e9",
+  },
+  {
+    icon: Sparkles,
+    title: "Vitamins & Minerals",
+    desc: "Essential vitamin and mineral supplements for nutritional support and deficiency management.",
+    count: 44,
+    color: "#eab308",
+  },
+  {
+    icon: FlaskConical,
+    title: "Other Formulations",
+    desc: "A range of specialized pharmaceutical formulations for diverse therapeutic needs.",
+    count: 28,
+    color: "#64748b",
+  },
+  {
+    icon: Baby,
+    title: "Oral Dry Suspensions & Oral Liquids",
+    desc: "Liquid formulations and suspensions designed for pediatric and adult patients.",
+    count: 31,
+    color: "#14b8a6",
+  },
+  {
+    icon: Syringe,
+    title: "General Injections",
+    desc: "Injectable medicines for hospital, emergency, and clinical care applications.",
+    count: 24,
+    color: "#7c3aed",
+  },
+  {
+    icon: Eye,
+    title: "Eye, Ear & Nasal Drops",
+    desc: "Sterile ophthalmic, otic, and nasal preparations for localized treatment.",
+    count: 20,
+    color: "#06b6d4",
+  },
+  {
+    icon: Hand,
+    title: "External Preparations",
+    desc: "Topical solutions for skin care, wound management, and localized pain relief.",
+    count: 29,
+    color: "#84cc16",
+  },
+  {
+    icon: Package,
+    title: "Oral Powders (Sachet)",
+    desc: "Convenient sachet formulations for nutritional support and therapeutic treatment.",
+    count: 18,
+    color: "#f43f5e",
+  },
+  {
+    icon: TestTube2,
+    title: "Products Under Development",
+    desc: "Innovative pharmaceutical formulations currently under research and development.",
+    count: 15,
+    color: "#6366f1",
+  },
+  {
+    icon: Sparkles,
+    title: "Ointments, Creams, Gels, Lotions & Shampoo",
+    desc: "Topical dermatological and personal care formulations for various skin and scalp conditions.",
+    count: 35,
+    color: "#22c55e",
   },
 ];
 
@@ -190,12 +277,91 @@ const testimonials = [
 ];
 
 const therapeuticAreaCards = [
-  { icon: Heart, label: "Cardiology", color: "#276f4b" },
-  { icon: Zap, label: "Oncology", color: "#8b5cf6" },
-  { icon: Brain, label: "Neurology", color: "#1a3a6b" },
-  { icon: Sparkles, label: "Dermatology", color: "#ec4899" },
-  { icon: Pill, label: "Antibiotics", color: "#2ecc71" },
-  { icon: Leaf, label: "Supplements", color: "#f59e0b" },
+  {
+    icon: Leaf,
+    title: "Nutraceuticals & Herbal Supplements",
+    color: "#f59e0b",
+  },
+  {
+    icon: Heart,
+    title: "Cardiovascular System",
+    color: "#ef4444",
+  },
+  {
+    icon: Brain,
+    title: "Central Nervous System",
+    color: "#8b5cf6",
+  },
+  {
+    icon: Activity,
+    title: "Anti-diabetic",
+    color: "#1a3a6b",
+  },
+  {
+    icon: ShieldPlus,
+    title: "Antibiotic & Anti-Infective",
+    color: "#22c55e",
+  },
+  {
+    icon: Soup,
+    title: "Alimentary System",
+    color: "#f97316",
+  },
+  {
+    icon: Bone,
+    title: "Analgesics & Musculo Skeletal Disorders",
+    color: "#0ea5e9",
+  },
+  {
+    icon: Heart,
+    title: "RI Tract & Anti-Allergic",
+    color: "#06b6d4",
+  },
+  {
+    icon: Sparkles,
+    title: "Vitamins & Minerals",
+    color: "#eab308",
+  },
+  {
+    icon: FlaskConical,
+    title: "Other Formulations",
+    color: "#64748b",
+  },
+  {
+    icon: Baby,
+    title: "Oral Dry Suspensions & Oral Liquids",
+    color: "#14b8a6",
+  },
+  {
+    icon: Syringe,
+    title: "General Injections",
+    color: "#dc2626",
+  },
+  {
+    icon: Eye,
+    title: "Eye, Ear & Nasal Drops",
+    color: "#0284c7",
+  },
+  {
+    icon: Hand,
+    title: "External Preparations",
+    color: "#84cc16",
+  },
+  {
+    icon: Package,
+    title: "Oral Powders (Sachet)",
+    color: "#f43f5e",
+  },
+  {
+    icon: TestTube2,
+    title: "Products Under Development",
+    color: "#6366f1",
+  },
+  {
+    icon: Sparkles,
+    title: "Ointments, Creams, Gels, Lotions & Shampoo",
+    color: "#10b981",
+  },
 ];
 
 const Home = () => {
@@ -444,40 +610,48 @@ const Home = () => {
             </div>
           </FadeUp>
 
-          <div
-            className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide"
-            style={{ scrollbarWidth: "none" }}
-          >
-            {therapeuticAreaCards.map((area, i) => {
-              const Icon = area.icon;
-              return (
-                <motion.div
-                  key={area.label}
-                  initial={{ opacity: 0, x: 30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: i * 0.1 }}
-                  viewport={{ once: true }}
-                  className="snap-start shrink-0"
-                >
-                  <Link to="/products">
-                    <div className="w-44 bg-white rounded-2xl p-6 flex flex-col items-center gap-3 shadow-sm hover:shadow-lg transition-all hover:-translate-y-1 cursor-pointer border border-gray-100">
-                      <div
-                        className="w-14 h-14 rounded-2xl flex items-center justify-center"
-                        style={{ background: `${area.color}15` }}
-                      >
-                        <Icon
-                          className="w-7 h-7"
-                          style={{ color: area.color }}
-                        />
-                      </div>
-                      <span className="text-sm font-semibold text-[#1a3a6b] text-center">
-                        {area.label}
-                      </span>
+          <div className="overflow-hidden w-full h-46">
+            <motion.div
+              className="flex gap-4 mt-2"
+              animate={{
+                x: ["0%", "-50%"],
+              }}
+              transition={{
+                repeat: Infinity,
+                repeatType: "loop",
+                duration: 20,
+                ease: "linear",
+              }}
+              whileHover={{ animationPlayState: "paused" }}
+            >
+              {[...therapeuticAreaCards, ...therapeuticAreaCards].map(
+                (area, i) => {
+                  const Icon = area.icon;
+
+                  return (
+                    <div key={`${area.title}-${i}`} className="shrink-0">
+                      <Link to="/products">
+                        <div className="w-44 h-40 bg-white rounded-2xl p-6 flex flex-col items-center gap-3 shadow-sm hover:shadow-lg transition-all hover:-translate-y-1 cursor-pointer border border-gray-100">
+                          <div
+                            className="w-14 h-14 rounded-2xl flex items-center justify-center"
+                            style={{ background: `${area.color}15` }}
+                          >
+                            <Icon
+                              className="w-7 h-7"
+                              style={{ color: area.color }}
+                            />
+                          </div>
+
+                          <div className="text-sm h-[82px] flex items-center justify-center font-semibold text-[#1a3a6b] text-center">
+                            {area.title}
+                          </div>
+                        </div>
+                      </Link>
                     </div>
-                  </Link>
-                </motion.div>
-              );
-            })}
+                  );
+                }
+              )}
+            </motion.div>
           </div>
         </div>
       </section>

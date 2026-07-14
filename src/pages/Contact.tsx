@@ -72,7 +72,8 @@ const offices = [
     city: "Noida, India",
     address:
       "C-502, Hotech Commercial, C-Block, Defence Enclave, Noida Sector-44, Uttar Pradesh 201301, India",
-    phone: "+91 9415812557\n+91 9793142303",
+    phone1: "+91 9415812557",
+    phone2: "+91 9793142303",
     email: "helikhealthcare@gmail.com",
     type: "North India Headquarters",
     color: "#1a3a6b",
@@ -80,10 +81,11 @@ const offices = [
   {
     city: "Dubai, UAE",
     address: "Owaisi Building, 302, Golden Sands, Mankhool, Dubai, UAE",
-    phone: "+91 9415812557\n+91 9793142303",
+    phone1: "+91 9415812557",
+    phone2: "+91 9793142303",
     email: "helikhealthcare@gmail.com",
     type: "International Headquarters",
-    color: "#2ecc71",
+    color: "#276f4b",
   },
 ];
 
@@ -111,6 +113,7 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
+    window.location.href = `mailto:${form.email}?subject=${form.subject}&body="Hi, I'm ${form.name} \n ${form.message}"`;
     setTimeout(() => {
       setLoading(false);
       setSubmitted(true);
@@ -300,7 +303,7 @@ const Contact = () => {
                         </label>
                         <textarea
                           required
-                          rows={5}
+                          rows={7}
                           value={form.message}
                           onChange={(e) =>
                             setForm({ ...form, message: e.target.value })
@@ -355,59 +358,25 @@ const Contact = () => {
                   Find Us Here
                 </h2>
 
-                {/* Map placeholder */}
-                <div
-                  className="rounded-3xl overflow-hidden h-72 relative flex items-center justify-center"
-                  style={{
-                    background:
-                      "linear-gradient(135deg, #e8f0fe, #c5d8f5, #dceefa)",
-                  }}
-                >
-                  {/* Fake map grid */}
-                  <div
-                    className="absolute inset-0"
-                    style={{
-                      backgroundImage:
-                        "linear-gradient(#c5d8f510 1px, transparent 1px), linear-gradient(90deg, #c5d8f510 1px, transparent 1px)",
-                      backgroundSize: "40px 40px",
-                    }}
-                  />
-                  {/* Map pin */}
-                  <div className="relative z-10 flex flex-col items-center">
-                    <motion.div
-                      animate={{ y: [0, -8, 0] }}
-                      transition={{ duration: 2, repeat: Infinity }}
-                      className="w-12 h-12 rounded-full flex items-center justify-center shadow-xl"
-                      style={{ background: "#276f4b" }}
-                    >
-                      <MapPin className="w-6 h-6 text-white" />
-                    </motion.div>
-                    <div className="mt-3 bg-white rounded-xl px-4 py-2 shadow-lg text-center">
-                      <div className="font-bold text-[#1a3a6b] text-sm">
-                        Helik Healthcare HQ
-                      </div>
-                      <div className="text-xs text-gray-500">
-                        Bandra Kurla Complex, Mumbai
-                      </div>
-                    </div>
-                  </div>
-                  {/* Styled roads */}
-                  <div className="absolute inset-0 opacity-20">
-                    <div className="absolute top-1/3 left-0 right-0 h-px bg-[#1a3a6b]" />
-                    <div className="absolute top-2/3 left-0 right-0 h-px bg-[#1a3a6b]" />
-                    <div className="absolute left-1/3 top-0 bottom-0 w-px bg-[#1a3a6b]" />
-                    <div className="absolute left-2/3 top-0 bottom-0 w-px bg-[#1a3a6b]" />
-                  </div>
-                </div>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.4035723451075!2d77.34330497571736!3d28.557641675705757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce542d8f57c89%3A0x9a97943d1b73f2b5!2sDefence%20Enclave!5e0!3m2!1sen!2sin!4v1784051136581!5m2!1sen!2sin"
+                  className="w-[400px] md:w-[600px] rounded-2xl"
+                  height="350"
+                  title="location"
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                ></iframe>
 
                 <div className="mt-4 flex items-start gap-3 p-4 bg-blue-50 rounded-2xl">
                   <MapPin className="w-5 h-5 text-[#1a3a6b] mt-0.5 shrink-0" />
                   <div>
                     <div className="font-semibold text-[#1a3a6b] text-sm mb-0.5">
-                      Helik Towers
+                      Helik Healthcare
                     </div>
                     <div className="text-gray-600 text-sm">
-                      Bandra Kurla Complex, Mumbai 400 051, Maharashtra, India
+                      C-502, Hotech Commercial, C-Block, Defence Enclave, Noida
+                      Sector-44, Uttar Pradesh-201301, India
                     </div>
                   </div>
                 </div>
@@ -435,10 +404,10 @@ const Contact = () => {
             </div>
           </FadeUp>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="flex items-center justify-center flex-col md:flex-row gap-6">
             {offices.map((office, i) => (
               <FadeUp key={office.city} delay={i * 0.1}>
-                <div className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition-all hover:-translate-y-1">
+                <div className="bg-white md:w-[500px] rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition-all hover:-translate-y-1">
                   <div className="h-2" style={{ background: office.color }} />
                   <div className="p-7">
                     <div className="flex items-center gap-3 mb-4">
@@ -473,7 +442,13 @@ const Contact = () => {
                       <div className="flex gap-2">
                         <Phone className="w-4 h-4 text-gray-400 mt-0.5 shrink-0" />
                         <span className="text-sm text-gray-600">
-                          {office.phone}
+                          {office.phone1}
+                        </span>
+                      </div>
+                      <div className="flex gap-2">
+                        <Phone className="w-4 h-4 text-gray-400 mt-0.5 shrink-0" />
+                        <span className="text-sm text-gray-600">
+                          {office.phone2}
                         </span>
                       </div>
                       <div className="flex gap-2">

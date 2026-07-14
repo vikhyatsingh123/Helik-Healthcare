@@ -46,7 +46,7 @@ const Loader = () => {
             <motion.div
               className="relative w-20 h-20 rounded-2xl flex items-center justify-center"
               style={{
-                background: "linear-gradient(135deg, #276f4b, #f5a623)",
+                background: "rgb(39, 111, 75)",
               }}
               animate={{ rotateY: [0, 360] }}
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}

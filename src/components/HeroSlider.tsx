@@ -34,7 +34,7 @@ const slides: Slide[] = [
       "Our state-of-the-art R&D facilities drive innovation in therapeutics, creating treatments that address the most critical healthcare challenges.",
     cta: "Our Product Range",
     ctaPath: "/products",
-    accent: "#2ecc71",
+    accent: "#276f4b",
     gradient: "linear-gradient(135deg, #0d1b2a 0%, #1b3a4b 45%, #1a5276 100%)",
   },
   {
@@ -80,9 +80,9 @@ const HeroSlider = () => {
   const slide = slides[current];
 
   const variants = {
-    enter: (dir: number) => ({ x: dir > 0 ? "100%" : "-100%", opacity: 0 }),
-    center: { x: 0, opacity: 1 },
-    exit: (dir: number) => ({ x: dir > 0 ? "-100%" : "100%", opacity: 0 }),
+    enter: (dir: number) => ({ x: dir > 0 ? "100%" : "-100%" }),
+    center: { x: 0 },
+    exit: (dir: number) => ({ x: dir > 0 ? "-100%" : "100%" }),
   };
 
   return (
@@ -90,7 +90,7 @@ const HeroSlider = () => {
       className="relative overflow-hidden"
       style={{ height: "100vh", minHeight: 600 }}
     >
-      <AnimatePresence custom={direction} mode="wait">
+      <AnimatePresence custom={direction} mode="sync">
         <motion.div
           key={slide.id}
           custom={direction}
@@ -98,7 +98,7 @@ const HeroSlider = () => {
           initial="enter"
           animate="center"
           exit="exit"
-          transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }}
+          transition={{ duration: 1.2, ease: [0.25, 0.46, 0.45, 0.94] }}
           className="absolute inset-0"
           style={{ background: slide.gradient }}
         >
