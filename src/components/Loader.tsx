@@ -69,7 +69,7 @@ const Loader = () => {
               <motion.div
                 className="h-full rounded-full"
                 style={{
-                  background: "linear-gradient(90deg, #276f4b, #f5a623)",
+                  background: "rgb(39, 111, 75)",
                 }}
                 initial={{ width: "0%" }}
                 animate={{ width: "100%" }}
