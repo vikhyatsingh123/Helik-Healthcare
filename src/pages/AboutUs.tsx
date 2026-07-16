@@ -374,7 +374,7 @@ const AboutUs = () => {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {teamMembers.map((member, i) => (
               <FadeUp key={member.name} delay={i * 0.1}>
-                <div className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all hover:-translate-y-1 group">
+                <div className="bg-white h-full rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all hover:-translate-y-1 group">
                   {/* Avatar */}
                   <div
                     className="h-36 flex items-center justify-center"

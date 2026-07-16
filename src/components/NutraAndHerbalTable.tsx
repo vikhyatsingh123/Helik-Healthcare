@@ -118,7 +118,7 @@ const NutraAndHerbalTable: React.FC<ProductsTableProps> = (props) => {
                     <div
                       onMouseDown={header.getResizeHandler()}
                       onTouchStart={header.getResizeHandler()}
-                      className={`absolute right-0 top-0 h-full w-1.5 cursor-col-resize select-none touch-none ${
+                      className={`absolute right-0 top-0 h-full w-1 cursor-col-resize select-none touch-none bg-gray-200 ${
                         header.column.getIsResizing() ? "" : "hover:bg-gray-300"
                       }`}
                       style={

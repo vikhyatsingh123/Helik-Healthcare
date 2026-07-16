@@ -170,7 +170,7 @@ const Contact = () => {
               const Icon = info.icon;
               return (
                 <FadeUp key={info.label} delay={i * 0.1}>
-                  <div className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-all border border-gray-100">
+                  <div className="bg-white h-full rounded-2xl p-6 shadow-sm hover:shadow-md transition-all border border-gray-100">
                     <div
                       className="w-11 h-11 rounded-xl flex items-center justify-center mb-4"
                       style={{ background: `${info.color}15` }}
