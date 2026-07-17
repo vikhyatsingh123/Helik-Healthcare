@@ -49,18 +49,25 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-18 py-3">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
-            <div>
-              <span
-                className={`text-3xl font-bold transition-colors ${
-                  isTransparent ? "text-white" : "text-[#1a3a6b]"
-                }`}
-              >
-                Helik
-              </span>
+            <div className="flex gap-1 justify-center items-center">
+              {isTransparent ? (
+                <img
+                  src="./helik_logo.png"
+                  alt="logo"
+                  width={100}
+                  height={50}
+                />
+              ) : (
+                <img
+                  src="./helik_blue.jpeg"
+                  alt="logo"
+                  width={100}
+                  height={50}
+                />
+              )}
               <span
                 className={`text-3xl font-light transition-colors text-[#276f4b]`}
               >
-                {" "}
                 Healthcare
               </span>
             </div>

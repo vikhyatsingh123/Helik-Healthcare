@@ -141,9 +141,8 @@ const Footer = () => {
               <li className="flex gap-3">
                 <MapPin className="w-4 h-4 text-[#276f4b] mt-0.5 shrink-0" />
                 <span className="text-white/70 text-sm">
-                  Helik Towers, Bandra Kurla Complex,
-                  <br />
-                  Mumbai 400 051, India
+                  C-502, Hotech Commercial, C-Block, Defence Enclave, Noida
+                  Sector-44, Uttar Pradesh 201301, India
                 </span>
               </li>
               <li className="flex gap-3">
@@ -154,10 +153,10 @@ const Footer = () => {
               <li className="flex gap-3">
                 <Mail className="w-4 h-4 text-[#276f4b] mt-0.5 shrink-0" />
                 <a
-                  href="mailto:info@helikhealthcare.com"
+                  href="mailto:helikhealthcare@gmail.com"
                   className="text-white/70 hover:text-white text-sm transition-colors"
                 >
-                  info@helikhealthcare.com
+                  helikhealthcare@gmail.com
                 </a>
               </li>
             </ul>
