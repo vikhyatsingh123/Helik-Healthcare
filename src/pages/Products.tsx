@@ -38,19 +38,21 @@ const Products = () => {
   }, [activeTab, activeSubTabId]);
 
   const baseData = useMemo(() => {
-    let data;
+    let data: Record<string, any>;
     if (activeTabId === "Nutraceuticals & Herbal Supplements") {
       data = NutraAndHerbalData;
     } else {
       data = productsOtherData;
     }
-    return data[activeSubTabId ? activeSubTabId : activeTabId].filter((p) => {
-      const matchesCategory = p.tabName === activeFilter.tabName;
-      const matchesSub = activeFilter.subcategory
-        ? p.subcategory === activeFilter.subcategory
-        : true;
-      return matchesCategory && matchesSub;
-    });
+    return data[activeSubTabId ? activeSubTabId : activeTabId].filter(
+      (p: any) => {
+        const matchesCategory = p.tabName === activeFilter.tabName;
+        const matchesSub = activeFilter.subcategory
+          ? p.subcategory === activeFilter.subcategory
+          : true;
+        return matchesCategory && matchesSub;
+      }
+    );
   }, [activeFilter]);
 
   const filteredData = useMemo(() => {
@@ -58,7 +60,7 @@ const Products = () => {
     const q = search.toLowerCase();
     if (activeTabId === "Nutraceuticals & Herbal Supplements") {
       return baseData.filter(
-        (p) =>
+        (p: any) =>
           p.category.toLowerCase().includes(q) ||
           p.productComposition.toLowerCase().includes(q) ||
           p.type.toLowerCase().includes(q)
@@ -66,7 +68,7 @@ const Products = () => {
     }
 
     return baseData.filter(
-      (p) =>
+      (p: any) =>
         p.productName.toLowerCase().includes(q) ||
         p.formulation.toLowerCase().includes(q) ||
         p.dosageForm.toLowerCase().includes(q)
