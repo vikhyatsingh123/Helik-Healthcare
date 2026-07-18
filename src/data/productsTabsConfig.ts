@@ -136,11 +136,11 @@ export const tabsConfig: TabConfig[] = [
     tabName: "Oral Powders (Sachet)",
   },
   {
-    id: "Products Under Development (Tablets & Capsules)",
-    label: "Products Under Development (Tablets & Capsules)",
+    id: "Products Under Development",
+    label: "Products Under Development",
     icon: Pill,
     color: "#276f4b",
-    tabName: "Products Under Development (Tablets & Capsules)",
+    tabName: "Products Under Development",
   },
   {
     id: "Ointments, Cream, Gel, Lotion & Shampoo",

@@ -5257,13 +5257,13 @@ const productsOtherData = {
       subcategory: null,
     },
   ],
-  "Products Under Development (Tablets & Capsules)": [
+  "Products Under Development": [
     {
       id: 1,
       productName: "Amlodipine",
       formulation: "50 mg / 150 mg",
       dosageForm: "Uncoated Tablet",
-      tabName: "Products Under Development (Tablets & Capsules)",
+      tabName: "Products Under Development",
       subcategory: null,
     },
     {
@@ -5271,7 +5271,7 @@ const productsOtherData = {
       productName: "Bepotastine Besilate",
       formulation: "10 mg",
       dosageForm: "Filmcoated Tablet",
-      tabName: "Products Under Development (Tablets & Capsules)",
+      tabName: "Products Under Development",
       subcategory: null,
     },
     {
@@ -5279,7 +5279,7 @@ const productsOtherData = {
       productName: "Biotin",
       formulation: "250 mcg",
       dosageForm: "Capsule",
-      tabName: "Products Under Development (Tablets & Capsules)",
+      tabName: "Products Under Development",
       subcategory: null,
     },
     {
@@ -5287,7 +5287,7 @@ const productsOtherData = {
       productName: "Brivaracetam",
       formulation: "50 mg / 75 mg / 100 mg",
       dosageForm: "Film Coated Tablet",
-      tabName: "Products Under Development (Tablets & Capsules)",
+      tabName: "Products Under Development",
       subcategory: null,
     },
     {
@@ -5297,7 +5297,7 @@ const productsOtherData = {
       formulation:
         "Calcium Citrate 592.50 mg + Magnesium Citrate 427.23 mg + Magnesium (Eq. to Elemental Magnesium) 48 mg + Vitamin K2-7 (Menaquinone-7) 0.20 mg + Zinc Citrate (Eq. to Elemental Zinc) 3.40 mg + Vitamin D3 (Cholecalciferol) 0.025 mg",
       dosageForm: "Tablet",
-      tabName: "Products Under Development (Tablets & Capsules)",
+      tabName: "Products Under Development",
       subcategory: null,
     },
     {
@@ -5305,7 +5305,7 @@ const productsOtherData = {
       productName: "Captopril",
       formulation: "25 mg",
       dosageForm: "Sublingual Tablet",
-      tabName: "Products Under Development (Tablets & Capsules)",
+      tabName: "Products Under Development",
       subcategory: null,
     },
     {
@@ -5315,7 +5315,7 @@ const productsOtherData = {
       formulation:
         "Dapagliflozin Propanediol (Eq. to Dapagliflozin) 10 mg + Metformin HCl 1000 mg",
       dosageForm: "Uncoated Bilayered Tablet",
-      tabName: "Products Under Development (Tablets & Capsules)",
+      tabName: "Products Under Development",
       subcategory: null,
     },
     {
@@ -5323,7 +5323,7 @@ const productsOtherData = {
       productName: "Diphenhydramine HCl",
       formulation: "25 mg",
       dosageForm: "Film Coated",
-      tabName: "Products Under Development (Tablets & Capsules)",
+      tabName: "Products Under Development",
       subcategory: null,
     },
     {
@@ -5331,7 +5331,7 @@ const productsOtherData = {
       productName: "Entecavir Monohydrate (Eq. to Entecavir)",
       formulation: "0.5 mg / 1 mg",
       dosageForm: "Film Coated Tablet",
-      tabName: "Products Under Development (Tablets & Capsules)",
+      tabName: "Products Under Development",
       subcategory: null,
     },
     {
@@ -5339,7 +5339,7 @@ const productsOtherData = {
       productName: "Eperisone HCl",
       formulation: "75 mg / 150 mg",
       dosageForm: "SR Capsule",
-      tabName: "Products Under Development (Tablets & Capsules)",
+      tabName: "Products Under Development",
       subcategory: null,
     },
     {
@@ -5347,7 +5347,7 @@ const productsOtherData = {
       productName: "Faropenem",
       formulation: "200 mg",
       dosageForm: "Film Coated Tablet",
-      tabName: "Products Under Development (Tablets & Capsules)",
+      tabName: "Products Under Development",
       subcategory: null,
     },
     {
@@ -5355,7 +5355,7 @@ const productsOtherData = {
       productName: "Finasteride",
       formulation: "1 mg / 5 mg",
       dosageForm: "Film Coated Tablet",
-      tabName: "Products Under Development (Tablets & Capsules)",
+      tabName: "Products Under Development",
       subcategory: null,
     },
     {
@@ -5363,7 +5363,7 @@ const productsOtherData = {
       productName: "Flavoxate HCl",
       formulation: "200 mg",
       dosageForm: "Film Coated Tablet",
-      tabName: "Products Under Development (Tablets & Capsules)",
+      tabName: "Products Under Development",
       subcategory: null,
     },
     {
@@ -5371,7 +5371,7 @@ const productsOtherData = {
       productName: "Flucloxacillin Sodium (Eq. to Flucloxacillin)",
       formulation: "250 mg / 500 mg",
       dosageForm: "Capsules",
-      tabName: "Products Under Development (Tablets & Capsules)",
+      tabName: "Products Under Development",
       subcategory: null,
     },
     {
@@ -5380,7 +5380,7 @@ const productsOtherData = {
       formulation:
         "Gliclazide 30/60 mg + Metformin HCl 500/1000 mg + Pioglitazone HCl 15 mg",
       dosageForm: "Uncoated Bilayered Tablet",
-      tabName: "Products Under Development (Tablets & Capsules)",
+      tabName: "Products Under Development",
       subcategory: null,
     },
     {
@@ -5388,7 +5388,7 @@ const productsOtherData = {
       productName: "Hydralazine Hydrochloride",
       formulation: "25 mg / 50 mg",
       dosageForm: "Film Coated Tablet",
-      tabName: "Products Under Development (Tablets & Capsules)",
+      tabName: "Products Under Development",
       subcategory: null,
     },
     {
@@ -5396,7 +5396,7 @@ const productsOtherData = {
       productName: "Lenalidomide",
       formulation: "5 mg / 10 mg",
       dosageForm: "Hard Gelatin Capsule",
-      tabName: "Products Under Development (Tablets & Capsules)",
+      tabName: "Products Under Development",
       subcategory: null,
     },
     {
@@ -5404,7 +5404,7 @@ const productsOtherData = {
       productName: "Letrozole",
       formulation: "2.5 mg / 5 mg",
       dosageForm: "Film Coated Tablet",
-      tabName: "Products Under Development (Tablets & Capsules)",
+      tabName: "Products Under Development",
       subcategory: null,
     },
     {
@@ -5412,7 +5412,7 @@ const productsOtherData = {
       productName: "Lornoxicam + Thiocolchicoside",
       formulation: "Lornoxicam 8/16 mg + Thiocolchicoside 8/16 mg",
       dosageForm: "Film Coated / SR Tablet",
-      tabName: "Products Under Development (Tablets & Capsules)",
+      tabName: "Products Under Development",
       subcategory: null,
     },
     {
@@ -5420,7 +5420,7 @@ const productsOtherData = {
       productName: "Magnesium Bisglycinate (Eq. to Elemental Magnesium)",
       formulation: "200 mg",
       dosageForm: "Tablet",
-      tabName: "Products Under Development (Tablets & Capsules)",
+      tabName: "Products Under Development",
       subcategory: null,
     },
     {
@@ -5428,7 +5428,7 @@ const productsOtherData = {
       productName: "Melatonin",
       formulation: "5 mg",
       dosageForm: "Film Coated / SR Tablet",
-      tabName: "Products Under Development (Tablets & Capsules)",
+      tabName: "Products Under Development",
       subcategory: null,
     },
     {
@@ -5436,7 +5436,7 @@ const productsOtherData = {
       productName: "Methotrexate",
       formulation: "7.5 mg",
       dosageForm: "Uncoated Tablet",
-      tabName: "Products Under Development (Tablets & Capsules)",
+      tabName: "Products Under Development",
       subcategory: null,
     },
     {
@@ -5444,7 +5444,7 @@ const productsOtherData = {
       productName: "Methoxsalen",
       formulation: "10 mg / 20 mg",
       dosageForm: "Film Coated Tablet",
-      tabName: "Products Under Development (Tablets & Capsules)",
+      tabName: "Products Under Development",
       subcategory: null,
     },
     {
@@ -5452,7 +5452,7 @@ const productsOtherData = {
       productName: "N-Acetylcysteine",
       formulation: "600 mg",
       dosageForm: "Effervescent Tablet",
-      tabName: "Products Under Development (Tablets & Capsules)",
+      tabName: "Products Under Development",
       subcategory: null,
     },
     {
@@ -5460,7 +5460,7 @@ const productsOtherData = {
       productName: "Naltrexone HCl",
       formulation: "50 mg",
       dosageForm: "Film Coated Tablet",
-      tabName: "Products Under Development (Tablets & Capsules)",
+      tabName: "Products Under Development",
       subcategory: null,
     },
     {
@@ -5468,7 +5468,7 @@ const productsOtherData = {
       productName: "Naproxen",
       formulation: "250 mg / 500 mg",
       dosageForm: "Uncoated Tablet",
-      tabName: "Products Under Development (Tablets & Capsules)",
+      tabName: "Products Under Development",
       subcategory: null,
     },
     {
@@ -5477,7 +5477,7 @@ const productsOtherData = {
       formulation:
         "Naproxen Sodium 550 mg + Equivalent to Naproxen 500 mg + Domperidone Maleate 10 mg",
       dosageForm: "Film Coated Tablet",
-      tabName: "Products Under Development (Tablets & Capsules)",
+      tabName: "Products Under Development",
       subcategory: null,
     },
     {
@@ -5485,7 +5485,7 @@ const productsOtherData = {
       productName: "Nitrofurantoin",
       formulation: "100 mg",
       dosageForm: "Capsule",
-      tabName: "Products Under Development (Tablets & Capsules)",
+      tabName: "Products Under Development",
       subcategory: null,
     },
     {
@@ -5493,7 +5493,7 @@ const productsOtherData = {
       productName: "Oseltamivir Phosphate (Eq. to Oseltamivir)",
       formulation: "30 mg / 45 mg / 75 mg",
       dosageForm: "Capsules",
-      tabName: "Products Under Development (Tablets & Capsules)",
+      tabName: "Products Under Development",
       subcategory: null,
     },
     {
@@ -5501,7 +5501,7 @@ const productsOtherData = {
       productName: "Perampanel",
       formulation: "2 mg / 4 mg / 6 mg / 8 mg / 10 mg / 12 mg",
       dosageForm: "Film Coated Tablet",
-      tabName: "Products Under Development (Tablets & Capsules)",
+      tabName: "Products Under Development",
       subcategory: null,
     },
     {
@@ -5509,7 +5509,7 @@ const productsOtherData = {
       productName: "Pimozide",
       formulation: "2 mg",
       dosageForm: "Uncoated Tablet",
-      tabName: "Products Under Development (Tablets & Capsules)",
+      tabName: "Products Under Development",
       subcategory: null,
     },
     {
@@ -5517,7 +5517,7 @@ const productsOtherData = {
       productName: "Rasagiline Mesylate (Eq. to Rasagiline)",
       formulation: "0.5 mg / 1 mg",
       dosageForm: "Uncoated Tablet",
-      tabName: "Products Under Development (Tablets & Capsules)",
+      tabName: "Products Under Development",
       subcategory: null,
     },
     {
@@ -5526,7 +5526,7 @@ const productsOtherData = {
       formulation:
         "Sacubitril 24 mg / 49 mg / 97 mg + Valsartan 26 mg / 51 mg / 103 mg",
       dosageForm: "Film Coated Tablet",
-      tabName: "Products Under Development (Tablets & Capsules)",
+      tabName: "Products Under Development",
       subcategory: null,
     },
     {
@@ -5536,7 +5536,7 @@ const productsOtherData = {
       formulation:
         "Sitagliptin Phosphate Monohydrate (Eq. to Sitagliptin) 50 mg + Metformin HCl 500 mg / 850 mg / 1000 mg",
       dosageForm: "Film Coated Tablet",
-      tabName: "Products Under Development (Tablets & Capsules)",
+      tabName: "Products Under Development",
       subcategory: null,
     },
     {
@@ -5544,7 +5544,7 @@ const productsOtherData = {
       productName: "Sitagliptin Phosphate Monohydrate (Eq. to Sitagliptin)",
       formulation: "25 mg / 50 mg / 100 mg",
       dosageForm: "Film Coated Tablet",
-      tabName: "Products Under Development (Tablets & Capsules)",
+      tabName: "Products Under Development",
       subcategory: null,
     },
     {
@@ -5552,7 +5552,7 @@ const productsOtherData = {
       productName: "Spironolactone",
       formulation: "25 mg / 50 mg / 100 mg",
       dosageForm: "Film Coated Tablet",
-      tabName: "Products Under Development (Tablets & Capsules)",
+      tabName: "Products Under Development",
       subcategory: null,
     },
     {
@@ -5560,7 +5560,7 @@ const productsOtherData = {
       productName: "Sulbutiamine",
       formulation: "200 mg",
       dosageForm: "Sugar Coated Tablet",
-      tabName: "Products Under Development (Tablets & Capsules)",
+      tabName: "Products Under Development",
       subcategory: null,
     },
     {
@@ -5568,7 +5568,7 @@ const productsOtherData = {
       productName: "Tacrolimus",
       formulation: "0.25 mg / 0.5 mg / 1 mg",
       dosageForm: "Capsule",
-      tabName: "Products Under Development (Tablets & Capsules)",
+      tabName: "Products Under Development",
       subcategory: null,
     },
     {
@@ -5576,7 +5576,7 @@ const productsOtherData = {
       productName: "Torsemide + Spironolactone",
       formulation: "Torsemide 5 mg + Spironolactone 50 mg",
       dosageForm: "Uncoated Tablet",
-      tabName: "Products Under Development (Tablets & Capsules)",
+      tabName: "Products Under Development",
       subcategory: null,
     },
     {
@@ -5584,7 +5584,7 @@ const productsOtherData = {
       productName: "Triamcinolone",
       formulation: "4 mg",
       dosageForm: "Uncoated Tablet",
-      tabName: "Products Under Development (Tablets & Capsules)",
+      tabName: "Products Under Development",
       subcategory: null,
     },
     {
@@ -5592,7 +5592,7 @@ const productsOtherData = {
       productName: "Voglibose + Glimepiride + Metformin HCl",
       formulation: "Voglibose 0.2 mg + Glimepiride 1 mg + Metformin HCl 500 mg",
       dosageForm: "SR Uncoated Tablet",
-      tabName: "Products Under Development (Tablets & Capsules)",
+      tabName: "Products Under Development",
       subcategory: null,
     },
     {
@@ -5600,7 +5600,7 @@ const productsOtherData = {
       productName: "Vortioxetine",
       formulation: "5 mg / 10 mg / 15 mg / 20 mg",
       dosageForm: "Film Coated Tablet",
-      tabName: "Products Under Development (Tablets & Capsules)",
+      tabName: "Products Under Development",
       subcategory: null,
     },
   ],

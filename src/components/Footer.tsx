@@ -23,13 +23,18 @@ const YoutubeIcon = () => (
   </svg>
 );
 
+const policy = [
+  { title: "Privacy Policy", link: "/privacy-policy" },
+  { title: "Terms of Use", link: "/terms-of-use" },
+  { title: "Terms & Conditions", link: "/terms-and-conditions" },
+];
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const quickLinks = [
     { label: "About Us", path: "/about" },
     { label: "Our Products", path: "/products" },
-    { label: "Product Range", path: "/product-range" },
     { label: "Careers", path: "/careers" },
     { label: "Contact Us", path: "/contact" },
   ];
@@ -37,13 +42,13 @@ const Footer = () => {
   const therapeuticAreas = [
     {
       label: "Nutraceuticals & Herbal Supplements",
-      path: "/product-range",
+      path: "/products",
     },
-    { label: "Cardiology", path: "/product-range" },
-    { label: "Oncology", path: "/product-range" },
-    { label: "Neurology", path: "/product-range" },
-    { label: "Dermatology", path: "/product-range" },
-    { label: "Antibiotics", path: "/product-range" },
+    { label: "Cardiology", path: "/products" },
+    { label: "Oncology", path: "/products" },
+    { label: "Neurology", path: "/products" },
+    { label: "Dermatology", path: "/products" },
+    { label: "Antibiotics", path: "/products" },
   ];
 
   const socialLinks = [
@@ -171,13 +176,13 @@ const Footer = () => {
             &copy; {currentYear} Helik Healthcare Ltd. All rights reserved.
           </p>
           <div className="flex gap-5">
-            {["Privacy Policy", "Terms of Use", "Cookie Policy"].map((item) => (
+            {policy.map((item) => (
               <a
-                key={item}
-                href="#"
+                key={item.title}
+                href={item.link}
                 className="text-white/40 hover:text-white/70 text-sm transition-colors"
               >
-                {item}
+                {item.title}
               </a>
             ))}
           </div>
