@@ -173,7 +173,7 @@ const Footer = () => {
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-white/40 text-sm">
-            &copy; {currentYear} Helik Healthcare Ltd. All rights reserved.
+            &copy; {currentYear} Helik Healthcare Pvt Ltd. All rights reserved.
           </p>
           <div className="flex gap-5">
             {policy.map((item) => (
