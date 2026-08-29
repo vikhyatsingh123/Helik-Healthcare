@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import {
@@ -109,6 +109,10 @@ const Contact = () => {
   });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    document.title = "Contact Us | Helik Healthcare";
+  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();

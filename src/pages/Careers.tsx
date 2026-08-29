@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import {
@@ -164,6 +164,10 @@ const Careers = () => {
   });
   const [submitted, setSubmitted] = useState(false);
   const [fileName, setFileName] = useState("");
+
+  useEffect(() => {
+    document.title = "Careers | Helik Healthcare";
+  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();

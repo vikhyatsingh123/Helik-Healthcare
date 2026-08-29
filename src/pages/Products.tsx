@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Search, X, ChevronRight } from "lucide-react";
@@ -15,6 +15,11 @@ const Products = () => {
   const [activeSubTabId, setActiveSubTabId] = useState(
     activeTab.subTabs ? activeTab.subTabs[0].id : ""
   );
+
+  useEffect(() => {
+    document.title = "Products | Helik Healthcare";
+  }, []);
+
   const [search, setSearch] = useState("");
 
   const handleTabClick = (tabId: string) => {

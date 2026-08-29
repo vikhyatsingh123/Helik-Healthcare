@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { motion, useInView } from "framer-motion";
 import {
@@ -169,6 +169,10 @@ const countries = [
 ];
 
 const AboutUs = () => {
+  useEffect(() => {
+    document.title = "About Us | Helik Healthcare";
+  }, []);
+
   return (
     <div>
       {/* Hero */}
