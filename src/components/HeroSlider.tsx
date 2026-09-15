@@ -22,7 +22,7 @@ const slides: Slide[] = [
     subtitle:
       "Developing life-changing medications that improve health outcomes for millions of patients across 10+ countries worldwide.",
     cta: "Explore Our Products",
-    ctaPath: "/products",
+    ctaPath: "/products/export-range",
     accent: "#276f4b",
     gradient: "linear-gradient(135deg, #0f2347 0%, #1a3a6b 45%, #2a5298 100%)",
   },
@@ -33,7 +33,7 @@ const slides: Slide[] = [
     subtitle:
       "Our state-of-the-art R&D facilities drive innovation in therapeutics, creating treatments that address the most critical healthcare challenges.",
     cta: "Our Product Range",
-    ctaPath: "/products",
+    ctaPath: "/products/export-range",
     accent: "#276f4b",
     gradient: "linear-gradient(135deg, #0d1b2a 0%, #1b3a4b 45%, #1a5276 100%)",
   },

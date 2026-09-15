@@ -257,7 +257,7 @@ const TherapeuticAreas = () => {
                         molecules in pipeline
                       </span>
                       <Link
-                        to="/products"
+                        to="/products/export-range"
                         className="flex items-center gap-1 text-xs font-semibold group-hover:gap-2 transition-all"
                         style={{ color: area.color }}
                       >

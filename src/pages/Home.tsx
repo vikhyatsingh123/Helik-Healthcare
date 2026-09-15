@@ -1,6 +1,6 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { motion, useInView } from "framer-motion";
+import { AnimatePresence, motion, useInView } from "framer-motion";
 import {
   Heart,
   Brain,
@@ -22,13 +22,17 @@ import {
   Activity,
   Soup,
   ZapIcon,
+  ChevronRight,
+  ChevronLeft,
 } from "lucide-react";
 import HeroSlider from "../components/HeroSlider";
 import StatsCounter from "../components/StatsCounter";
 import TestimonialCard from "../components/TestimonialCard";
+import ProductModal from "../components/ProductModal";
+import { newLaunched } from "../data/NewLaunched";
 
 // Fade-up animation wrapper
-const FadeUp = ({
+export const FadeUp = ({
   children,
   delay = 0,
   className = "",
@@ -89,39 +93,11 @@ const productCategories = [
     color: "#2ecc71",
   },
   {
-    icon: Soup,
-    title: "Alimentary System",
-    desc: "Medicines for digestive health, acidity, ulcers, constipation, and gastrointestinal disorders.",
-    count: 40,
-    color: "#f97316",
-  },
-  {
     icon: Bone,
     title: "Analgesics & Musculo Skeletal Disorders",
     desc: "Pain management and anti-inflammatory medicines for muscles, joints, and bones.",
     count: 50,
     color: "#ef4444",
-  },
-  {
-    icon: ZapIcon,
-    title: "RI Tract & Anti-Allergic",
-    desc: "Treatments for respiratory infections, allergies, asthma, and cough-related conditions.",
-    count: 36,
-    color: "#0ea5e9",
-  },
-  {
-    icon: Sparkles,
-    title: "Vitamins & Minerals",
-    desc: "Essential vitamin and mineral supplements for nutritional support and deficiency management.",
-    count: 44,
-    color: "#eab308",
-  },
-  {
-    icon: FlaskConical,
-    title: "Other Formulations",
-    desc: "A range of specialized pharmaceutical formulations for diverse therapeutic needs.",
-    count: 28,
-    color: "#64748b",
   },
   {
     icon: Baby,
@@ -143,6 +119,27 @@ const productCategories = [
     desc: "Sterile ophthalmic, otic, and nasal preparations for localized treatment.",
     count: 20,
     color: "#06b6d4",
+  },
+  {
+    icon: ZapIcon,
+    title: "Anti-Allergic",
+    desc: "Treatments for respiratory infections, allergies, asthma, and cough-related conditions.",
+    count: 36,
+    color: "#0ea5e9",
+  },
+  {
+    icon: Sparkles,
+    title: "Vitamins & Minerals",
+    desc: "Essential vitamin and mineral supplements for nutritional support and deficiency management.",
+    count: 44,
+    color: "#eab308",
+  },
+  {
+    icon: FlaskConical,
+    title: "Other Formulations",
+    desc: "A range of specialized pharmaceutical formulations for diverse therapeutic needs.",
+    count: 28,
+    color: "#64748b",
   },
   {
     icon: Hand,
@@ -365,6 +362,30 @@ const therapeuticAreaCards = [
 ];
 
 const Home = () => {
+  const [open, setOpen] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState({});
+  const [currentPage, setCurrentPage] = useState(0);
+
+  const cardsPerPage = 4;
+  const totalPages = Math.ceil(newLaunched.length / cardsPerPage);
+
+  const visibleProducts = newLaunched.slice(
+    currentPage * cardsPerPage,
+    currentPage * cardsPerPage + cardsPerPage
+  );
+
+  const nextPage = () => {
+    setCurrentPage((prev) => Math.min(prev + 1, totalPages - 1));
+  };
+
+  const prevPage = () => {
+    setCurrentPage((prev) => Math.max(prev - 1, 0));
+  };
+
+  const handleClose = () => {
+    setOpen((prev) => !prev);
+  };
+
   useEffect(() => {
     document.title = "Helik Healthcare";
   }, []);
@@ -527,74 +548,221 @@ const Home = () => {
       </section>
 
       {/* Product Categories */}
-      <section className="py-20 bg-white">
+      <section className="py-10 bg-[#eff5fa]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeUp>
-            <div className="text-center mb-14">
+            <div className="text-center">
               <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-[#276f4b] bg-[#cfedd0] px-4 py-1.5 rounded-full mb-3">
                 Our Portfolio
               </span>
+
+              <h2 className="text-4xl font-bold text-[#1a3a6b] mb-4">
+                Our Products
+              </h2>
+
+              <p className="text-gray-500 max-w-xl mx-auto mb-6">
+                A diversified portfolio spanning critical products, backed by
+                decades of research and clinical excellence.
+              </p>
+
+              {/* Carousel */}
+              <div className="relative px-8 sm:px-10 lg:px-12">
+                {/* Previous Button */}
+                <button
+                  onClick={prevPage}
+                  disabled={currentPage === 0}
+                  className={`absolute left-0 top-1/2 -translate-y-1/2 z-10
+              w-10 h-10 sm:w-11 sm:h-11
+              rounded-full flex items-center justify-center
+              bg-white border border-[#d8e8f5]
+              shadow-md
+              transition-all duration-300
+              ${
+                currentPage === 0
+                  ? "opacity-40 cursor-not-allowed"
+                  : "hover:bg-[#1a3a6b] hover:text-white hover:scale-110 cursor-pointer"
+              }`}
+                  aria-label="Previous products"
+                >
+                  <ChevronLeft size={22} />
+                </button>
+
+                {/* Cards */}
+                <div>
+                  <AnimatePresence mode="wait">
+                    <motion.div
+                      key={currentPage}
+                      initial={{
+                        opacity: 0,
+                        x: 50,
+                      }}
+                      animate={{
+                        opacity: 1,
+                        x: 0,
+                      }}
+                      exit={{
+                        opacity: 0,
+                        x: -50,
+                      }}
+                      transition={{
+                        duration: 0.45,
+                        ease: [0.22, 1, 0.36, 1],
+                      }}
+                      className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+                    >
+                      {visibleProducts.map((cat, i) => (
+                        <FadeUp key={cat.name} delay={i * 0.08}>
+                          <div className="bg-white border border-[#e1edf7] p-4 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group h-full">
+                            <div className="flex items-center justify-center mb-5 transition-transform group-hover:scale-110">
+                              <img
+                                src={cat.image}
+                                alt={cat.name}
+                                className="w-full h-auto"
+                              />
+                            </div>
+
+                            <div className="flex items-start justify-between mb-2">
+                              <h3 className="text-lg font-bold text-[#1a3a6b]">
+                                {cat.name}
+                              </h3>
+                            </div>
+
+                            <p className="text-gray-600 text-sm leading-relaxed mb-4 truncate">
+                              {cat.description}
+                            </p>
+
+                            <button
+                              onClick={() => {
+                                setSelectedProduct(cat);
+                                setOpen(true);
+                              }}
+                              className="cursor-pointer w-full flex justify-center items-center gap-1 text-sm group-hover:gap-2 transition-all"
+                            >
+                              <div
+                                style={{
+                                  background:
+                                    "linear-gradient(135deg, #1a3a6b, #2a5298)",
+                                }}
+                                className="px-4 py-2 rounded-full text-white font-semibold transition-all hover:shadow-lg hover:-translate-y-0.5"
+                              >
+                                View Details
+                              </div>
+                            </button>
+                          </div>
+                        </FadeUp>
+                      ))}
+                    </motion.div>
+                  </AnimatePresence>
+                </div>
+
+                {/* Next Button */}
+                <button
+                  onClick={nextPage}
+                  disabled={currentPage === totalPages - 1}
+                  className={`absolute right-0 top-1/2 -translate-y-1/2 z-10
+              w-10 h-10 sm:w-11 sm:h-11
+              rounded-full flex items-center justify-center
+              bg-white border border-[#d8e8f5]
+              shadow-md
+              transition-all duration-300
+              ${
+                currentPage === totalPages - 1
+                  ? "opacity-40 cursor-not-allowed"
+                  : "hover:bg-[#1a3a6b] hover:text-white hover:scale-110 cursor-pointer"
+              }`}
+                  aria-label="Next products"
+                >
+                  <ChevronRight size={22} />
+                </button>
+              </div>
+
+              {/* Pagination dots */}
+              {totalPages > 1 && (
+                <div className="flex justify-center items-center gap-2 mt-6">
+                  {Array.from({ length: totalPages }).map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentPage(index)}
+                      className={`h-2 rounded-full transition-all duration-300 ${
+                        currentPage === index
+                          ? "w-7 bg-[#1a3a6b]"
+                          : "w-2 bg-[#b9d2e7] hover:bg-[#7fa8c7]"
+                      }`}
+                      aria-label={`Go to product page ${index + 1}`}
+                    />
+                  ))}
+                </div>
+              )}
+            </div>
+          </FadeUp>
+        </div>
+      </section>
+
+      <section className="py-10 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <FadeUp>
+            <div className="text-center">
               <h2 className="text-4xl font-bold text-[#1a3a6b] mb-4">
                 Our Product Range
               </h2>
-              <p className="text-gray-500 max-w-xl mx-auto">
+              <p className="text-gray-500 max-w-xl mx-auto mb-6">
                 A diversified portfolio spanning critical product range, backed
                 by decades of research and clinical excellence.
               </p>
-            </div>
-          </FadeUp>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {productCategories.map((cat, i) => {
-              const Icon = cat.icon;
-              return (
-                <FadeUp key={cat.title} delay={i * 0.1}>
-                  <Link to="/products">
-                    <div className="bg-white border border-gray-200 rounded-2xl p-7 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group cursor-pointer h-full">
-                      <div
-                        className="w-14 h-14 rounded-2xl flex items-center justify-center mb-5 transition-transform group-hover:scale-110"
-                        style={{ background: `${cat.color}15` }}
-                      >
-                        <Icon
-                          className="w-7 h-7"
-                          style={{ color: cat.color }}
-                        />
-                      </div>
-                      <div className="flex items-start justify-between mb-2">
-                        <h3 className="text-lg font-bold text-[#1a3a6b]">
-                          {cat.title}
-                        </h3>
-                        <span className="text-xs font-medium text-gray-400 bg-gray-50 px-2 py-1 rounded-full shrink-0">
-                          {cat.count} Products
-                        </span>
-                      </div>
-                      <p className="text-gray-500 text-sm leading-relaxed mb-4">
-                        {cat.desc}
-                      </p>
-                      <div
-                        className="flex items-center gap-1 text-sm font-medium group-hover:gap-2 transition-all"
-                        style={{ color: cat.color }}
-                      >
-                        Explore <ArrowRight className="w-4 h-4" />
-                      </div>
-                    </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {productCategories.map((cat, i) => {
+                  const Icon = cat.icon;
+                  return (
+                    <FadeUp key={cat.title} delay={i * 0.1}>
+                      <Link to="/products/export-range">
+                        <div className="bg-white border border-gray-200 rounded-2xl p-7 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group cursor-pointer h-full">
+                          <div
+                            className="w-14 h-14 rounded-2xl flex items-center justify-center mb-5 transition-transform group-hover:scale-110"
+                            style={{ background: `${cat.color}15` }}
+                          >
+                            <Icon
+                              className="w-7 h-7"
+                              style={{ color: cat.color }}
+                            />
+                          </div>
+                          <div className="flex items-start justify-between mb-2">
+                            <h3 className="text-lg font-bold text-[#1a3a6b]">
+                              {cat.title}
+                            </h3>
+                            <span className="text-xs font-medium text-gray-400 bg-gray-50 px-2 py-1 rounded-full shrink-0">
+                              {cat.count} Products
+                            </span>
+                          </div>
+                          <p className="text-gray-500 text-sm leading-relaxed mb-4">
+                            {cat.desc}
+                          </p>
+                          <div
+                            className="flex items-center gap-1 text-sm font-medium group-hover:gap-2 transition-all"
+                            style={{ color: cat.color }}
+                          >
+                            Explore <ArrowRight className="w-4 h-4" />
+                          </div>
+                        </div>
+                      </Link>
+                    </FadeUp>
+                  );
+                })}
+              </div>
+
+              <FadeUp delay={0.3}>
+                <div className="text-center mt-10">
+                  <Link
+                    to="/products/export-range"
+                    className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold text-white transition-all hover:shadow-lg hover:-translate-y-0.5"
+                    style={{
+                      background: "linear-gradient(135deg, #1a3a6b, #2a5298)",
+                    }}
+                  >
+                    View All Products <ArrowRight className="w-4 h-4" />
                   </Link>
-                </FadeUp>
-              );
-            })}
-          </div>
-
-          <FadeUp delay={0.3}>
-            <div className="text-center mt-10">
-              <Link
-                to="/products"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold text-white transition-all hover:shadow-lg hover:-translate-y-0.5"
-                style={{
-                  background: "linear-gradient(135deg, #1a3a6b, #2a5298)",
-                }}
-              >
-                View All Products <ArrowRight className="w-4 h-4" />
-              </Link>
+                </div>
+              </FadeUp>
             </div>
           </FadeUp>
         </div>
@@ -634,7 +802,7 @@ const Home = () => {
 
                   return (
                     <div key={`${area.title}-${i}`} className="shrink-0">
-                      <Link to="/products">
+                      <Link to="/products/export-range">
                         <div className="w-44 h-40 bg-white rounded-2xl p-6 flex flex-col items-center gap-3 shadow-sm hover:shadow-lg transition-all hover:-translate-y-1 cursor-pointer border border-gray-100">
                           <div
                             className="w-14 h-14 rounded-2xl flex items-center justify-center"
@@ -792,6 +960,11 @@ const Home = () => {
           </FadeUp>
         </div>
       </section>
+      <ProductModal
+        onClose={handleClose}
+        open={open}
+        product={selectedProduct}
+      />
     </div>
   );
 };

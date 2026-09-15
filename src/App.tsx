@@ -1,17 +1,19 @@
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import Loader from "./components/Loader";
-import ScrollToTop from "./components/ScrollToTop";
-import Home from "./pages/Home";
+
 import AboutUs from "./pages/AboutUs";
-import Products from "./pages/Products";
 import Careers from "./pages/Careers";
 import Contact from "./pages/Contact";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import Loader from "./components/Loader";
+import Navbar from "./components/Navbar";
+import NewLaunches from "./pages/NewLaunches";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
-import TermsOfUse from "./pages/TermsOfUse";
+import Products from "./pages/Products";
+import ScrollToTop from "./components/ScrollToTop";
 import TermsAndConditions from "./pages/TermsAndConditions";
+import TermsOfUse from "./pages/TermsOfUse";
 
 const PageTransition = ({ children }: { children: React.ReactNode }) => {
   const location = useLocation();
@@ -32,6 +34,7 @@ const PageTransition = ({ children }: { children: React.ReactNode }) => {
 
 const AppContent = () => {
   const location = useLocation();
+
   return (
     <div className="min-h-screen flex flex-col">
       <Loader />
@@ -42,7 +45,8 @@ const AppContent = () => {
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<AboutUs />} />
-            <Route path="/products" element={<Products />} />
+            <Route path="/products/new-launches" element={<NewLaunches />} />
+            <Route path="/products/export-range" element={<Products />} />
             <Route path="/careers" element={<Careers />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />

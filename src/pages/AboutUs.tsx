@@ -98,20 +98,20 @@ const certifications = [
     label: "GMP",
     sublabel: "Approved Facility",
     color: "#2ecc71",
-    logo: "./gmp.png",
+    logo: "/gmp.png",
   },
   {
     label: "WHO",
     sublabel: "World Health Organization",
     color: "#8b5cf6",
-    logo: "./who.jpg",
+    logo: "/who.jpg",
   },
 
   {
     label: "ISO 9001",
     sublabel: "2015 Certified",
     color: "#276f4b",
-    logo: "./iso.png",
+    logo: "/iso.png",
   },
 ];
 
