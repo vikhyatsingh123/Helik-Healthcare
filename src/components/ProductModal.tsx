@@ -80,8 +80,8 @@ import { GHBPlus } from "../data/GhbPlus";
 import { GrestGold } from "../data/GrestGold";
 import { Immucare } from "../data/Immucare";
 
-interface Product {
-  id: number;
+export interface Product {
+  id: string;
   name: string;
   description: string;
   image: any;
@@ -93,7 +93,7 @@ interface ProductModalProps {
   open: boolean;
 }
 
-const productData = {
+const productData: Record<string, any> = {
   "oestofort-gold": OestofortGold,
   bebact: Bebact45,
   boneheal: BoneHeal,

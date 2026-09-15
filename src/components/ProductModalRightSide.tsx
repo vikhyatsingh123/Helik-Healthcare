@@ -24,13 +24,31 @@ import {
    Small reusable components
 ------------------------------------------------------- */
 
-const SectionIcon = ({ icon: Icon, section }) => (
+const SectionIcon = ({
+  icon: Icon,
+  section,
+}: {
+  icon: React.ElementType;
+  section: string;
+}) => (
   <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-gray-100 text-gray-700">
     <Icon size={17} strokeWidth={1.8} className={section} />
   </div>
 );
 
-const Accordion = ({ title, icon, children, section, defaultOpen = false }) => {
+const Accordion = ({
+  title,
+  icon,
+  children,
+  section,
+  defaultOpen = false,
+}: {
+  title: string;
+  icon: React.ElementType;
+  children: React.ReactNode;
+  section: string;
+  defaultOpen?: boolean;
+}) => {
   const [open, setOpen] = useState(defaultOpen);
 
   return (
@@ -85,14 +103,20 @@ const Accordion = ({ title, icon, children, section, defaultOpen = false }) => {
   );
 };
 
-const BulletList = ({ items, icon = Check }) => {
+const BulletList = ({
+  items,
+  icon = Check,
+}: {
+  items: string[];
+  icon?: React.ElementType;
+}) => {
   if (!items?.length) return null;
 
   const Icon = icon;
 
   return (
     <div className="space-y-2.5">
-      {items.map((item, index) => (
+      {items.map((item, index: number) => (
         <div
           key={`${item}-${index}`}
           className="flex items-start gap-2.5 text-sm leading-6 text-gray-600"
@@ -109,7 +133,13 @@ const BulletList = ({ items, icon = Check }) => {
   );
 };
 
-const InfoRow = ({ label, value }) => {
+const InfoRow = ({
+  label,
+  value,
+}: {
+  label: string;
+  value: string | number | null | undefined;
+}) => {
   if (
     value === undefined ||
     value === null ||
@@ -132,7 +162,13 @@ const InfoRow = ({ label, value }) => {
   );
 };
 
-const Tag = ({ children, className = "" }) => (
+const Tag = ({
+  children,
+  className = "",
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) => (
   <span
     className={`inline-flex rounded-full bg-gray-100 px-2.5 py-1 text-xs font-medium text-gray-700 ${className}`}
   >
@@ -144,7 +180,7 @@ const Tag = ({ children, className = "" }) => (
    Main component
 ------------------------------------------------------- */
 
-const ProductModalRightSide = ({ product }) => {
+const ProductModalRightSide = ({ product }: { product: any }) => {
   const p = product.product;
   const composition = product.composition;
 
@@ -323,31 +359,42 @@ const ProductModalRightSide = ({ product }) => {
                       <span>Quantity</span>
                     </div>
 
-                    {composition.ingredients.map((ingredient, index) => (
-                      <div
-                        key={`${ingredient.name}-${index}`}
-                        className="grid grid-cols-[1fr_auto] gap-3 border-t border-gray-100 px-3 py-3"
-                      >
-                        <div>
-                          <p className="text-sm font-medium text-gray-800">
-                            {ingredient.name}
-                          </p>
+                    {composition.ingredients.map(
+                      (
+                        ingredient: {
+                          name: string;
+                          rda_percent?: number | null;
+                          quantity_per_tablet?: string;
+                          quantity_per_capsule?: string;
+                          quantity?: string;
+                        },
+                        index: number
+                      ) => (
+                        <div
+                          key={`${ingredient.name}-${index}`}
+                          className="grid grid-cols-[1fr_auto] gap-3 border-t border-gray-100 px-3 py-3"
+                        >
+                          <div>
+                            <p className="text-sm font-medium text-gray-800">
+                              {ingredient.name}
+                            </p>
 
-                          {ingredient.rda_percent !== null &&
-                            ingredient.rda_percent !== undefined && (
-                              <p className="mt-0.5 text-xs text-gray-400">
-                                {ingredient.rda_percent}% RDA
-                              </p>
-                            )}
+                            {ingredient.rda_percent !== null &&
+                              ingredient.rda_percent !== undefined && (
+                                <p className="mt-0.5 text-xs text-gray-400">
+                                  {ingredient.rda_percent}% RDA
+                                </p>
+                              )}
+                          </div>
+
+                          <span className="text-right text-sm font-semibold text-gray-700">
+                            {ingredient.quantity_per_tablet ||
+                              ingredient.quantity_per_capsule ||
+                              ingredient.quantity}
+                          </span>
                         </div>
-
-                        <span className="text-right text-sm font-semibold text-gray-700">
-                          {ingredient.quantity_per_tablet ||
-                            ingredient.quantity_per_capsule ||
-                            ingredient.quantity}
-                        </span>
-                      </div>
-                    ))}
+                      )
+                    )}
                   </div>
                 </div>
               )}
@@ -387,7 +434,14 @@ const ProductModalRightSide = ({ product }) => {
 
                   <div className="space-y-2">
                     {composition.additional_functional_ingredients.map(
-                      (ingredient, index) => (
+                      (
+                        ingredient: {
+                          name: string;
+                          quantity_per_capsule?: string;
+                          quantity?: string;
+                        },
+                        index: number
+                      ) => (
                         <div
                           key={`${ingredient.name}-${index}`}
                           className="flex items-center justify-between rounded-lg bg-gray-50 px-3 py-2.5"
@@ -448,20 +502,25 @@ const ProductModalRightSide = ({ product }) => {
             icon={HeartPulse}
           >
             <div className="space-y-3">
-              {product.intended_uses?.map((item, index) => (
-                <div
-                  key={`${item.area}-${index}`}
-                  className="rounded-xl border border-gray-100 bg-gray-50 p-4"
-                >
-                  <h4 className="text-sm font-semibold text-gray-900">
-                    {item.area}
-                  </h4>
+              {product.intended_uses?.map(
+                (
+                  item: { area: string; description: string },
+                  index: number
+                ) => (
+                  <div
+                    key={`${item.area}-${index}`}
+                    className="rounded-xl border border-gray-100 bg-gray-50 p-4"
+                  >
+                    <h4 className="text-sm font-semibold text-gray-900">
+                      {item.area}
+                    </h4>
 
-                  <p className="mt-1.5 text-sm leading-6 text-gray-600">
-                    {item.description}
-                  </p>
-                </div>
-              ))}
+                    <p className="mt-1.5 text-sm leading-6 text-gray-600">
+                      {item.description}
+                    </p>
+                  </div>
+                )
+              )}
             </div>
           </Accordion>
 
@@ -487,28 +546,37 @@ const ProductModalRightSide = ({ product }) => {
             icon={FlaskConical}
           >
             <div className="space-y-4">
-              {product.why_this_combination?.map((item, index) => (
-                <div
-                  key={`${item.ingredient}-${index}`}
-                  className="rounded-xl border border-gray-100 p-4"
-                >
-                  <div className="flex items-start justify-between gap-3">
-                    <h4 className="text-sm font-semibold text-gray-900">
-                      {item.ingredient}
-                    </h4>
+              {product.why_this_combination?.map(
+                (
+                  item: {
+                    ingredient: string;
+                    quantity?: string;
+                    description: string;
+                  },
+                  index: number
+                ) => (
+                  <div
+                    key={`${item.ingredient}-${index}`}
+                    className="rounded-xl border border-gray-100 p-4"
+                  >
+                    <div className="flex items-start justify-between gap-3">
+                      <h4 className="text-sm font-semibold text-gray-900">
+                        {item.ingredient}
+                      </h4>
 
-                    {item.quantity && (
-                      <span className="shrink-0 rounded-full bg-gray-100 px-2.5 py-1 text-xs font-semibold text-gray-600">
-                        {item.quantity}
-                      </span>
-                    )}
+                      {item.quantity && (
+                        <span className="shrink-0 rounded-full bg-gray-100 px-2.5 py-1 text-xs font-semibold text-gray-600">
+                          {item.quantity}
+                        </span>
+                      )}
+                    </div>
+
+                    <p className="mt-2 text-sm leading-6 text-gray-600">
+                      {item.description}
+                    </p>
                   </div>
-
-                  <p className="mt-2 text-sm leading-6 text-gray-600">
-                    {item.description}
-                  </p>
-                </div>
-              ))}
+                )
+              )}
             </div>
           </Accordion>
 
@@ -528,35 +596,46 @@ const ProductModalRightSide = ({ product }) => {
                 </p>
               )}
 
-              {product.how_it_works?.steps?.map((step, index) => (
-                <div
-                  key={`${step.stage}-${index}`}
-                  className="relative flex gap-3"
-                >
-                  {/* connector */}
-                  {index < product.how_it_works.steps.length - 1 && (
-                    <div className="absolute left-[15px] top-8 h-[calc(100%+16px)] w-px bg-gray-200" />
-                  )}
-
-                  <div className="relative z-10 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gray-900 text-xs font-semibold text-white">
-                    {step.stage}
-                  </div>
-
-                  <div className="min-w-0 flex-1 pb-2">
-                    <h4 className="text-sm font-semibold text-gray-900">
-                      {step.title}
-                    </h4>
-
-                    {step.ingredients?.length > 0 && (
-                      <div className="mt-2 flex flex-wrap gap-1.5">
-                        {step.ingredients.map((ingredient, i) => (
-                          <Tag key={`${ingredient}-${i}`}>{ingredient}</Tag>
-                        ))}
-                      </div>
+              {product.how_it_works?.steps?.map(
+                (
+                  step: {
+                    stage: string;
+                    title: string;
+                    ingredients?: string[];
+                  },
+                  index: number
+                ) => (
+                  <div
+                    key={`${step.stage}-${index}`}
+                    className="relative flex gap-3"
+                  >
+                    {/* connector */}
+                    {index < product.how_it_works.steps.length - 1 && (
+                      <div className="absolute left-[15px] top-8 h-[calc(100%+16px)] w-px bg-gray-200" />
                     )}
+
+                    <div className="relative z-10 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gray-900 text-xs font-semibold text-white">
+                      {step.stage}
+                    </div>
+
+                    <div className="min-w-0 flex-1 pb-2">
+                      <h4 className="text-sm font-semibold text-gray-900">
+                        {step.title}
+                      </h4>
+
+                      {step.ingredients && step.ingredients.length > 0 && (
+                        <div className="mt-2 flex flex-wrap gap-1.5">
+                          {step.ingredients.map((ingredient, index: number) => (
+                            <Tag key={`${ingredient}-${index}`}>
+                              {ingredient}
+                            </Tag>
+                          ))}
+                        </div>
+                      )}
+                    </div>
                   </div>
-                </div>
-              ))}
+                )
+              )}
 
               {product.how_it_works?.pathway && (
                 <div className="rounded-xl bg-gray-50 p-4">
@@ -846,15 +925,17 @@ const ProductModalRightSide = ({ product }) => {
                 </h4>
 
                 <div className="space-y-2.5">
-                  {product.dos_and_donts?.donts?.map((item, index) => (
-                    <div
-                      key={`${item}-${index}`}
-                      className="flex items-start gap-2.5 text-sm leading-6 text-red-700"
-                    >
-                      <span className="mt-1 shrink-0 text-red-500">×</span>
-                      <span>{item}</span>
-                    </div>
-                  ))}
+                  {product.dos_and_donts?.donts?.map(
+                    (item: string, index: number) => (
+                      <div
+                        key={`${item}-${index}`}
+                        className="flex items-start gap-2.5 text-sm leading-6 text-red-700"
+                      >
+                        <span className="mt-1 shrink-0 text-red-500">×</span>
+                        <span>{item}</span>
+                      </div>
+                    )
+                  )}
                 </div>
               </div>
             </div>
@@ -883,9 +964,11 @@ const ProductModalRightSide = ({ product }) => {
 
               {product.storage?.product_information?.length > 0 && (
                 <div className="mt-4 flex flex-wrap gap-2">
-                  {product.storage.product_information.map((item, index) => (
-                    <Tag key={`${item}-${index}`}>{item}</Tag>
-                  ))}
+                  {product.storage.product_information.map(
+                    (item: string, index: number) => (
+                      <Tag key={`${item}-${index}`}>{item}</Tag>
+                    )
+                  )}
                 </div>
               )}
 

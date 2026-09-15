@@ -28,7 +28,7 @@ import {
 import HeroSlider from "../components/HeroSlider";
 import StatsCounter from "../components/StatsCounter";
 import TestimonialCard from "../components/TestimonialCard";
-import ProductModal from "../components/ProductModal";
+import ProductModal, { type Product } from "../components/ProductModal";
 import { newLaunched } from "../data/NewLaunched";
 
 // Fade-up animation wrapper
@@ -363,7 +363,7 @@ const therapeuticAreaCards = [
 
 const Home = () => {
   const [open, setOpen] = useState(false);
-  const [selectedProduct, setSelectedProduct] = useState({});
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [currentPage, setCurrentPage] = useState(0);
 
   const cardsPerPage = 4;

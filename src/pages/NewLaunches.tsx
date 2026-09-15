@@ -5,11 +5,11 @@ import { ChevronRight } from "lucide-react";
 
 import { newLaunched } from "../data/NewLaunched";
 import { FadeUp } from "./Home";
-import ProductModal from "../components/ProductModal";
+import ProductModal, { type Product } from "../components/ProductModal";
 
 const NewLaunches = () => {
   const [open, setOpen] = useState(false);
-  const [selectedProduct, setSelectedProduct] = useState({});
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
   useEffect(() => {
     document.title = "Products | Helik Healthcare";
