@@ -38,25 +38,19 @@ const contactInfo = [
     icon: MapPin,
     label: "India Office",
     value:
-      "C-502, Hotech Commercial, C-Block, Defence Enclave, Noida Sector-44, Uttar Pradesh 201301, India",
-    color: "#1a3a6b",
-  },
-  {
-    icon: MapPin,
-    label: "Dubai Office",
-    value: "Owaisi Building, 302, Golden Sands, Mankhool, Dubai, UAE",
+      "C-502, hometech Commercial, C-Block, Defence Enclave, Noida Sector-44, Delhi NCR 201301, India",
     color: "#1a3a6b",
   },
   {
     icon: Phone,
     label: "Phone",
-    value: "+91 9415812557\n+91 9793142303",
+    value: "+91 8840703781",
     color: "#276f4b",
   },
   {
     icon: Mail,
     label: "Email",
-    value: "helikhealthcare@gmail.com",
+    value: "info@helikhealthcare.in",
     color: "#2ecc71",
   },
   {
@@ -71,21 +65,11 @@ const offices = [
   {
     city: "Noida, India",
     address:
-      "C-502, Hotech Commercial, C-Block, Defence Enclave, Noida Sector-44, Uttar Pradesh 201301, India",
-    phone1: "+91 9415812557",
-    phone2: "+91 9793142303",
-    email: "helikhealthcare@gmail.com",
+      "C-502, hometech Commercial, C-Block, Defence Enclave, Noida Sector-44, Delhi NCR 201301, India",
+    phone1: "+91 8840703781",
+    email: "info@helikhealthcare.in",
     type: "North India Headquarters",
     color: "#1a3a6b",
-  },
-  {
-    city: "Dubai, UAE",
-    address: "Owaisi Building, 302, Golden Sands, Mankhool, Dubai, UAE",
-    phone1: "+91 9415812557",
-    phone2: "+91 9793142303",
-    email: "helikhealthcare@gmail.com",
-    type: "International Headquarters",
-    color: "#276f4b",
   },
 ];
 
@@ -379,8 +363,8 @@ const Contact = () => {
                       Helik Healthcare
                     </div>
                     <div className="text-gray-600 text-sm">
-                      C-502, Hotech Commercial, C-Block, Defence Enclave, Noida
-                      Sector-44, Uttar Pradesh-201301, India
+                      C-502, hometech Commercial, C-Block, Defence Enclave,
+                      Noida Sector-44, Delhi NCR 201301, India
                     </div>
                   </div>
                 </div>
@@ -402,16 +386,15 @@ const Contact = () => {
                 Office Locations
               </h2>
               <p className="text-gray-500 max-w-xl mx-auto">
-                Two strategic offices across World's key commercial and research
-                hubs.
+                Where to find us.
               </p>
             </div>
           </FadeUp>
 
-          <div className="flex items-center justify-center flex-col md:flex-row gap-6">
+          <div className="flex items-center justify-center w-full flex-col md:flex-row gap-6">
             {offices.map((office, i) => (
               <FadeUp key={office.city} delay={i * 0.1}>
-                <div className="bg-white md:w-[500px] rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition-all hover:-translate-y-1">
+                <div className="bg-white md:w-[800px] rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition-all hover:-translate-y-1">
                   <div className="h-2" style={{ background: office.color }} />
                   <div className="p-7">
                     <div className="flex items-center gap-3 mb-4">
@@ -447,12 +430,6 @@ const Contact = () => {
                         <Phone className="w-4 h-4 text-gray-400 mt-0.5 shrink-0" />
                         <span className="text-sm text-gray-600">
                           {office.phone1}
-                        </span>
-                      </div>
-                      <div className="flex gap-2">
-                        <Phone className="w-4 h-4 text-gray-400 mt-0.5 shrink-0" />
-                        <span className="text-sm text-gray-600">
-                          {office.phone2}
                         </span>
                       </div>
                       <div className="flex gap-2">

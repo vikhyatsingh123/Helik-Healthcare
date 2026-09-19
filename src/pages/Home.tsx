@@ -7,7 +7,6 @@ import {
   Sparkles,
   Leaf,
   CheckCircle,
-  Lightbulb,
   Globe,
   ArrowRight,
   TestTube2,
@@ -21,15 +20,33 @@ import {
   ShieldPlus,
   Activity,
   Soup,
-  ZapIcon,
   ChevronRight,
   ChevronLeft,
+  BadgeCheck,
+  ShieldCheck,
 } from "lucide-react";
 import HeroSlider from "../components/HeroSlider";
 import StatsCounter from "../components/StatsCounter";
 import TestimonialCard from "../components/TestimonialCard";
 import ProductModal, { type Product } from "../components/ProductModal";
 import { newLaunched } from "../data/NewLaunched";
+
+import img1 from "../assets/productCategory/Nutra and herbal.png";
+import img2 from "../assets/productCategory/3.png";
+import img3 from "../assets/productCategory/Anit daibatic.png";
+import img4 from "../assets/productCategory/Antibiotic & Anti-Infective.png";
+import img6 from "../assets/productCategory/Cardivascular.png";
+import img7 from "../assets/productCategory/External Preparations.png";
+import img8 from "../assets/productCategory/Genral injection.png";
+import img9 from "../assets/productCategory/Joint image.png";
+import img10 from "../assets/productCategory/Ointments, Creams, Gels, Lotions & Shampoo.png";
+import img11 from "../assets/productCategory/Oral Dry Suspensions & Oral Liquids.png";
+import img12 from "../assets/productCategory/Oral Powders (Sachet).png";
+import img14 from "../assets/productCategory/Products Under Development.png";
+import img15 from "../assets/productCategory/anti elergic.png";
+import img16 from "../assets/productCategory/eye drop.png";
+import img17 from "../assets/productCategory/other Formuktaions.png";
+import img18 from "../assets/productCategory/vitamins.png";
 
 // Fade-up animation wrapper
 export const FadeUp = ({
@@ -58,112 +75,112 @@ export const FadeUp = ({
 
 const productCategories = [
   {
-    icon: Leaf,
+    icon: img1,
     title: "Nutraceuticals & Herbal Supplements",
     desc: "Evidence-based nutritional and herbal supplements supporting overall health and wellness.",
     count: 90,
     color: "#f59e0b",
   },
   {
-    icon: Heart,
+    icon: img6,
     title: "Cardiovascular System",
     desc: "Medicines for hypertension, heart failure, cholesterol management, and other cardiovascular conditions.",
     count: 85,
     color: "#276f4b",
   },
   {
-    icon: Brain,
+    icon: img2,
     title: "Central Nervous System",
     desc: "Therapies for neurological and psychiatric disorders including epilepsy, anxiety, and depression.",
     count: 62,
     color: "#8b5cf6",
   },
   {
-    icon: Activity,
+    icon: img3,
     title: "Anti-diabetic",
     desc: "Tablets and capsules for effective blood glucose control and diabetes management.",
     count: 47,
     color: "#1a3a6b",
   },
   {
-    icon: ShieldPlus,
+    icon: img4,
     title: "Antibiotic & Anti-Infective",
     desc: "Broad-spectrum antibiotics and anti-infective medicines for bacterial and other infections.",
     count: 55,
     color: "#2ecc71",
   },
   {
-    icon: Bone,
+    icon: img9,
     title: "Analgesics & Musculo Skeletal Disorders",
     desc: "Pain management and anti-inflammatory medicines for muscles, joints, and bones.",
     count: 50,
     color: "#ef4444",
   },
   {
-    icon: Baby,
+    icon: img11,
     title: "Oral Dry Suspensions & Oral Liquids",
     desc: "Liquid formulations and suspensions designed for pediatric and adult patients.",
     count: 31,
     color: "#14b8a6",
   },
   {
-    icon: Syringe,
+    icon: img8,
     title: "General Injections",
     desc: "Injectable medicines for hospital, emergency, and clinical care applications.",
     count: 24,
     color: "#7c3aed",
   },
   {
-    icon: Eye,
+    icon: img16,
     title: "Eye, Ear & Nasal Drops",
     desc: "Sterile ophthalmic, otic, and nasal preparations for localized treatment.",
     count: 20,
     color: "#06b6d4",
   },
   {
-    icon: ZapIcon,
+    icon: img15,
     title: "Anti-Allergic",
     desc: "Treatments for respiratory infections, allergies, asthma, and cough-related conditions.",
     count: 36,
     color: "#0ea5e9",
   },
   {
-    icon: Sparkles,
+    icon: img18,
     title: "Vitamins & Minerals",
     desc: "Essential vitamin and mineral supplements for nutritional support and deficiency management.",
     count: 44,
     color: "#eab308",
   },
   {
-    icon: FlaskConical,
+    icon: img17,
     title: "Other Formulations",
     desc: "A range of specialized pharmaceutical formulations for diverse therapeutic needs.",
     count: 28,
     color: "#64748b",
   },
   {
-    icon: Hand,
+    icon: img7,
     title: "External Preparations",
     desc: "Topical solutions for skin care, wound management, and localized pain relief.",
     count: 29,
     color: "#84cc16",
   },
   {
-    icon: Package,
+    icon: img12,
     title: "Oral Powders (Sachet)",
     desc: "Convenient sachet formulations for nutritional support and therapeutic treatment.",
     count: 18,
     color: "#f43f5e",
   },
   {
-    icon: TestTube2,
+    icon: img14,
     title: "Products Under Development",
     desc: "Innovative pharmaceutical formulations currently under research and development.",
     count: 15,
     color: "#6366f1",
   },
   {
-    icon: Sparkles,
+    icon: img10,
     title: "Ointments, Creams, Gels, Lotions & Shampoo",
     desc: "Topical dermatological and personal care formulations for various skin and scalp conditions.",
     count: 35,
@@ -173,22 +190,28 @@ const productCategories = [
 
 const whyUsItems = [
   {
-    icon: CheckCircle,
-    title: "Wide Product Range & Accessibility",
-    desc: "We offer a wide range of medicines and healthcare products to meet your medical needs. From prescription medications to over-the-counter remedies, we provide quality products from trusted brands, ensuring reliable care and convenience for every customer.",
-    color: "#1a3a6b",
+    icon: FlaskConical,
+    title: "Science-Backed Thinking",
+    desc: "We focus on products built around sound scientific rationale, meaningful formulation and genuine healthcare needs.",
+    color: "#0E5A8A",
   },
   {
-    icon: Lightbulb,
-    title: "Quality & Compliance",
-    desc: "We adhere to stringent quality systems, regulatory requirements, and international manufacturing standards to ensure safe, effective, and reliable healthcare products for global markets. Quality is embedded at every stage—from sourcing to final delivery.",
-    color: "#276f4b",
+    icon: BadgeCheck,
+    title: "Quality Without Compromise",
+    desc: "We maintain a strong focus on product quality, specifications and reliable manufacturing at every stage.",
+    color: "#0C3925",
   },
   {
-    icon: Globe,
-    title: "Global Partnerships & Reliability",
-    desc: "We build long-term relationships through transparent communication, timely delivery, scalable manufacturing, and customized solutions that help partners grow confidently in international markets.",
-    color: "#2ecc71",
+    icon: Eye,
+    title: "Clear & Transparent",
+    desc: "We believe in honest communication, clear information and visibility throughout every product and business process.",
+    color: "#168C8C",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Built on Reliability",
+    desc: "We aim to be a dependable partner through consistent execution, responsive support and reliable product supply.",
+    color: "#0E2954",
   },
 ];
 
@@ -409,41 +432,39 @@ const Home = () => {
                   About Helik Healthcare
                 </span>
                 <h2 className="text-4xl font-bold text-[#1a3a6b] leading-tight mb-5">
-                  A Legacy of Trust, A Future of Innovation
+                  Building Healthcare Products With Purpose
                 </h2>
                 <p className="text-gray-600 leading-relaxed mb-4">
-                  Established in 2020, Helik Healthcare Pvt. Ltd. has solidified
-                  its standing as an authoritative, high-integrity contract
-                  manufacturing and marketing partner operating within India.
+                  Built on 30+ Years of Pharmaceutical Experience. Focused on
+                  What Healthcare Needs Next.
                 </p>
-                <p className="text-gray-600 leading-relaxed mb-8">
-                  While acting with the rapid flexibility of a modern
-                  enterprise, Helik's operational foundation is built on more
-                  than three decades of industrial experience through its core
-                  northern associate corporation, Gamete Healthcare Pvt. Ltd.,
-                  based in Delhi (North India).
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  Our foundation is backed by more than 30 years of
+                  pharmaceutical industry experience through our associated
+                  company, Gamete Healthcare Pvt. Ltd., established in 1998.
+                  This experience has given us a practical understanding of
+                  healthcare products, market requirements, manufacturing and
+                  supply networks.
                 </p>
-                <p className="text-gray-600 leading-relaxed mb-8">
-                  As a fully integrated entity, Helik Healthcare masterfully
-                  manages international market architecture, structural brand
-                  registration, and large-scale logistical supply networks. We
-                  focus entirely on driving maximum therapeutic efficacy and
-                  distribution security for advanced nutraceutical product
-                  suites and premium-grade herbal supplement systems across
-                  demanding global territories.
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  Established in 2020, Helik Healthcare Pvt. Ltd. is a
+                  healthcare product company built to identify real market needs
+                  and turn them into science-backed pharmaceutical,
+                  nutraceutical and healthcare products. We work with a trusted
+                  network of manufacturing partners to develop and bring
+                  products to market, with a focus on quality, practical value
+                  and long-term relevance.
                 </p>
                 <div className="flex flex-wrap gap-3 mb-8">
-                  {["WHO Certified", "GMP Certified", "ISO 9001:2015"].map(
-                    (badge) => (
-                      <span
-                        key={badge}
-                        className="flex items-center gap-1.5 text-sm font-medium text-[#1a3a6b] bg-blue-50 px-3 py-1.5 rounded-full"
-                      >
-                        <CheckCircle className="w-3.5 h-3.5 text-[#2ecc71]" />
-                        {badge}
-                      </span>
-                    )
-                  )}
+                  {["Quality", "Transparency", "Reliability"].map((badge) => (
+                    <span
+                      key={badge}
+                      className="flex items-center gap-1.5 text-sm font-medium text-[#1a3a6b] bg-blue-50 px-3 py-1.5 rounded-full"
+                    >
+                      <CheckCircle className="w-3.5 h-3.5 text-[#2ecc71]" />
+                      {badge}
+                    </span>
+                  ))}
                 </div>
                 <Link
                   to="/about"
@@ -712,25 +733,27 @@ const Home = () => {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {productCategories.map((cat, i) => {
-                  const Icon = cat.icon;
                   return (
                     <FadeUp key={cat.title} delay={i * 0.1}>
                       <Link to="/products/export-range">
                         <div className="bg-white border border-gray-200 rounded-2xl p-7 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group cursor-pointer h-full">
                           <div
-                            className="w-14 h-14 rounded-2xl flex items-center justify-center mb-5 transition-transform group-hover:scale-110"
+                            className="rounded-2xl flex items-center justify-center mb-5 transition-transform group-hover:scale-110"
                             style={{ background: `${cat.color}15` }}
                           >
-                            <Icon
-                              className="w-7 h-7"
-                              style={{ color: cat.color }}
-                            />
+                            <img src={cat.icon} alt={cat.title} />
                           </div>
                           <div className="flex items-start justify-between mb-2">
                             <h3 className="text-lg font-bold text-[#1a3a6b]">
                               {cat.title}
                             </h3>
-                            <span className="text-xs font-medium text-gray-400 bg-gray-50 px-2 py-1 rounded-full shrink-0">
+                            <span
+                              className={`text-xs font-medium text-gray-400 px-2 py-1 rounded-full shrink-0`}
+                              style={{
+                                background: `${cat.color}15`,
+                                color: cat.color,
+                              }}
+                            >
                               {cat.count} Products
                             </span>
                           </div>
@@ -840,13 +863,13 @@ const Home = () => {
                 The Helik Difference
               </h2>
               <p className="text-gray-500 max-w-xl mx-auto">
-                Three core pillars that have made Helik Healthcare a trusted
-                name in global pharmaceuticals.
+                Four core pillars that have made Helik Healthcare a trusted name
+                in global pharmaceuticals.
               </p>
             </div>
           </FadeUp>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-4 gap-8">
             {whyUsItems.map((item, i) => {
               const Icon = item.icon;
               return (
@@ -954,7 +977,7 @@ const Home = () => {
                 to="/about"
                 className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-white border-2 border-white/30 hover:bg-white/10 transition-all"
               >
-                Learn About Us
+                Know About Helik
               </Link>
             </div>
           </FadeUp>

@@ -386,9 +386,9 @@ export const BoneHeal = {
     marketed_by: {
       company: "Helik Healthcare Pvt. Ltd.",
       address:
-        "C-502, Hometech C-Block, Defence Enclave, Sector-44, Noida – 201301, Delhi NCR, India",
+        "C-502, hometech Commercial, C-Block, Defence Enclave, Noida Sector-44, Delhi NCR 201301, India",
       customer_care: "+91 8299394553",
-      email: "helikhealthcare@gmail.com",
+      email: "info@helikhealthcare.in",
       website: "helikhealthcare.in",
     },
     manufactured_by: {

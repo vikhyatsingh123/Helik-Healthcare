@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 interface Slide {
   id: number;
+  description: string;
   badge: string;
   title: string;
   subtitle: string;
@@ -17,21 +18,23 @@ interface Slide {
 const slides: Slide[] = [
   {
     id: 1,
-    badge: "Innovation in Healthcare",
-    title: "Pioneering\nPharmaceutical\nExcellence",
-    subtitle:
-      "Developing life-changing medications that improve health outcomes for millions of patients across 10+ countries worldwide.",
+    badge: "Who Helik Is",
+    title: "Science-Backed Healthcare",
+    subtitle: "Healthcare Products Built Around Real-World Needs.",
+    description:
+      "We identify genuine healthcare needs and develop science-backed pharmaceutical, nutraceutical and healthcare products designed to create meaningful value for patients, consumers and markets.",
     cta: "Explore Our Products",
-    ctaPath: "/products/export-range",
+    ctaPath: "/products/new-launches",
     accent: "#276f4b",
     gradient: "linear-gradient(135deg, #0f2347 0%, #1a3a6b 45%, #2a5298 100%)",
   },
   {
     id: 2,
-    badge: "Research & Development",
-    title: "Science-Driven\nSolutions for\nBetter Health",
-    subtitle:
-      "Our state-of-the-art R&D facilities drive innovation in therapeutics, creating treatments that address the most critical healthcare challenges.",
+    badge: "What Makes Helik Different",
+    title: "Products With A Purpose",
+    subtitle: "We Start With the Need. Not the Product.",
+    description:
+      "From identifying a market opportunity to developing the right formulation and building a differentiated brand, our focus is on creating products that address real healthcare needs—not simply adding another product to the market.",
     cta: "Our Product Range",
     ctaPath: "/products/export-range",
     accent: "#276f4b",
@@ -39,10 +42,11 @@ const slides: Slide[] = [
   },
   {
     id: 3,
-    badge: "Global Reach",
-    title: "Delivering Health\nAcross Every\nContinent",
-    subtitle:
-      "With a robust distribution network spanning 10+ countries, we ensure our life-saving medicines reach patients wherever they are.",
+    badge: "How Helik Takes Products To Market",
+    title: "From Development To Market",
+    subtitle: "From Product Idea to India and Global Markets.",
+    description:
+      "We combine product development, trusted manufacturing partnerships and market expertise to take healthcare products from concept to commercialization across India and international markets.",
     cta: "Partner With Us",
     ctaPath: "/contact",
     accent: "#276f4b",
@@ -201,7 +205,7 @@ const HeroSlider = () => {
                 </motion.div>
 
                 {/* Title */}
-                <motion.h1
+                <motion.h2
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3 }}
@@ -209,16 +213,25 @@ const HeroSlider = () => {
                   style={{ whiteSpace: "pre-line" }}
                 >
                   {slide.title}
-                </motion.h1>
+                </motion.h2>
 
                 {/* Subtitle */}
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4 }}
-                  className="text-lg text-white/70 mb-10 leading-relaxed max-w-lg"
+                  className="text-lg text-white/80 mb-4 leading-relaxed max-w-lg"
                 >
                   {slide.subtitle}
+                </motion.p>
+
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.4 }}
+                  className="text-sm text-white/70 mb-10 leading-relaxed max-w-lg"
+                >
+                  {slide.description}
                 </motion.p>
 
                 {/* CTAs */}

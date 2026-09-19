@@ -286,9 +286,7 @@ const PrivacyPolicy: React.FC = () => {
       <p>
         Any complaints, abuse or concerns with regards to the processing of
         personal data provided by you or breach of these terms must be reported
-        to{" "}
-        <a href="mailto:helikhealthcare@gmail.com">helikhealthcare@gmail.com</a>
-        .
+        to <a href="mailto:info@helikhealthcare.in">info@helikhealthcare.in</a>.
       </p>
 
       <h3>Change in Policy</h3>

@@ -79,8 +79,7 @@ const Footer = () => {
             </Link>
             <p className="text-white/60 text-sm leading-relaxed mb-6">
               Advancing health through innovative pharmaceutical solutions.
-              Committed to quality, safety, and accessibility for patients
-              worldwide.
+              Committed to quality, safety, and transparency.
             </p>
             {/* Social icons */}
             <div className="flex gap-3">
@@ -146,22 +145,21 @@ const Footer = () => {
               <li className="flex gap-3">
                 <MapPin className="w-4 h-4 text-[#276f4b] mt-0.5 shrink-0" />
                 <span className="text-white/70 text-sm">
-                  C-502, Hotech Commercial, C-Block, Defence Enclave, Noida
-                  Sector-44, Uttar Pradesh 201301, India
+                  C-502, hometech Commercial, C-Block, Defence Enclave, Noida
+                  Sector-44, Delhi NCR 201301, India
                 </span>
               </li>
               <li className="flex gap-3">
                 <Phone className="w-4 h-4 text-[#276f4b] mt-0.5 shrink-0" />
-                <span className="text-white/70 text-sm">+91 9415812557</span>
-                <span className="text-white/70 text-sm">+91 9793142303</span>
+                <span className="text-white/70 text-sm">+91 8840703781</span>
               </li>
               <li className="flex gap-3">
                 <Mail className="w-4 h-4 text-[#276f4b] mt-0.5 shrink-0" />
                 <a
-                  href="mailto:helikhealthcare@gmail.com"
+                  href="mailto:info@helikhealthcare.in"
                   className="text-white/70 hover:text-white text-sm transition-colors"
                 >
-                  helikhealthcare@gmail.com
+                  info@helikhealthcare.in
                 </a>
               </li>
             </ul>
