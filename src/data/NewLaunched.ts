@@ -1,11 +1,11 @@
-import oesto1 from "../assets/oestofortgold/Helik_Image_1.png";
-import bebact1 from "../assets/bebact45/Helik_image_1.png";
-import boneheal1 from "../assets/boneheal/Helik_image_1.png";
-import floramet1 from "../assets/floramet/Helik_image_1.png";
-import ghbfort1 from "../assets/ghbfort/Helik_Image_1.png";
-import ghbplus1 from "../assets/ghbplus/Helik_Image_1.png";
-import grestgold1 from "../assets/grestgold/Helik_Image_1.png";
-import immucare1 from "../assets/immucare/Helik_Image_1.png";
+import oesto1 from "../assets/oestofortgold/Oestofort gold_1.png";
+import bebact1 from "../assets/bebact45/Bebact-45_1.png";
+import boneheal1 from "../assets/boneheal/Boneheal_1.png";
+import floramet1 from "../assets/floramet/Floramet_1.png";
+import ghbfort1 from "../assets/ghbfort/GHB_Fort_1.png";
+import ghbplus1 from "../assets/ghbplus/GHB_plus-1.png";
+import grestgold1 from "../assets/grestgold/Grest gold_1.png";
+import immucare1 from "../assets/immucare/immucare_1.png";
 
 export const newLaunched = [
   {
@@ -17,14 +17,14 @@ export const newLaunched = [
   },
   {
     id: "bebact",
-    name: "Be-bact 45",
+    name: "Bebact-45",
     description:
       "Bebact-45 features three probiotic strains from Kibow Biotech — Lactobacillus acidophilus KB19, Bifidobacterium longum KB27, and Streptococcus thermophilus KB31 — delivering 45 billion CFU, supported by prebiotics and L-Glutamine. It helps support digestive health, gut microbiome balance, and overall gut wellness.",
     image: bebact1,
   },
   {
     id: "boneheal",
-    name: "Bone Heal",
+    name: "BoneHeal",
     description:
       "BoneHeal is an advanced bone and joint formula with Undenatured Collagen, Boswellia, Calcium Citrate, Magnesium, Zinc, Vitamin D3, and Vitamin K2-7. It supports bone strength, joint comfort, mobility, and healthy bone mineralization.",
     image: boneheal1,

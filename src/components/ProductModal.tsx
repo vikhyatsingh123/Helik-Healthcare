@@ -3,72 +3,74 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
 // Images
-import oestro1 from "../assets/oestofortgold/Helik_Image_1.png";
-import oestro2 from "../assets/oestofortgold/Helik_Image_2.png";
-import oestro3 from "../assets/oestofortgold/Helik_Image_3.png";
-import oestro4 from "../assets/oestofortgold/Helik_Image_4.png";
-import oestro5 from "../assets/oestofortgold/Helik_Image_5.png";
-import oestro6 from "../assets/oestofortgold/Helik_Image_6.png";
-import oestro7 from "../assets/oestofortgold/information.png";
-import oestro8 from "../assets/oestofortgold/information2.png";
+import oestro1 from "../assets/oestofortgold/Oestofort gold_1.png";
+import oestro2 from "../assets/oestofortgold/Oestofort gold_2.png";
+import oestro3 from "../assets/oestofortgold/Oestofort gold_3.png";
+import oestro4 from "../assets/oestofortgold/Oestofort gold_4.png";
+import oestro5 from "../assets/oestofortgold/Oestofort gold_5.png";
+import oestro6 from "../assets/oestofortgold/Oestofort gold_6.png";
+import oestro7 from "../assets/oestofortgold/Oestofort gold_7.png";
 
-import bebact1 from "../assets/bebact45/Helik_image_1.png";
-import bebact2 from "../assets/bebact45/Helik_image_2.png";
-import bebact3 from "../assets/bebact45/Helik_image_3.png";
-import bebact4 from "../assets/bebact45/Helik_image_4.png";
-import bebact5 from "../assets/bebact45/Helik_image_6.png";
-import bebact6 from "../assets/bebact45/Helik_image_7.png";
-import bebact7 from "../assets/bebact45/info3.png";
+import bebact1 from "../assets/bebact45/Bebact-45_1.png";
+import bebact2 from "../assets/bebact45/Bebact-45_2.png";
+import bebact3 from "../assets/bebact45/Bebact-45_3.png";
+import bebact4 from "../assets/bebact45/Bebact-45_4.png";
+import bebact5 from "../assets/bebact45/Bebact-45_5.png";
+import bebact6 from "../assets/bebact45/Bebact-45_6.png";
+import bebact7 from "../assets/bebact45/Bebact-45_7.png";
+import bebact8 from "../assets/bebact45/Bebact-45_8.png";
+import bebact9 from "../assets/bebact45/Bebact-45_9.png";
 
-import boneheal1 from "../assets/boneheal/Helik_image_1.png";
-import boneheal2 from "../assets/boneheal/Helik_image_2.png";
-import boneheal3 from "../assets/boneheal/Helik_image_3.png";
-import boneheal4 from "../assets/boneheal/Helik_image_4.png";
-import boneheal5 from "../assets/boneheal/Helik_image_5.png";
-import boneheal6 from "../assets/boneheal/Helik_image_6.png";
-import boneheal7 from "../assets/boneheal/Helik_image_7.png";
-import boneheal8 from "../assets/boneheal/Helik_image_8.png";
+import boneheal1 from "../assets/boneheal/Boneheal_1.png";
+import boneheal2 from "../assets/boneheal/Boneheal_2.png";
+import boneheal3 from "../assets/boneheal/Boneheal_3.png";
+import boneheal4 from "../assets/boneheal/Boneheal_4.png";
+import boneheal5 from "../assets/boneheal/Boneheal_5.png";
+import boneheal6 from "../assets/boneheal/Boneheal_6.png";
+import boneheal7 from "../assets/boneheal/Boneheal_7.png";
+import boneheal8 from "../assets/boneheal/Boneheal_8.png";
 
-import floramet1 from "../assets/floramet/Helik_image_1.png";
-import floramet2 from "../assets/floramet/Helik_image_2.png";
-import floramet3 from "../assets/floramet/Helik_image_3.png";
-import floramet4 from "../assets/floramet/Helik_image_4.png";
-import floramet5 from "../assets/floramet/Helik_image_5.png";
-import floramet6 from "../assets/floramet/Helik_image_6.png";
+import floramet1 from "../assets/floramet/Floramet_1.png";
+import floramet2 from "../assets/floramet/Floramet_2.png";
+import floramet3 from "../assets/floramet/Floramet_3.png";
+import floramet4 from "../assets/floramet/Floramet_4.png";
+import floramet5 from "../assets/floramet/Floramet_5.png";
+import floramet6 from "../assets/floramet/Floramet_6.png";
+import floramet7 from "../assets/floramet/Floramet_7.png";
+import floramet8 from "../assets/floramet/Floramet_8.png";
+import floramet9 from "../assets/floramet/Floramet_9.png";
 
-import ghbfort1 from "../assets/ghbfort/Helik_Image_1.png";
-import ghbfort2 from "../assets/ghbfort/Helik_Image_7.png";
-import ghbfort3 from "../assets/ghbfort/Helik_Image_2.png";
-import ghbfort4 from "../assets/ghbfort/Helik_Image_3.png";
-import ghbfort5 from "../assets/ghbfort/Helik_Image_4.png";
-import ghbfort6 from "../assets/ghbfort/Helik_Image_5.png";
-import ghbfort7 from "../assets/ghbfort/Helik_Image_6.png";
-import ghbfort8 from "../assets/ghbfort/info_3.png";
+import ghbfort1 from "../assets/ghbfort/GHB_Fort_1.png";
+import ghbfort2 from "../assets/ghbfort/GHB_Fort_7.png";
+import ghbfort3 from "../assets/ghbfort/GHB_Fort_2.png";
+import ghbfort4 from "../assets/ghbfort/GHB_Fort_3.png";
+import ghbfort5 from "../assets/ghbfort/GHB_Fort_4.png";
+import ghbfort6 from "../assets/ghbfort/GHB_Fort_5.png";
+import ghbfort7 from "../assets/ghbfort/GHB_Fort_6.png";
 
-import ghbplus1 from "../assets/ghbplus/Helik_Image_1.png";
-import ghbplus2 from "../assets/ghbplus/Helik_Image_2.png";
-import ghbplus3 from "../assets/ghbplus/Helik_Image_3.png";
-import ghbplus4 from "../assets/ghbplus/Helik_Image_4.png";
-import ghbplus5 from "../assets/ghbplus/Helik_Image_5.png";
-import ghbplus6 from "../assets/ghbplus/Helik_Image_6.png";
-import ghbplus7 from "../assets/ghbplus/side_1.png";
+import ghbplus1 from "../assets/ghbplus/GHB_plus-1.png";
+import ghbplus2 from "../assets/ghbplus/GHB_plus-2.png";
+import ghbplus3 from "../assets/ghbplus/GHB_plus-3.png";
+import ghbplus4 from "../assets/ghbplus/GHB_plus-4.png";
+import ghbplus5 from "../assets/ghbplus/GHB_plus-5.png";
+import ghbplus6 from "../assets/ghbplus/GHB_plus-6.png";
+import ghbplus7 from "../assets/ghbplus/GHB_plus-7.png";
 
-import grestgold1 from "../assets/grestgold/Helik_Image_1.png";
-import grestgold2 from "../assets/grestgold/Helik_Image_2.png";
-import grestgold3 from "../assets/grestgold/Helik_Image_3.png";
-import grestgold4 from "../assets/grestgold/Helik_Image_4.png";
-import grestgold5 from "../assets/grestgold/Helik_Image_5.png";
-import grestgold6 from "../assets/grestgold/Helik_Image_6.png";
-import grestgold7 from "../assets/grestgold/info2.png";
+import grestgold1 from "../assets/grestgold/Grest gold_1.png";
+import grestgold2 from "../assets/grestgold/Grest gold_2.png";
+import grestgold3 from "../assets/grestgold/Grest gold_3.png";
+import grestgold4 from "../assets/grestgold/Grest gold_4.png";
+import grestgold6 from "../assets/grestgold/Grest gold_6.png";
+import grestgold7 from "../assets/grestgold/Grest gold_7.png";
+import grestgold8 from "../assets/grestgold/Grest gold_8.png";
 
-import immucare1 from "../assets/immucare/Helik_Image_1.png";
-import immucare2 from "../assets/immucare/Helik_Image_2.png";
-import immucare3 from "../assets/immucare/Helik_Image_3.png";
-import immucare4 from "../assets/immucare/Helik_Image_4.png";
-import immucare5 from "../assets/immucare/Helik_Image_5.png";
-import immucare6 from "../assets/immucare/Helik_Image_6.png";
-import immucare7 from "../assets/immucare/Helik_Image_7.png";
-import immucare8 from "../assets/immucare/Helik_Image_8.png";
+import immucare1 from "../assets/immucare/immucare_1.png";
+import immucare2 from "../assets/immucare/immucare_2.png";
+import immucare3 from "../assets/immucare/immucare_3.png";
+import immucare4 from "../assets/immucare/immucare_4.png";
+import immucare5 from "../assets/immucare/immucare_5.png";
+import immucare6 from "../assets/immucare/immucare_6.png";
+import immucare7 from "../assets/immucare/immucare_7.png";
 
 import ProductModalRightSide from "./ProductModalRightSide";
 import { OestofortGold } from "../data/OestofortGold";
@@ -113,9 +115,18 @@ const productImages: Record<string, string[]> = {
     oestro5,
     oestro6,
     oestro7,
-    oestro8,
   ],
-  bebact: [bebact1, bebact2, bebact3, bebact4, bebact5, bebact6, bebact7],
+  bebact: [
+    bebact1,
+    bebact2,
+    bebact3,
+    bebact4,
+    bebact5,
+    bebact6,
+    bebact7,
+    bebact8,
+    bebact9,
+  ],
   boneheal: [
     boneheal1,
     boneheal2,
@@ -126,7 +137,17 @@ const productImages: Record<string, string[]> = {
     boneheal7,
     boneheal8,
   ],
-  floramet: [floramet1, floramet2, floramet3, floramet4, floramet5, floramet6],
+  floramet: [
+    floramet1,
+    floramet2,
+    floramet3,
+    floramet4,
+    floramet5,
+    floramet6,
+    floramet7,
+    floramet8,
+    floramet9,
+  ],
   ghbfort: [
     ghbfort1,
     ghbfort2,
@@ -135,7 +156,6 @@ const productImages: Record<string, string[]> = {
     ghbfort5,
     ghbfort6,
     ghbfort7,
-    ghbfort8,
   ],
   ghbplus: [
     ghbplus1,
@@ -151,9 +171,9 @@ const productImages: Record<string, string[]> = {
     grestgold2,
     grestgold3,
     grestgold4,
-    grestgold5,
     grestgold6,
     grestgold7,
+    grestgold8,
   ],
   immucare: [
     immucare1,
@@ -163,7 +183,6 @@ const productImages: Record<string, string[]> = {
     immucare5,
     immucare6,
     immucare7,
-    immucare8,
   ],
 };
 

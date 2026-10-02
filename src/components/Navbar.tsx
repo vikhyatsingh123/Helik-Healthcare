@@ -10,8 +10,8 @@ const navLinks = [
     label: "Products",
     children: [
       {
-        label: "New Launches",
-        path: "/products/new-launches",
+        label: "Products",
+        path: "/products/products",
       },
       {
         label: "Export Range",

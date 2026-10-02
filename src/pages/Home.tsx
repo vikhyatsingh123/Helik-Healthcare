@@ -542,8 +542,8 @@ const Home = () => {
                     <CheckCircle className="w-5 h-5 text-[#2ecc71]" />
                   </div>
                   <div>
-                    <div className="text-xs text-gray-500">Quality Score</div>
-                    <div className="font-bold text-[#1a3a6b]">99.8%</div>
+                    <div className="text-xs text-gray-500">Clients Served</div>
+                    <div className="font-bold text-[#1a3a6b]">20+</div>
                   </div>
                 </motion.div>
 
@@ -557,9 +557,7 @@ const Home = () => {
                   </div>
                   <div>
                     <div className="text-xs text-gray-500">Global Reach</div>
-                    <div className="font-bold text-[#1a3a6b]">
-                      10+ Countries
-                    </div>
+                    <div className="font-bold text-[#1a3a6b]">5 Countries</div>
                   </div>
                 </motion.div>
               </div>

@@ -80,7 +80,7 @@ const NutraAndHerbalData = {
     },
     {
       id: 10,
-      category: "Joint & Bone Health",
+      category: "Joint & BoneHealth",
       productComposition:
         "Calcium Carbonate, Calcitriol, Vitamin K2-7, Cyanocobalamin, Vitamin B6, Folic Acid, Zinc",
       type: "Capsule",
@@ -89,7 +89,7 @@ const NutraAndHerbalData = {
     },
     {
       id: 11,
-      category: "Joint & Bone Health",
+      category: "Joint & BoneHealth",
       productComposition:
         "Calcium Citrate, Calcitriol, Cynocobalamin, Folic Acid, Vitamin B6",
       type: "Capsule",
@@ -399,7 +399,7 @@ const NutraAndHerbalData = {
     },
     {
       id: 5,
-      category: "Joint & Bone Health",
+      category: "Joint & BoneHealth",
       productComposition:
         "Allium Sativum Extract (Garlic), Withania Somnifera (Ashwagandha), Tinospora Cordifolia (Giloy) With Vitamins & Minerals",
       type: "Tablet",
@@ -600,7 +600,7 @@ const NutraAndHerbalData = {
     },
     {
       id: 28,
-      category: "Joint & Bone Health",
+      category: "Joint & BoneHealth",
       productComposition:
         "Boswellia Serrata, Collagen Peptide Type II, Curcumin (Extract), Hyaluronic Acid, Glucosamine, Methylsulfonylmethane",
       type: "Tablet",
@@ -635,7 +635,7 @@ const NutraAndHerbalData = {
     },
     {
       id: 32,
-      category: "Joint & Bone Health",
+      category: "Joint & BoneHealth",
       productComposition: "Calcium Aspartate & Vitamin D3",
       type: "Tablet",
       subcategory: "Nutraceuticals",
@@ -643,7 +643,7 @@ const NutraAndHerbalData = {
     },
     {
       id: 33,
-      category: "Joint & Bone Health",
+      category: "Joint & BoneHealth",
       productComposition:
         "Calcium Aspartate, Calcium Orotate, Vitamin D3, Zinc, Folic Acid, Magnesium Hydroxide & Hydroxocobalamin",
       type: "Tablet",
@@ -652,7 +652,7 @@ const NutraAndHerbalData = {
     },
     {
       id: 34,
-      category: "Joint & Bone Health",
+      category: "Joint & BoneHealth",
       productComposition:
         "Calcium Carbonate (From Oyster Shell), Elemental Calcium, Cholecalciferol (Vit D2), Zinc Sulphate Eq. To Elemental Zinc, Magnesium Hydroxide, Magnesium Oxide, Folic Acid, Magnesium",
       type: "Tablet",
@@ -661,7 +661,7 @@ const NutraAndHerbalData = {
     },
     {
       id: 35,
-      category: "Joint & Bone Health",
+      category: "Joint & BoneHealth",
       productComposition:
         "Calcium Carbonate (From Oyster Shell), Elemental Calcium, Cholecalciferol (Vitamin D2), Zinc Sulphate Eq. To Elemental Zinc, Folic Acid, Magnesium Hydroxide Eq. To Elemental Magnesium",
       type: "Tablet",
@@ -670,7 +670,7 @@ const NutraAndHerbalData = {
     },
     {
       id: 36,
-      category: "Joint & Bone Health",
+      category: "Joint & BoneHealth",
       productComposition:
         "Calcium Carbonate (From Oyster Shell), Eq. To Elemental Calcium, Vitamin D3",
       type: "Tablet",
@@ -679,7 +679,7 @@ const NutraAndHerbalData = {
     },
     {
       id: 37,
-      category: "Joint & Bone Health",
+      category: "Joint & BoneHealth",
       productComposition:
         "Calcium Carbonate (From Oyster Shell), Elemental Calcium, Cholecalciferol, Zinc Sulphate Eq. To Elemental Zinc, Magnesium Hydroxide Eq. To Elemental Magnesium",
       type: "Tablet",
@@ -688,7 +688,7 @@ const NutraAndHerbalData = {
     },
     {
       id: 38,
-      category: "Joint & Bone Health",
+      category: "Joint & BoneHealth",
       productComposition:
         "Calcium Carbonate, Magnesium, Zinc Sulphate, Cyanocobalamin, L-Methylfolate, Vitamin K2-7, Calcitriol",
       type: "Tablet",
@@ -697,7 +697,7 @@ const NutraAndHerbalData = {
     },
     {
       id: 39,
-      category: "Joint & Bone Health",
+      category: "Joint & BoneHealth",
       productComposition: "Calcium Carbonate, Vitamin D3",
       type: "Tablet",
       subcategory: "Nutraceuticals",
@@ -705,7 +705,7 @@ const NutraAndHerbalData = {
     },
     {
       id: 40,
-      category: "Joint & Bone Health",
+      category: "Joint & BoneHealth",
       productComposition:
         "Calcium Citrate Malate, L-Methylfolate, Vitamin C, Vitamin K2-7, Vitamin D3, Vitamin E, Boron, L-Carnitine, L-Tartrate",
       type: "Tablet",
@@ -714,7 +714,7 @@ const NutraAndHerbalData = {
     },
     {
       id: 41,
-      category: "Joint & Bone Health",
+      category: "Joint & BoneHealth",
       productComposition:
         "Calcium Citrate Malate, L-Methylfolate, Vitamin C, K2-7, D3, E, Boron, L-Carnitine, L-Tartrate, Methylcobalamin & Magnesium Sulphate",
       type: "Tablet",
@@ -723,7 +723,7 @@ const NutraAndHerbalData = {
     },
     {
       id: 42,
-      category: "Joint & Bone Health",
+      category: "Joint & BoneHealth",
       productComposition:
         "Calcium Citrate Malate, L-Methylfolate, Vitamin C, K2-7, D3, E, Boron, L-Carnitine, L-Tartrate, Methylcobalamin & Magnesium Sulphate",
       type: "Tablet",
@@ -732,7 +732,7 @@ const NutraAndHerbalData = {
     },
     {
       id: 43,
-      category: "Joint & Bone Health",
+      category: "Joint & BoneHealth",
       productComposition:
         "Calcium Citrate Mg, Eq. To Elemental Calcium, Magnesium Hydroxide, Eq. To Elemental Magnesium, Zinc Bisglycinate, Eq. To Elemental Zinc, Cholecalciferol (Vitamin D2)",
       type: "Tablet",
@@ -741,7 +741,7 @@ const NutraAndHerbalData = {
     },
     {
       id: 44,
-      category: "Joint & Bone Health",
+      category: "Joint & BoneHealth",
       productComposition: "Calcium Citrate, Magnesium, Zinc, Vitamin D3",
       type: "Tablet",
       subcategory: "Nutraceuticals",
@@ -749,7 +749,7 @@ const NutraAndHerbalData = {
     },
     {
       id: 45,
-      category: "Joint & Bone Health",
+      category: "Joint & BoneHealth",
       productComposition: "Calcium Coral",
       type: "Tablet",
       subcategory: "Nutraceuticals",
@@ -757,7 +757,7 @@ const NutraAndHerbalData = {
     },
     {
       id: 46,
-      category: "Joint & Bone Health",
+      category: "Joint & BoneHealth",
       productComposition:
         "Calcium Orotate, L-Methylfolate, Pyridoxal-5-Phosphate, Vitamin B12 & Vitamin D3",
       type: "Tablet",
@@ -766,7 +766,7 @@ const NutraAndHerbalData = {
     },
     {
       id: 47,
-      category: "Joint & Bone Health",
+      category: "Joint & BoneHealth",
       productComposition:
         "Calcium Orotate, Magnesium, Zinc, Folic Acid, Vitamin B12, Vitamin K2-7 & Vitamin D3",
       type: "Tablet",
@@ -775,7 +775,7 @@ const NutraAndHerbalData = {
     },
     {
       id: 48,
-      category: "Joint & Bone Health",
+      category: "Joint & BoneHealth",
       productComposition:
         "Calcium Phosphate, Magnesium Hydroxide, Zinc Gluconate, Vitamin D3",
       type: "Tablet",
@@ -784,7 +784,7 @@ const NutraAndHerbalData = {
     },
     {
       id: 49,
-      category: "Joint & Bone Health",
+      category: "Joint & BoneHealth",
       productComposition: "Calcium With Vitamin And Mineral",
       type: "Tablet",
       subcategory: "Nutraceuticals",
@@ -792,7 +792,7 @@ const NutraAndHerbalData = {
     },
     {
       id: 50,
-      category: "Joint & Bone Health",
+      category: "Joint & BoneHealth",
       productComposition: "Calcium With Vitamin D3",
       type: "Tablet",
       subcategory: "Nutraceuticals",
@@ -851,7 +851,7 @@ const NutraAndHerbalData = {
     },
     {
       id: 57,
-      category: "Joint & Bone Health",
+      category: "Joint & BoneHealth",
       productComposition:
         "Chondroitin Sulfate, Glucosamine Sulfate, Vitamins & Minerals (Chondroitin Sulfate, Glucosamine Sulfate, Vitamin B1, Vitamin B2, Vitamin B6, Vitamin B12, Vitamin B5, Vitamin B3, Vitamin A, Vitamin C, Vitamin D3, Vitamin E, Folic Acid, Biotin)",
       type: "Tablet",
@@ -878,7 +878,7 @@ const NutraAndHerbalData = {
     },
     {
       id: 60,
-      category: "Joint & Bone Health",
+      category: "Joint & BoneHealth",
       productComposition:
         "Cissus Quadragularis, Amino Acid, Vitamins & Minerals",
       type: "Tablet",
@@ -887,7 +887,7 @@ const NutraAndHerbalData = {
     },
     {
       id: 61,
-      category: "Joint & Bone Health",
+      category: "Joint & BoneHealth",
       productComposition:
         "Cissus Quadrangularis Extract, Calcium Citrate Maleate, Withania Somnifera Extract, Vitamin D3 Stabilized",
       type: "Tablet",
@@ -896,7 +896,7 @@ const NutraAndHerbalData = {
     },
     {
       id: 62,
-      category: "Joint & Bone Health",
+      category: "Joint & BoneHealth",
       productComposition:
         "Cissus Quadrangularis Extract, Withania Somnifera (Ashwagandha) Extract, Calcium & Vitamin D3",
       type: "Tablet",
@@ -905,7 +905,7 @@ const NutraAndHerbalData = {
     },
     {
       id: 63,
-      category: "Joint & Bone Health",
+      category: "Joint & BoneHealth",
       productComposition:
         "Cissus Quadrangularis, Boswellia Serrata, Bamboo Extract, Boron, Vitamin K2 & Vitamin D3",
       type: "Tablet",
@@ -914,7 +914,7 @@ const NutraAndHerbalData = {
     },
     {
       id: 64,
-      category: "Joint & Bone Health",
+      category: "Joint & BoneHealth",
       productComposition:
         "Cissus Quadrangularis, Calcium Carbonate, Vitamin D3",
       type: "Tablet",
@@ -923,7 +923,7 @@ const NutraAndHerbalData = {
     },
     {
       id: 65,
-      category: "Joint & Bone Health",
+      category: "Joint & BoneHealth",
       productComposition:
         "Cissus Quadrangularis, Diacerin, Glucosamine Sulfate Potassium Chloride, Methyl Sulfonyl Methane, Vitamin & Minerals (Cissus Quadrangularis, Methyl Sulfonyl Methane, Potassium Chloride, Diacerin, Glucosamine Sulfate, Vitamin B1, Vitamin B2, Vitamin B6, Vitamin B12, Vitamin B5, Vitamin B3, Vitamin A, Vitamin C, Vitamin D3, Vitamin E, Folic Acid, Biotin)",
       type: "Tablet",
@@ -1021,7 +1021,7 @@ const NutraAndHerbalData = {
     },
     {
       id: 76,
-      category: "Joint & Bone Health",
+      category: "Joint & BoneHealth",
       productComposition:
         "Collagen Peptide Type I, Sodium Hyaluronate, Ascorbic Acid (Vitamin C) Coated & Chondroitin Sulphate Sodium",
       type: "Tablet",
@@ -1178,7 +1178,7 @@ const NutraAndHerbalData = {
     },
     {
       id: 94,
-      category: "Nutritional & Bone Health Supplement",
+      category: "Nutritional & BoneHealth Supplement",
       productComposition:
         "Ferrous Asparto Glycinate, L-Methylfolate Calcium, Cyanocobalamine, Pyridoxal-5-Phosphate, Cholecalciferol",
       type: "Tablet",
@@ -1413,7 +1413,7 @@ const NutraAndHerbalData = {
     },
     {
       id: 121,
-      category: "Joint & Bone Health",
+      category: "Joint & BoneHealth",
       productComposition:
         "Glucosamine Sulfate Potassium Chloride, Diacerin, Vitamin B12, Vitamin D, Cissus Quadrangularis Extract, Methylsulfonylmethane, Hyaluronic Acid, Zinc Sulfate Eq. To Elemental Zinc",
       type: "Tablet",
@@ -1422,7 +1422,7 @@ const NutraAndHerbalData = {
     },
     {
       id: 122,
-      category: "Joint & Bone Health",
+      category: "Joint & BoneHealth",
       productComposition:
         "Glucosamine Sulfate Potassium Chloride, Diacerin, Methylsulfonylmethane, Cissus Quadrangularis, Vitamin & Minerals",
       type: "Tablet",
@@ -1431,7 +1431,7 @@ const NutraAndHerbalData = {
     },
     {
       id: 123,
-      category: "Joint & Bone Health",
+      category: "Joint & BoneHealth",
       productComposition:
         "Glucosamine Sulfate Potassium Chloride, Diacerin, Methylsulfonylmethane, Vitamin & Minerals",
       type: "Tablet",
@@ -1440,7 +1440,7 @@ const NutraAndHerbalData = {
     },
     {
       id: 124,
-      category: "Joint & Bone Health",
+      category: "Joint & BoneHealth",
       productComposition:
         "Glucosamine Sulfate Potassium Chloride, Diacerin, Vitamin, Vitamin D, Cissus Quadrangularis Extract (Hadjod), Methylsulfonylmethane, Hyaluronic Acid, Zinc Sulfate Eq. To Elemental Zinc",
       type: "Tablet",
@@ -1449,7 +1449,7 @@ const NutraAndHerbalData = {
     },
     {
       id: 125,
-      category: "Joint & Bone Health",
+      category: "Joint & BoneHealth",
       productComposition:
         "Glucosamine Sulphate, Diacerin, Methyl Sulfonyl Methane, Vitamins & Minerals",
       type: "Tablet",
@@ -1458,7 +1458,7 @@ const NutraAndHerbalData = {
     },
     {
       id: 126,
-      category: "Joint & Bone Health",
+      category: "Joint & BoneHealth",
       productComposition:
         "Glucosamine Sulphate Potassium Chloride, Chondroitin Sulphate Sodium, Methylsulfonylmethane",
       type: "Tablet",
@@ -1467,7 +1467,7 @@ const NutraAndHerbalData = {
     },
     {
       id: 127,
-      category: "Joint & Bone Health",
+      category: "Joint & BoneHealth",
       productComposition:
         "Glucosamine Sulphate, Boswellia Serrata, Turmeric, Diacerin, Chondroitin And Hyaluronic Acid",
       type: "Tablet",
@@ -1528,7 +1528,7 @@ const NutraAndHerbalData = {
     },
     {
       id: 134,
-      category: "Joint & Bone Health",
+      category: "Joint & BoneHealth",
       productComposition:
         "L-Arginine, L-Lysine, Zinc Sulphate, Calcium Carbonate, Cissus Quadragularis, Vitamin B6 (Pyridoxine), Vitamin D3",
       type: "Tablet",
@@ -2068,7 +2068,7 @@ const NutraAndHerbalData = {
     },
     {
       id: 196,
-      category: "Joint & Bone Health",
+      category: "Joint & BoneHealth",
       productComposition:
         "Calcium Carbonate, Magnesium, Potassium, Vitamin B12, Vitamin C, Vitamin D",
       type: "Effervescent Tablet",
@@ -2077,7 +2077,7 @@ const NutraAndHerbalData = {
     },
     {
       id: 197,
-      category: "Joint & Bone Health",
+      category: "Joint & BoneHealth",
       productComposition: "Calcium Carbonate, Magnesium, Vitamin D3, & Zinc",
       type: "Effervescent Tablet",
       subcategory: "Nutraceuticals",
@@ -2085,7 +2085,7 @@ const NutraAndHerbalData = {
     },
     {
       id: 198,
-      category: "Joint & Bone Health",
+      category: "Joint & BoneHealth",
       productComposition:
         "Calcium, Magnesium, Phosphorus, Manganese, Methylcobalamin, Folic Acid, Vitamin B6 & D3",
       type: "Effervescent Tablet",
@@ -2094,7 +2094,7 @@ const NutraAndHerbalData = {
     },
     {
       id: 199,
-      category: "Joint & Bone Health",
+      category: "Joint & BoneHealth",
       productComposition: "Coral Calcium",
       type: "Effervescent Tablet",
       subcategory: "Nutraceuticals",
@@ -2119,7 +2119,7 @@ const NutraAndHerbalData = {
     },
     {
       id: 202,
-      category: "Joint & Bone Health",
+      category: "Joint & BoneHealth",
       productComposition: "Glucosamine HCl, Chondroitin & MSM",
       type: "Effervescent Tablet",
       subcategory: "Nutraceuticals",
@@ -2179,7 +2179,7 @@ const NutraAndHerbalData = {
     },
     {
       id: 209,
-      category: "Joint & Bone Health",
+      category: "Joint & BoneHealth",
       productComposition:
         "Glucosamine, Boswellia Serrata Extract, Rosehip Extract, Calcium Carbonate, Omega 3 Fatty Acid, DHA, Vitamin C, Magnesium Sulphate, Niacinamide, Zinc Sulphate, Vitamin E, Manganese Sulphate, Calcium Pantothenate, Vitamin B1, B2, B6, A, B12, Folic Acid",
       type: "Powder",
@@ -2220,7 +2220,7 @@ const NutraAndHerbalData = {
     },
     {
       id: 214,
-      category: "Joint & Bone Health",
+      category: "Joint & BoneHealth",
       productComposition:
         "Calcium Carbonate, Magnesium Hydroxide, Zinc Gluconate, Vitamin D3",
       type: "Oral Liquid",
@@ -2398,7 +2398,7 @@ const NutraAndHerbalData = {
     },
     {
       id: 235,
-      category: "Bone Health & Immunity Booster",
+      category: "BoneHealth & Immunity Booster",
       productComposition:
         "Calcium Lactate Gluconate, Vitamin A, Vitamin D3, B1, Vitamin B2, Nicotinamide, Vitamin C, Vitamin E",
       type: "Sachet",
@@ -2416,7 +2416,7 @@ const NutraAndHerbalData = {
     },
     {
       id: 237,
-      category: "Joint & Bone Health",
+      category: "Joint & BoneHealth",
       productComposition: "Collagen Peptide, Glucosamine, Vitamin C",
       type: "Sachet",
       subcategory: "Nutraceuticals",

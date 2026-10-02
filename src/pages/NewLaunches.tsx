@@ -46,10 +46,10 @@ const NewLaunches = () => {
                 Home
               </Link>
               <ChevronRight className="w-4 h-4" />
-              <span className="text-white">New Launches</span>
+              <span className="text-white">Products</span>
             </div>
             <h1 className="text-5xl font-extrabold text-white mb-4">
-              New Launched Products
+              Our Products
             </h1>
             <p className="text-white/70 text-lg max-w-xl">
               A diversified portfolio spanning critical products, backed by

@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, type Easing } from "framer-motion";
 import {
   Target,
   Eye,
@@ -9,7 +9,63 @@ import {
   Heart,
   Shield,
   ChevronRight,
+  Building2,
+  Globe2,
+  Rocket,
+  Sprout,
+  ArrowDown,
+  type LucideProps,
 } from "lucide-react";
+
+const journey = [
+  {
+    year: "1998",
+    title: "Gamete Healthcare Established",
+    description:
+      "Our pharmaceutical industry foundation begins with the establishment of Gamete Healthcare Pvt. Ltd.",
+    icon: Building2,
+    side: "left",
+  },
+  {
+    year: "2020",
+    title: "Helik Healthcare Established",
+    description:
+      "Helik Healthcare Pvt. Ltd. begins its journey as a healthcare product company, building on the experience and industry understanding developed over the years.",
+    icon: Sprout,
+    side: "right",
+  },
+  {
+    year: "TODAY",
+    title: "Growing Products & Partnerships",
+    description:
+      "Helik is expanding its healthcare portfolio, manufacturing network and international business through strong product and business partnerships.",
+    icon: Globe2,
+    side: "left",
+  },
+  {
+    year: "NEXT",
+    title: "Building Helik Products & Brands",
+    description:
+      "Our focus is to develop a stronger portfolio of Helik products and brands for India and international markets.",
+    icon: Rocket,
+    side: "right",
+  },
+];
+
+const itemVariants = {
+  hidden: {
+    opacity: 0,
+    y: 40,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut" as Easing,
+    },
+  },
+};
 
 const FadeUp = ({
   children,
@@ -38,26 +94,26 @@ const FadeUp = ({
 const values = [
   {
     icon: Shield,
-    title: "Integrity",
-    desc: "We uphold the highest ethical standards in every business decision and scientific endeavour.",
+    title: "Science",
+    desc: "We value sound scientific thinking in the products we bring to market.",
     color: "#1a3a6b",
   },
   {
     icon: Lightbulb,
-    title: "Innovation",
-    desc: "Relentless pursuit of new ideas and technologies to advance pharmaceutical science.",
+    title: "Quality",
+    desc: "We maintain a strong focus on quality across products, partners and supply.",
     color: "#276f4b",
   },
   {
     icon: Heart,
-    title: "Patient First",
-    desc: "Every decision is filtered through one question: how does this benefit the patient?",
+    title: "Transparency",
+    desc: "We believe in clear communication, honest information and visibility throughout our business relationships.",
     color: "#ec4899",
   },
   {
     icon: Globe,
-    title: "Accessibility",
-    desc: "Quality healthcare should be universal — we work to make it affordable and available.",
+    title: "Reliability",
+    desc: "We aim to be a dependable partner through consistent execution and responsive support.",
     color: "#2ecc71",
   },
 ];
@@ -113,6 +169,12 @@ const certifications = [
     color: "#276f4b",
     logo: "/iso.png",
   },
+  {
+    label: "HACCP",
+    sublabel: "HACCP Certified",
+    color: "#2ecc71",
+    logo: "/haccp.png",
+  },
 ];
 
 const countries = [
@@ -137,36 +199,58 @@ const countries = [
     flag: "https://upload.wikimedia.org/wikipedia/commons/c/cb/Flag_of_the_United_Arab_Emirates.svg",
   },
   {
-    id: 5,
-    name: "Canada",
-    flag: "https://upload.wikimedia.org/wikipedia/commons/c/cf/Flag_of_Canada.svg",
-  },
-  {
-    id: 6,
-    name: "Myanmar",
-    flag: "https://upload.wikimedia.org/wikipedia/commons/8/8c/Flag_of_Myanmar.svg",
-  },
-  {
-    id: 7,
-    name: "Romania",
-    flag: "https://upload.wikimedia.org/wikipedia/commons/7/73/Flag_of_Romania.svg",
-  },
-  {
-    id: 8,
-    name: "Qatar",
-    flag: "https://upload.wikimedia.org/wikipedia/commons/6/65/Flag_of_Qatar.svg",
-  },
-  {
-    id: 9,
-    name: "Ethiopia",
-    flag: "https://upload.wikimedia.org/wikipedia/commons/7/71/Flag_of_Ethiopia.svg",
-  },
-  {
-    id: 10,
-    name: "Sudan",
-    flag: "https://upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_Sudan.svg",
+    id: 4,
+    name: "Indonesia",
+    flag: "https://upload.wikimedia.org/wikipedia/commons/9/9f/Flag_of_Indonesia.svg",
   },
 ];
+
+function TimelineContent({
+  item,
+  align = "left",
+}: {
+  item: {
+    year: string;
+    title: string;
+    description: string;
+    icon: React.ForwardRefExoticComponent<
+      Omit<LucideProps, "ref"> & React.RefAttributes<SVGSVGElement>
+    >;
+    side: string;
+  };
+  align?: "left" | "right";
+}) {
+  return (
+    <div
+      className={`group ${
+        align === "right" ? "md:ml-auto md:max-w-md" : "md:max-w-md"
+      }`}
+    >
+      {/* Year - Mobile */}
+      <div
+        className={`mb-2 text-xs font-bold uppercase tracking-[0.2em] text-[#276f4b] md:hidden ${
+          align === "right" ? "text-right" : ""
+        }`}
+      >
+        {item.year}
+      </div>
+
+      <div
+        className={`rounded-2xl border border-gray-100 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#cfedd0] hover:shadow-xl md:p-7 ${
+          align === "right" ? "md:text-right" : ""
+        }`}
+      >
+        <h3 className="mb-3 text-xl font-bold leading-snug text-[#1a3a6b] md:text-2xl">
+          {item.title}
+        </h3>
+
+        <p className="text-sm leading-7 text-gray-500 md:text-base">
+          {item.description}
+        </p>
+      </div>
+    </div>
+  );
+}
 
 const AboutUs = () => {
   useEffect(() => {
@@ -228,8 +312,172 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* Mission & Vision */}
+      <section className="relative overflow-hidden bg-white py-20 lg:py-28">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          {/* Section Heading */}
+          <motion.div
+            initial={{ opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6 }}
+            className="mx-auto mb-20 max-w-3xl text-center"
+          >
+            <span className="mb-3 inline-block rounded-full bg-[#cfedd0] px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-[#276f4b]">
+              Our Journey
+            </span>
+
+            <h2 className="mb-5 text-4xl font-bold leading-tight text-[#1a3a6b] md:text-5xl">
+              Healthcare Ideas to Market
+            </h2>
+
+            <p className="mx-auto max-w-2xl text-base leading-7 text-gray-500 md:text-lg">
+              Our journey combines decades of pharmaceutical industry experience
+              with a new-generation approach to building healthcare products and
+              brands.
+            </p>
+          </motion.div>
+
+          {/* Timeline */}
+          <div className="relative mx-auto max-w-5xl">
+            {/* Main Vertical Line */}
+            <div className="absolute left-5 top-0 h-full w-px bg-gradient-to-b from-[#276f4b]/10 via-[#276f4b]/50 to-[#276f4b]/10 md:left-1/2 md:-translate-x-1/2" />
+
+            <div className="space-y-16 md:space-y-24">
+              {journey.map((item) => {
+                const Icon = item.icon;
+                const isLeft = item.side === "left";
+
+                return (
+                  <motion.div
+                    key={item.year}
+                    variants={itemVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{
+                      once: true,
+                      amount: 0.25,
+                    }}
+                    className="relative grid grid-cols-[40px_1fr] gap-5 md:grid-cols-[1fr_80px_1fr] md:gap-0"
+                  >
+                    {/* LEFT SIDE */}
+                    <div
+                      className={`hidden md:block ${
+                        isLeft ? "text-right" : ""
+                      }`}
+                    >
+                      {isLeft && <TimelineContent item={item} align="right" />}
+                    </div>
+
+                    {/* CENTER */}
+                    <div className="relative flex justify-center">
+                      <motion.div
+                        initial={{ scale: 0 }}
+                        whileInView={{ scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{
+                          delay: 0.15,
+                          duration: 0.4,
+                          type: "spring",
+                          stiffness: 220,
+                        }}
+                        className="relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-4 border-white bg-[#276f4b] text-white shadow-[0_0_0_5px_#cfedd0]"
+                      >
+                        <Icon size={17} strokeWidth={2} />
+                      </motion.div>
+                    </div>
+
+                    {/* RIGHT SIDE */}
+                    <div className="min-w-0">
+                      {/* Mobile: Always show content here */}
+                      <div className="md:hidden">
+                        <TimelineContent item={item} />
+                      </div>
+
+                      {/* Desktop: Right-side items */}
+                      {!isLeft && (
+                        <div className="hidden md:block">
+                          <TimelineContent item={item} />
+                        </div>
+                      )}
+                    </div>
+
+                    {/* YEAR - DESKTOP */}
+                    <div
+                      className={`pointer-events-none absolute top-1/2 hidden -translate-y-1/2 md:block ${
+                        isLeft ? "left-1/2 ml-12" : "right-1/2 mr-12"
+                      }`}
+                    >
+                      <span className="whitespace-nowrap text-sm font-bold uppercase tracking-[0.2em] text-[#276f4b]">
+                        {item.year}
+                      </span>
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </div>
+
+            {/* Bottom Arrow */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+              className="absolute -bottom-8 left-1/2 hidden -translate-x-1/2 md:block"
+            >
+              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#cfedd0] text-[#276f4b]">
+                <ArrowDown size={16} />
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Core Values */}
       <section className="py-20 bg-[#f8fafc]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <FadeUp>
+            <div className="text-center mb-14">
+              <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-[#276f4b] bg-[#cfedd0] px-4 py-1.5 rounded-full mb-3">
+                What We Stand For
+              </span>
+              <h2 className="text-4xl font-bold text-[#1a3a6b] mb-4">
+                Principles That Guide Helik
+              </h2>
+              <p className="text-gray-500 max-w-xl mx-auto">
+                Our values shape how we evaluate products, work with partners
+                and build long-term relationships
+              </p>
+            </div>
+          </FadeUp>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {values.map((val, i) => {
+              const Icon = val.icon;
+              return (
+                <FadeUp key={val.title} delay={i * 0.1}>
+                  <div className="text-center p-6 h-full rounded-2xl border border-gray-100 hover:shadow-xl transition-all hover:-translate-y-1">
+                    <div
+                      className="w-14 h-14 rounded-2xl mx-auto flex items-center justify-center mb-4"
+                      style={{ background: `${val.color}15` }}
+                    >
+                      <Icon className="w-7 h-7" style={{ color: val.color }} />
+                    </div>
+                    <h3 className="font-bold text-[#1a3a6b] mb-2">
+                      {val.title}
+                    </h3>
+                    <p className="text-sm text-gray-500 leading-relaxed">
+                      {val.desc}
+                    </p>
+                  </div>
+                </FadeUp>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Mission & Vision */}
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeUp>
             <div className="text-center mb-14">
@@ -258,13 +506,9 @@ const AboutUs = () => {
                     Our Mission
                   </h3>
                   <p className="text-white/80 leading-relaxed text-base">
-                    To make high-quality healthcare accessible by delivering
-                    safe, effective, and affordable pharmaceutical products
-                    across the globe. Through WHO-GMP and ISO-certified contract
-                    manufacturing partners, we are committed to maintaining
-                    world-class quality standards while building lasting trust
-                    with healthcare professionals, distributors, and consumers
-                    in every market we serve.
+                    To bring quality healthcare products to market that address
+                    genuine healthcare and market needs while creating value for
+                    patients, professionals and partners.
                   </p>
                   <div className="mt-8 pt-6 border-t border-white/20">
                     <p className="text-white/60 text-sm italic">
@@ -288,10 +532,9 @@ const AboutUs = () => {
                     Our Vision
                   </h3>
                   <p className="text-gray-600 leading-relaxed text-base">
-                    To become a leading global pharmaceutical company by setting
-                    new benchmarks in quality, reliability, and customer
-                    satisfaction through internationally certified manufacturing
-                    and ethical business practices.
+                    To build Helik into a recognized healthcare product company
+                    with differentiated products and brands serving India and
+                    international markets.
                   </p>
                   <div className="mt-8 pt-6 border-t border-gray-100">
                     <div className="flex gap-6">
@@ -303,13 +546,13 @@ const AboutUs = () => {
                       </div>
                       <div>
                         <div className="text-2xl font-bold text-[#1a3a6b]">
-                          100M+
+                          10M+
                         </div>
                         <div className="text-xs text-gray-500">Patients</div>
                       </div>
                       <div>
                         <div className="text-2xl font-bold text-[#2ecc71]">
-                          80+
+                          50+
                         </div>
                         <div className="text-xs text-gray-500">Countries</div>
                       </div>
@@ -318,44 +561,6 @@ const AboutUs = () => {
                 </div>
               </div>
             </FadeUp>
-          </div>
-        </div>
-      </section>
-
-      {/* Core Values */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <FadeUp>
-            <div className="text-center mb-14">
-              <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-[#276f4b] bg-[#cfedd0] px-4 py-1.5 rounded-full mb-3">
-                What We Stand For
-              </span>
-              <h2 className="text-4xl font-bold text-[#1a3a6b]">Core Values</h2>
-            </div>
-          </FadeUp>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {values.map((val, i) => {
-              const Icon = val.icon;
-              return (
-                <FadeUp key={val.title} delay={i * 0.1}>
-                  <div className="text-center p-8 rounded-2xl border border-gray-100 hover:shadow-xl transition-all hover:-translate-y-1">
-                    <div
-                      className="w-14 h-14 rounded-2xl mx-auto flex items-center justify-center mb-4"
-                      style={{ background: `${val.color}15` }}
-                    >
-                      <Icon className="w-7 h-7" style={{ color: val.color }} />
-                    </div>
-                    <h3 className="font-bold text-[#1a3a6b] mb-2">
-                      {val.title}
-                    </h3>
-                    <p className="text-sm text-gray-500 leading-relaxed">
-                      {val.desc}
-                    </p>
-                  </div>
-                </FadeUp>
-              );
-            })}
           </div>
         </div>
       </section>
@@ -410,46 +615,118 @@ const AboutUs = () => {
       </section>
 
       {/* Awards & Certifications */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <FadeUp>
-            <div className="text-center mb-14">
-              <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-[#276f4b] bg-[#cfedd0] px-4 py-1.5 rounded-full mb-3">
-                Recognition
-              </span>
-              <h2 className="text-4xl font-bold text-[#1a3a6b] mb-4">
-                Awards & Certifications
-              </h2>
-              <p className="text-gray-500 max-w-xl mx-auto">
-                Our quality and innovation are recognised by leading global
-                regulatory authorities and industry bodies.
-              </p>
-            </div>
-          </FadeUp>
 
-          <div className="flex lg:flex-row flex-col items-center justify-center gap-4">
-            {certifications.map((cert, i) => (
-              <FadeUp key={cert.label} delay={i * 0.08}>
-                <div
-                  className="flex flex-col items-center justify-center p-6 rounded-2xl border-2 border-dashed hover:shadow-lg transition-all"
-                  style={{ borderColor: `${cert.color}40` }}
-                >
-                  <img src={cert.logo} alt="logo" width="100px" />
-                  <div className="font-bold text-sm text-[#1a3a6b] text-center">
-                    {cert.label}
-                  </div>
-                  <div className="text-xs text-gray-400 text-center mt-1">
-                    {cert.sublabel}
-                  </div>
+      {/* Manufacturing network */}
+      <section className="py-20 bg-white flex items-center justify-center">
+        <div className="sm:px-6">
+          <FadeUp>
+            <div className="text-center mb-6">
+              <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-[#276f4b] bg-[#cfedd0] px-4 py-1.5 rounded-full mb-3">
+                Our Manufacturing Network
+              </span>
+              <h2 className="text-4xl font-bold text-[#1a3a6b] mb-8">
+                Certified Manufacturing Partners
+              </h2>
+              <FadeUp
+                delay={0.1}
+                className="flex md:flex-row flex-col items-center gap-6"
+              >
+                <div className="md:w-1/2 flex items-center text-center px-12 py-6  justify-center transition-all mx-auto border hover:-translate-y-1 hover:shadow-xl border-gray-100 bg-white rounded-2xl overflow-hidden">
+                  Our manufacturing network comprises WHO-GMP, ISO, HACCP, US
+                  FDA, European regulatory, and Ministry of AYUSH-compliant
+                  manufacturing units, selected according to specific product
+                  and market requirements.
+                  <br />
+                  <br />
+                  Our partner facilities have extensive experience in
+                  manufacturing and exporting healthcare products across SRA
+                  markets, the Middle East, Africa, and Asia.
+                  <br />
+                  <br />
+                  Collectively, our manufacturing partners have established
+                  export experience across more than 51 countries, with the
+                  capabilities to meet diverse regulatory, quality, and market
+                  requirements.
+                  <br />
+                  <br />
+                  We identify and select manufacturing partners based on product
+                  specifications, target-market regulations, quality standards,
+                  production capabilities, and evolving consumer needs.
+                </div>
+                <div className="grid grid-cols-2 gap-4 md:w-1/2">
+                  {certifications.map((cert, i) => (
+                    <FadeUp key={cert.label} delay={i * 0.08}>
+                      <div
+                        className="flex flex-col items-center justify-center p-6 rounded-2xl border-2 border-dashed hover:shadow-lg transition-all"
+                        style={{ borderColor: `${cert.color}40` }}
+                      >
+                        <img src={cert.logo} alt="logo" width="100px" />
+                        <div className="font-bold text-sm text-[#1a3a6b] text-center">
+                          {cert.label}
+                        </div>
+                        <div className="text-xs text-gray-400 text-center mt-1">
+                          {cert.sublabel}
+                        </div>
+                      </div>
+                    </FadeUp>
+                  ))}
                 </div>
               </FadeUp>
-            ))}
-          </div>
+            </div>
+          </FadeUp>
+        </div>
+      </section>
+
+      <section className="py-20 bg-[#f8fafc] flex items-center justify-center">
+        <div className="sm:px-6">
+          <FadeUp>
+            <div className="text-center mb-6">
+              <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-[#276f4b] bg-[#cfedd0] px-4 py-1.5 rounded-full mb-3">
+                OUR APPROACH
+              </span>
+              <h2 className="text-4xl font-bold text-[#1a3a6b] mb-8">
+                Requirement to Market
+              </h2>
+              <div className="flex flex-col md:flex-row items-center justify-center gap-6">
+                <FadeUp delay={0.1} className="md:w-1/2">
+                  <div className="flex items-center text-center p-12  justify-center transition-all mx-auto border hover:-translate-y-1 hover:shadow-xl border-gray-100 bg-white rounded-2xl overflow-hidden">
+                    We first understand your requirement, then identify the
+                    right manufacturing and regulatory pathway, coordinate
+                    product development and execution, and deliver a solution
+                    aligned with your product, quality, regulatory, packaging,
+                    and market requirements. Identify → Develop → Validate →
+                    Manufacture → Deliver
+                    <br />
+                    <br />
+                    This gives our clients end-to-end support, from product
+                    identification and development through manufacturing,
+                    documentation, packaging, and final delivery.
+                  </div>
+                </FadeUp>
+                <FadeUp delay={0.1} className="md:w-1/2">
+                  <div
+                    className="h-74 rounded-3xl relative overflow-hidden flex items-center justify-center"
+                    style={{
+                      background:
+                        "linear-gradient(135deg, #E6F5ED 0%, #EAF7F4 45%, #DCEEFF 100%)",
+                    }}
+                  >
+                    <img
+                      src="./market.png"
+                      alt="Market img"
+                      style={{ height: "stretch" }}
+                    />
+                    {/* Animated dots */}
+                  </div>
+                </FadeUp>
+              </div>
+            </div>
+          </FadeUp>
         </div>
       </section>
 
       {/* Global Presence */}
-      <section className="py-20 bg-[#f8fafc]">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeUp>
             <div className="text-center mb-14">
@@ -460,7 +737,9 @@ const AboutUs = () => {
                 Global Presence
               </h2>
               <p className="text-gray-500 max-w-xl mx-auto">
-                Our products reach patients in over 10 countries
+                Helik currently serves 20 international clients across 5
+                international markets, with India as the foundation of our
+                growing business.
               </p>
             </div>
           </FadeUp>
@@ -486,21 +765,18 @@ const AboutUs = () => {
             {/* Countries list */}
             <FadeUp delay={0.2}>
               <div>
-                <h3 className="font-bold text-[#1a3a6b] mb-4 text-lg">
-                  Key Markets
-                </h3>
-                <div className="flex flex-wrap gap-2">
+                <div className="grid grid-cols-2 gap-4">
                   {countries.map((country) => (
                     <span
                       key={country.id}
-                      className="flex items-center gap-1.5 bg-white border border-gray-100 shadow-sm px-3 py-1.5 rounded-2xl text-sm text-gray-700 hover:border-[#1a3a6b] hover:text-[#1a3a6b] transition-colors cursor-default"
+                      className="flex items-center justify-center gap-1.5 bg-white border border-gray-100 shadow-sm px-4 py-4 rounded-2xl text-sm text-gray-700 hover:border-[#1a3a6b] hover:text-[#1a3a6b] transition-colors cursor-default"
                     >
                       <img
                         src={country.flag}
                         alt={`${country.name} flag`}
-                        className="w-12 h-12 rounded-full object-cover"
+                        className="w-12 h-12 rounded-full object-cover mr-4"
                       />
-                      {country.name}
+                      <b> {country.name}</b>
                     </span>
                   ))}
                 </div>

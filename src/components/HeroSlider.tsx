@@ -24,7 +24,7 @@ const slides: Slide[] = [
     description:
       "We identify genuine healthcare needs and develop science-backed pharmaceutical, nutraceutical and healthcare products designed to create meaningful value for patients, consumers and markets.",
     cta: "Explore Our Products",
-    ctaPath: "/products/new-launches",
+    ctaPath: "/products/products",
     accent: "#276f4b",
     gradient: "linear-gradient(135deg, #0f2347 0%, #1a3a6b 45%, #2a5298 100%)",
   },
