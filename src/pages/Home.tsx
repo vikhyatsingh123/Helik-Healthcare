@@ -480,56 +480,15 @@ const Home = () => {
 
             {/* Visual */}
             <FadeUp delay={0.2}>
-              <div className="relative h-80 md:h-96">
+              <div className="relative h-80 md:h-126">
                 {/* Main card */}
-                <div
-                  className="absolute inset-0 rounded-3xl overflow-hidden"
-                  style={{
-                    background: "linear-gradient(135deg, #1a3a6b, #2a5298)",
-                  }}
-                >
+                <div className="absolute inset-0 rounded-3xl overflow-hidden">
                   {/* Abstract medical visual */}
-                  <div className="absolute inset-0">
-                    {[...Array(3)].map((_, i) => (
-                      <motion.div
-                        key={i}
-                        className="absolute rounded-full border border-white/10"
-                        style={{
-                          width: 150 + i * 100,
-                          height: 150 + i * 100,
-                          left: "50%",
-                          top: "50%",
-                          transform: "translate(-50%,-50%)",
-                        }}
-                        animate={{ rotate: i % 2 === 0 ? 360 : -360 }}
-                        transition={{
-                          duration: 15 + i * 5,
-                          repeat: Infinity,
-                          ease: "linear",
-                        }}
-                      />
-                    ))}
-                    {/* Center icon */}
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <motion.div
-                        className="w-20 h-20 rounded-2xl bg-white/10 flex items-center justify-center"
-                        animate={{ scale: [1, 1.05, 1] }}
-                        transition={{ duration: 3, repeat: Infinity }}
-                      >
-                        <Heart
-                          className="w-10 h-10 text-white"
-                          fill="white"
-                          fillOpacity={0.3}
-                        />
-                      </motion.div>
-                    </div>
-                  </div>
-                  <div className="absolute bottom-6 left-6 right-6">
-                    <p className="text-white/80 text-sm italic">
-                      "Our mission is to provide innovative, affordable
-                      healthcare solutions that improve lives across the world."
-                    </p>
-                  </div>
+                  <img
+                    src="/dna.PNG"
+                    alt="Abstract medical visual"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
 
                 {/* Floating badges */}
@@ -958,7 +917,7 @@ const Home = () => {
               <br />
               Pharmaceutical Leader?
             </h2>
-            <p className="text-white/70 text-lg mb-10 max-w-2xl mx-auto">
+            <p className="text-white/80 text-lg mb-10 max-w-2xl mx-auto">
               Whether you're a distributor, healthcare provider or investor —
               Helik Healthcare offers strategic partnership models tailored to
               your needs.

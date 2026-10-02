@@ -112,7 +112,7 @@ const Products = () => {
             <h1 className="text-5xl font-extrabold text-white mb-4">
               Products for Export
             </h1>
-            <p className="text-white/70 text-lg max-w-xl">
+            <p className="text-white/80 text-lg max-w-xl">
               Explore our comprehensive pharmaceutical portfolio spanning
               critical product range.
             </p>

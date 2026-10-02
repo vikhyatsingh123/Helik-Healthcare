@@ -51,7 +51,7 @@ const NewLaunches = () => {
             <h1 className="text-5xl font-extrabold text-white mb-4">
               Our Products
             </h1>
-            <p className="text-white/70 text-lg max-w-xl">
+            <p className="text-white/80 text-lg max-w-xl">
               A diversified portfolio spanning critical products, backed by
               decades of research and clinical excellence.
             </p>

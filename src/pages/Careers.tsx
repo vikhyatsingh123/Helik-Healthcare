@@ -232,7 +232,7 @@ const Careers = () => {
             <h1 className="text-5xl font-extrabold text-white mb-4">
               Join Our Team
             </h1>
-            <p className="text-white/70 text-lg max-w-xl mb-8">
+            <p className="text-white/80 text-lg max-w-xl mb-8">
               Be part of a mission-driven team dedicated to transforming global
               health. At Helik, your work directly impacts millions of lives.
             </p>

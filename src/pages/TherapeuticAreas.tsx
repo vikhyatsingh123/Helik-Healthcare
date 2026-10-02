@@ -165,7 +165,7 @@ const TherapeuticAreas = () => {
             <h1 className="text-5xl font-extrabold text-white mb-4">
               Product Range
             </h1>
-            <p className="text-white/70 text-lg max-w-xl">
+            <p className="text-white/80 text-lg max-w-xl">
               Focused expertise across six critical therapeutic domains, backed
               by decades of research and clinical experience.
             </p>

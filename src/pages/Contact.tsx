@@ -142,7 +142,7 @@ const Contact = () => {
             <h1 className="text-5xl font-extrabold text-white mb-4">
               Get In Touch
             </h1>
-            <p className="text-white/70 text-lg max-w-xl">
+            <p className="text-white/80 text-lg max-w-xl">
               Whether you're a healthcare professional, distributor, or partner
               — we're here to help. Reach out to our expert team.
             </p>

@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 interface Slide {
   id: number;
+  url: string;
   description: string;
   badge: string;
   title: string;
@@ -26,6 +27,7 @@ const slides: Slide[] = [
     cta: "Explore Our Products",
     ctaPath: "/products/products",
     accent: "#276f4b",
+    url: "./nurse.png",
     gradient: "linear-gradient(135deg, #0f2347 0%, #1a3a6b 45%, #2a5298 100%)",
   },
   {
@@ -38,6 +40,7 @@ const slides: Slide[] = [
     cta: "Our Product Range",
     ctaPath: "/products/export-range",
     accent: "#276f4b",
+    url: "./tablets.png",
     gradient: "linear-gradient(135deg, #0d1b2a 0%, #1b3a4b 45%, #1a5276 100%)",
   },
   {
@@ -50,6 +53,7 @@ const slides: Slide[] = [
     cta: "Partner With Us",
     ctaPath: "/contact",
     accent: "#276f4b",
+    url: "./dna.PNG",
     gradient: "linear-gradient(135deg, #1a0533 0%, #2d1b69 45%, #1a3a6b 100%)",
   },
 ];
@@ -104,86 +108,12 @@ const HeroSlider = () => {
           exit="exit"
           transition={{ duration: 1.2, ease: [0.25, 0.46, 0.45, 0.94] }}
           className="absolute inset-0"
-          style={{ background: slide.gradient }}
+          style={{
+            backgroundImage: `url(${slide.url})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
         >
-          {/* Decorative background shapes */}
-          <div className="absolute inset-0 overflow-hidden">
-            {/* Large circle top-right */}
-            <motion.div
-              className="absolute -top-32 -right-32 w-[500px] h-[500px] rounded-full opacity-10"
-              style={{ border: "2px solid white" }}
-              animate={{ rotate: 360 }}
-              transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-            />
-            {/* Medium circle */}
-            <motion.div
-              className="absolute top-20 right-20 w-[300px] h-[300px] rounded-full opacity-5"
-              style={{ background: "white" }}
-              animate={{ scale: [1, 1.1, 1] }}
-              transition={{ duration: 4, repeat: Infinity }}
-            />
-            {/* Molecule dots */}
-            {[...Array(6)].map((_, i) => (
-              <motion.div
-                key={i}
-                className="absolute w-2 h-2 rounded-full bg-white/20"
-                style={{
-                  left: `${15 + i * 14}%`,
-                  top: `${20 + (i % 3) * 25}%`,
-                }}
-                animate={{ y: [-10, 10, -10] }}
-                transition={{
-                  duration: 3 + i * 0.5,
-                  repeat: Infinity,
-                  delay: i * 0.3,
-                }}
-              />
-            ))}
-            {/* Grid lines */}
-            <div
-              className="absolute inset-0 opacity-5"
-              style={{
-                backgroundImage:
-                  "linear-gradient(white 1px, transparent 1px), linear-gradient(90deg, white 1px, transparent 1px)",
-                backgroundSize: "60px 60px",
-              }}
-            />
-            {/* Abstract DNA shape right side */}
-            <div className="absolute right-0 top-0 bottom-0 w-1/2 flex items-center justify-end pr-16">
-              <motion.div
-                className="relative w-72 h-72"
-                animate={{ rotate: [0, 5, -5, 0] }}
-                transition={{
-                  duration: 6,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-              >
-                {/* Hexagon grid */}
-                {[...Array(12)].map((_, i) => (
-                  <motion.div
-                    key={i}
-                    className="absolute rounded-lg opacity-20"
-                    style={{
-                      width: 40 + (i % 3) * 10,
-                      height: 40 + (i % 3) * 10,
-                      background: i % 2 === 0 ? "white" : slide.accent,
-                      left: `${(i % 4) * 25}%`,
-                      top: `${Math.floor(i / 4) * 33}%`,
-                      borderRadius: i % 3 === 0 ? "50%" : "8px",
-                    }}
-                    animate={{ opacity: [0.1, 0.25, 0.1] }}
-                    transition={{
-                      duration: 2,
-                      delay: i * 0.2,
-                      repeat: Infinity,
-                    }}
-                  />
-                ))}
-              </motion.div>
-            </div>
-          </div>
-
           {/* Content */}
           <div className="relative z-10 h-full flex items-center">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -229,7 +159,7 @@ const HeroSlider = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4 }}
-                  className="text-sm text-white/70 mb-10 leading-relaxed max-w-lg"
+                  className="text-sm text-white/80 mb-10 leading-relaxed max-w-lg"
                 >
                   {slide.description}
                 </motion.p>

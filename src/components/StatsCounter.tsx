@@ -24,7 +24,7 @@ const stats: Stat[] = [
   },
   {
     icon: Package,
-    value: 500,
+    value: 300,
     suffix: "+",
     prefix: "",
     label: "Products",
@@ -33,7 +33,7 @@ const stats: Stat[] = [
   },
   {
     icon: Globe,
-    value: 10,
+    value: 5,
     suffix: "+",
     prefix: "",
     label: "Countries",
@@ -42,7 +42,7 @@ const stats: Stat[] = [
   },
   {
     icon: Users,
-    value: 50,
+    value: 20,
     suffix: "+",
     prefix: "",
     label: "Trusted Clients",

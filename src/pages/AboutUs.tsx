@@ -263,19 +263,12 @@ const AboutUs = () => {
       <section
         className="pt-32 pb-20 relative overflow-hidden"
         style={{
-          background: "linear-gradient(135deg, #0f2347, #1a3a6b 50%, #2a5298)",
+          backgroundImage: "url('./background1.png')",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
         }}
       >
-        <div className="absolute inset-0">
-          <div
-            className="absolute inset-0 opacity-5"
-            style={{
-              backgroundImage:
-                "linear-gradient(white 1px, transparent 1px), linear-gradient(90deg, white 1px, transparent 1px)",
-              backgroundSize: "60px 60px",
-            }}
-          />
-        </div>
+        {/* </div> */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -292,10 +285,10 @@ const AboutUs = () => {
             <h1 className="text-5xl font-extrabold text-white mb-4">
               Our Story
             </h1>
-            <p className="text-white/70 text-lg">
+            <p className="text-white/80 text-lg">
               Building a Healthcare Company for the Future.
             </p>
-            <p className="text-white/70 text-lg mt-4">
+            <p className="text-white/80 text-lg mt-4">
               Our foundation is backed by more than 30 years of pharmaceutical
               industry experience through our associated company, Gamete
               Healthcare Pvt. Ltd., established in 1998. This experience has

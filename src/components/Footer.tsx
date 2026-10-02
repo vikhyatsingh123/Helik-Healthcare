@@ -71,7 +71,7 @@ const Footer = () => {
               </div>
               {/* <div>
                 <span className="text-xl font-bold text-white">Helik</span>
-                <span className="text-xl font-light text-white/70">
+                <span className="text-xl font-light text-white/80">
                   {" "}
                   Healthcare
                 </span>
@@ -106,7 +106,7 @@ const Footer = () => {
                 <li key={link.path}>
                   <Link
                     to={link.path}
-                    className="flex items-center gap-2 text-white/70 hover:text-white text-sm transition-colors group"
+                    className="flex items-center gap-2 text-white/80 hover:text-white text-sm transition-colors group"
                   >
                     <ArrowRight className="w-3 h-3 text-[#276f4b] transition-transform group-hover:translate-x-1" />
                     {link.label}
@@ -126,7 +126,7 @@ const Footer = () => {
                 <li key={area.label}>
                   <Link
                     to={area.path}
-                    className="flex items-center gap-2 text-white/70 hover:text-white text-sm transition-colors group"
+                    className="flex items-center gap-2 text-white/80 hover:text-white text-sm transition-colors group"
                   >
                     <ArrowRight className="w-3 h-3 text-[#276f4b] transition-transform group-hover:translate-x-1" />
                     {area.label}
@@ -144,20 +144,20 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex gap-3">
                 <MapPin className="w-4 h-4 text-[#276f4b] mt-0.5 shrink-0" />
-                <span className="text-white/70 text-sm">
+                <span className="text-white/80 text-sm">
                   C-502, hometech Commercial, C-Block, Defence Enclave, Noida
                   Sector-44, Delhi NCR 201301, India
                 </span>
               </li>
               <li className="flex gap-3">
                 <Phone className="w-4 h-4 text-[#276f4b] mt-0.5 shrink-0" />
-                <span className="text-white/70 text-sm">+91 8840703781</span>
+                <span className="text-white/80 text-sm">+91 8840703781</span>
               </li>
               <li className="flex gap-3">
                 <Mail className="w-4 h-4 text-[#276f4b] mt-0.5 shrink-0" />
                 <a
                   href="mailto:info@helikhealthcare.in"
-                  className="text-white/70 hover:text-white text-sm transition-colors"
+                  className="text-white/80 hover:text-white text-sm transition-colors"
                 >
                   info@helikhealthcare.in
                 </a>
@@ -178,7 +178,7 @@ const Footer = () => {
               <a
                 key={item.title}
                 href={item.link}
-                className="text-white/40 hover:text-white/70 text-sm transition-colors"
+                className="text-white/40 hover:text-white/80 text-sm transition-colors"
               >
                 {item.title}
               </a>
