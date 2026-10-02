@@ -65,12 +65,12 @@ import grestgold7 from "../assets/grestgold/Grest gold_7.png";
 import grestgold8 from "../assets/grestgold/Grest gold_8.png";
 
 import immucare1 from "../assets/immucare/immucare_1.png";
-import immucare2 from "../assets/immucare/immucare_2.png";
-import immucare3 from "../assets/immucare/immucare_3.png";
-import immucare4 from "../assets/immucare/immucare_4.png";
-import immucare5 from "../assets/immucare/immucare_5.png";
-import immucare6 from "../assets/immucare/immucare_6.png";
-import immucare7 from "../assets/immucare/immucare_7.png";
+import immucare2 from "../assets/immucare/Immucare_2.png";
+import immucare3 from "../assets/immucare/Immucare_3.png";
+import immucare4 from "../assets/immucare/Immucare_4.png";
+import immucare5 from "../assets/immucare/Immucare_5.png";
+import immucare6 from "../assets/immucare/Immucare_6.png";
+import immucare7 from "../assets/immucare/Immucare_7.png";
 
 import ProductModalRightSide from "./ProductModalRightSide";
 import { OestofortGold } from "../data/OestofortGold";
