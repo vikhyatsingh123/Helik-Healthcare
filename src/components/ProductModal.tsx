@@ -72,6 +72,105 @@ import immucare5 from "../assets/immucare/Immucare_5.png";
 import immucare6 from "../assets/immucare/Immucare_6.png";
 import immucare7 from "../assets/immucare/Immucare_7.png";
 
+import age1 from "../assets/age/Helik_Image_1.png";
+import age2 from "../assets/age/Helik_Image_2.png";
+import age3 from "../assets/age/Helik_Image_3.png";
+import age4 from "../assets/age/Helik_Image_4.png";
+import age5 from "../assets/age/Helik_Image_5.png";
+
+import agePlus1 from "../assets/ageplus/Helik_Image_1.png";
+import agePlus2 from "../assets/ageplus/Helik_Image_2.png";
+import agePlus3 from "../assets/ageplus/Helik_Image_3.png";
+import agePlus4 from "../assets/ageplus/Helik_Image_4.png";
+
+import betalik1 from "../assets/betalik/Helik_Image_1.png";
+import betalik2 from "../assets/betalik/Helik_Image_2.png";
+import betalik3 from "../assets/betalik/Helik_Image_3.png";
+import betalik4 from "../assets/betalik/Helik_Image_4.png";
+import betalik5 from "../assets/betalik/Helik_Image_5.png";
+
+import betalikPlus1 from "../assets/betalikplus/Helik_1.png";
+import betalikPlus2 from "../assets/betalikplus/Helik_2.png";
+import betalikPlus3 from "../assets/betalikplus/Helik_3.png";
+import betalikPlus4 from "../assets/betalikplus/Helik_4.png";
+import betalikPlus5 from "../assets/betalikplus/Helik_5.png";
+
+import clarimet5001 from "../assets/clarimet500/Clarimet-500_1.png";
+import clarimet5002 from "../assets/clarimet500/Clarimet-500_2.png";
+import clarimet5003 from "../assets/clarimet500/Clarimet-500_3.png";
+import clarimet5004 from "../assets/clarimet500/Clarimet-500_4.png";
+
+import coseDSR1 from "../assets/cosedsr/CoseDSR1.png";
+import coseDSR2 from "../assets/cosedsr/coseDSR3.png";
+import coseDSR3 from "../assets/cosedsr/CoseDSR4.png";
+import coseDSR4 from "../assets/cosedsr/CoseDSR5.png";
+
+import fluhet1 from "../assets/fluhet/Fluhet1.png";
+import fluhet2 from "../assets/fluhet/Fluhet2.png";
+import fluhet3 from "../assets/fluhet/Fluhet3.png";
+import fluhet4 from "../assets/fluhet/Fluhet4.png";
+
+import fluhet60_1 from "../assets/fluhet60/Fluhet-60-1.png";
+import fluhet60_2 from "../assets/fluhet60/Fluhet-60-2.png";
+import fluhet60_3 from "../assets/fluhet60/Fluhet-60-3.png";
+
+import linnt1 from "../assets/linnt/LIN-NT-1.png";
+import linnt2 from "../assets/linnt/LIN-NT-2.png";
+import linnt3 from "../assets/linnt/LIN-NT-3.png";
+import linnt4 from "../assets/linnt/LIN-NT-4.png";
+import linnt5 from "../assets/linnt/LIN-NT-5.png";
+
+import lizomet1 from "../assets/lizomet/Lizomet_1.png";
+import lizomet2 from "../assets/lizomet/Lizomet_2.png";
+import lizomet3 from "../assets/lizomet/Lizomet_3.png";
+import lizomet4 from "../assets/lizomet/Lizomet_4.png";
+
+import mtek1 from "../assets/mteklc/M Tek Lc-1.png";
+import mtek2 from "../assets/mteklc/M Tek Lc-2.png";
+import mtek3 from "../assets/mteklc/M Tek Lc-3.png";
+import mtek4 from "../assets/mteklc/M Tek Lc-4.png";
+import mtek5 from "../assets/mteklc/M Tek Lc-5.png";
+
+import ometron1 from "../assets/ometron/Ometron1.png";
+import ometron2 from "../assets/ometron/Ometron2.png";
+import ometron3 from "../assets/ometron/Ometron3.png";
+import ometron4 from "../assets/ometron/Ometron4.png";
+import ometron5 from "../assets/ometron/Ometron5.png";
+import ometron6 from "../assets/ometron/Ometron6.png";
+import ometron7 from "../assets/ometron/Ometron7.png";
+
+import rebzyls1 from "../assets/rebzyls/Rebzy-ls-1.png";
+import rebzyls2 from "../assets/rebzyls/Rebzy-ls-2.png";
+import rebzyls3 from "../assets/rebzyls/Rebzy-ls-3.png";
+import rebzyls4 from "../assets/rebzyls/Rebzy-ls-4.png";
+
+import restod1 from "../assets/restod/Resto-D_1.png";
+import restod2 from "../assets/restod/Resto-D_2.png";
+import restod3 from "../assets/restod/Resto-D_3.png";
+import restod4 from "../assets/restod/Resto-D_4.png";
+
+import restzyme1 from "../assets/restzyme/Restzyme_1.png";
+import restzyme2 from "../assets/restzyme/Restzyme_2.png";
+import restzyme3 from "../assets/restzyme/Restzyme_3.png";
+import restzyme4 from "../assets/restzyme/Restzyme_4.png";
+import restzyme5 from "../assets/restzyme/Restzyme_5.png";
+
+import texagam1 from "../assets/texagam500/Texagam-500-1.png";
+import texagam2 from "../assets/texagam500/Texagam-500-2.png";
+import texagam3 from "../assets/texagam500/Texagam-500-3.png";
+import texagam4 from "../assets/texagam500/Texagam-500-4.png";
+
+import typal1 from "../assets/typal50/Typal-1.png";
+import typal2 from "../assets/typal50/Typal-2.png";
+import typal3 from "../assets/typal50/Typal-3.png";
+import typal4 from "../assets/typal50/Typal-4.png";
+
+import typal1001 from "../assets/typal100/Typal-100-1.png";
+import typal1002 from "../assets/typal100/Typal-100-2.png";
+import typal1003 from "../assets/typal100/Typal-100-3.png";
+import typal1004 from "../assets/typal100/Typal-100-4.png";
+import typal1005 from "../assets/typal100/Typal-100-5.png";
+
 import ProductModalRightSide from "./ProductModalRightSide";
 import { OestofortGold } from "../data/OestofortGold";
 import { Bebact45 } from "../data/Bebact";
@@ -81,6 +180,24 @@ import { GHBFort } from "../data/GhbFort";
 import { GHBPlus } from "../data/GhbPlus";
 import { GrestGold } from "../data/GrestGold";
 import { Immucare } from "../data/Immucare";
+import { Age } from "../data/Age";
+import { AgePlus } from "../data/AgePlus";
+import { Betalik } from "../data/Betalik";
+import { BetalikPlus } from "../data/BetalikPlus";
+import { Clarimet500 } from "../data/Clarimet";
+import { CoseDSR } from "../data/CoseDsr";
+import { FluhEt } from "../data/Fluhet";
+import { Fluhet60 } from "../data/Fluhet60";
+import { LinNT } from "../data/Linnt";
+import { Lizomet } from "../data/Lizomet";
+import { MTekLC } from "../data/Mteklc";
+import { Ometron } from "../data/Ometron";
+import { RebzyLS } from "../data/Rebzyls";
+import { RestoD } from "../data/Restod";
+import { Restzyme } from "../data/Restzym";
+import { Texagam500 } from "../data/Texgam";
+import { Typal50 } from "../data/Typal";
+import { Typal100 } from "../data/Typal100";
 
 export interface Product {
   id: string;
@@ -104,6 +221,24 @@ const productData: Record<string, any> = {
   ghbplus: GHBPlus,
   grestgold: GrestGold,
   immucare: Immucare,
+  age: Age,
+  ageplus: AgePlus,
+  betalik: Betalik,
+  betalikplus: BetalikPlus,
+  clarimet500: Clarimet500,
+  cosedsr: CoseDSR,
+  fluhet: FluhEt,
+  fluhet60: Fluhet60,
+  linnt: LinNT,
+  lizomet: Lizomet,
+  mtek: MTekLC,
+  ometron: Ometron,
+  rebzyls: RebzyLS,
+  restod: RestoD,
+  restzyme: Restzyme,
+  texagam: Texagam500,
+  typal50: Typal50,
+  typal100: Typal100,
 };
 
 const productImages: Record<string, string[]> = {
@@ -184,6 +319,38 @@ const productImages: Record<string, string[]> = {
     immucare6,
     immucare7,
   ],
+  age: [age1, age2, age3, age4, age5],
+  ageplus: [agePlus1, agePlus2, agePlus3, agePlus4],
+  betalik: [betalik1, betalik2, betalik3, betalik4, betalik5],
+  betalikplus: [
+    betalikPlus1,
+    betalikPlus2,
+    betalikPlus3,
+    betalikPlus4,
+    betalikPlus5,
+  ],
+  clarimet500: [clarimet5001, clarimet5002, clarimet5003, clarimet5004],
+  cosedsr: [coseDSR1, coseDSR2, coseDSR3, coseDSR4],
+  fluhet: [fluhet1, fluhet2, fluhet3, fluhet4],
+  fluhet60: [fluhet60_1, fluhet60_2, fluhet60_3],
+  linnt: [linnt1, linnt2, linnt3, linnt4, linnt5],
+  lizomet: [lizomet1, lizomet2, lizomet3, lizomet4],
+  mtek: [mtek1, mtek2, mtek3, mtek4, mtek5],
+  ometron: [
+    ometron1,
+    ometron2,
+    ometron3,
+    ometron4,
+    ometron5,
+    ometron6,
+    ometron7,
+  ],
+  rebzyls: [rebzyls1, rebzyls2, rebzyls3, rebzyls4],
+  restod: [restod1, restod2, restod3, restod4],
+  restzyme: [restzyme1, restzyme2, restzyme3, restzyme4, restzyme5],
+  texagam: [texagam1, texagam2, texagam3, texagam4],
+  typal50: [typal1, typal2, typal3, typal4],
+  typal100: [typal1001, typal1002, typal1003, typal1004, typal1005],
 };
 
 const ProductModal: React.FC<ProductModalProps> = ({

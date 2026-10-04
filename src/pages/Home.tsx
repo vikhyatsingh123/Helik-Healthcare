@@ -103,26 +103,13 @@ const productCategories = [
     color: "#1a3a6b",
   },
   {
-    icon: img4,
-    title: "Antibiotic & Anti-Infective",
-    desc: "Broad-spectrum antibiotics and anti-infective medicines for bacterial and other infections.",
-    count: 55,
-    color: "#2ecc71",
-  },
-  {
     icon: img9,
     title: "Analgesics & Musculo Skeletal Disorders",
     desc: "Pain management and anti-inflammatory medicines for muscles, joints, and bones.",
     count: 50,
     color: "#ef4444",
   },
-  {
-    icon: img11,
-    title: "Oral Dry Suspensions & Oral Liquids",
-    desc: "Liquid formulations and suspensions designed for pediatric and adult patients.",
-    count: 31,
-    color: "#14b8a6",
-  },
+
   {
     icon: img8,
     title: "General Injections",
@@ -145,11 +132,11 @@ const productCategories = [
     color: "#0ea5e9",
   },
   {
-    icon: img18,
-    title: "Vitamins & Minerals",
-    desc: "Essential vitamin and mineral supplements for nutritional support and deficiency management.",
-    count: 44,
-    color: "#eab308",
+    icon: img14,
+    title: "Products Under Development",
+    desc: "Innovative pharmaceutical formulations currently under research and development.",
+    count: 15,
+    color: "#6366f1",
   },
   {
     icon: img17,
@@ -173,11 +160,25 @@ const productCategories = [
     color: "#f43f5e",
   },
   {
-    icon: img14,
-    title: "Products Under Development",
-    desc: "Innovative pharmaceutical formulations currently under research and development.",
-    count: 15,
-    color: "#6366f1",
+    icon: img4,
+    title: "Antibiotic & Anti-Infective",
+    desc: "Broad-spectrum antibiotics and anti-infective medicines for bacterial and other infections.",
+    count: 55,
+    color: "#2ecc71",
+  },
+  {
+    icon: img11,
+    title: "Oral Dry Suspensions & Oral Liquids",
+    desc: "Liquid formulations and suspensions designed for pediatric and adult patients.",
+    count: 31,
+    color: "#14b8a6",
+  },
+  {
+    icon: img18,
+    title: "Vitamins & Minerals",
+    desc: "Essential vitamin and mineral supplements for nutritional support and deficiency management.",
+    count: 44,
+    color: "#eab308",
   },
   {
     icon: img10,
@@ -595,7 +596,7 @@ const Home = () => {
                               <img
                                 src={cat.image}
                                 alt={cat.name}
-                                className="w-full h-auto"
+                                className="w-full object-fill md:h-[222px]"
                               />
                             </div>
 
@@ -700,8 +701,8 @@ const Home = () => {
                           >
                             <img src={cat.icon} alt={cat.title} />
                           </div>
-                          <div className="flex items-start justify-between mb-2">
-                            <h3 className="text-lg font-bold text-[#1a3a6b]">
+                          <div className="flex justify-between mb-2 h-16 items-center">
+                            <h3 className="text-lg font-bold text-[#1a3a6b] text-left">
                               {cat.title}
                             </h3>
                             <span
@@ -714,7 +715,7 @@ const Home = () => {
                               {cat.count} Products
                             </span>
                           </div>
-                          <p className="text-gray-500 text-sm leading-relaxed mb-4">
+                          <p className="text-gray-500 text-sm leading-relaxed mb-4 text-left">
                             {cat.desc}
                           </p>
                           <div

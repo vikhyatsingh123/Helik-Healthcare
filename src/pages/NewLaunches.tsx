@@ -88,7 +88,7 @@ const NewLaunches = () => {
                       <img
                         src={cat.image}
                         alt={cat.name}
-                        className="w-full h-auto"
+                        className="w-full object-fill md:h-[222px]"
                       />
                     </div>
 
