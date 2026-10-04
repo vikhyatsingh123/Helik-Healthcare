@@ -131,13 +131,13 @@ import mtek3 from "../assets/mteklc/M Tek Lc-3.png";
 import mtek4 from "../assets/mteklc/M Tek Lc-4.png";
 import mtek5 from "../assets/mteklc/M Tek Lc-5.png";
 
-import ometron1 from "../assets/ometron/Ometron1.png";
-import ometron2 from "../assets/ometron/Ometron2.png";
-import ometron3 from "../assets/ometron/Ometron3.png";
-import ometron4 from "../assets/ometron/Ometron4.png";
-import ometron5 from "../assets/ometron/Ometron5.png";
-import ometron6 from "../assets/ometron/Ometron6.png";
-import ometron7 from "../assets/ometron/Ometron7.png";
+import ometron1 from "../assets/ometron/ometron1.png";
+import ometron2 from "../assets/ometron/ometron2.png";
+import ometron3 from "../assets/ometron/ometron3.png";
+import ometron4 from "../assets/ometron/ometron4.png";
+import ometron5 from "../assets/ometron/ometron5.png";
+import ometron6 from "../assets/ometron/ometron6.png";
+import ometron7 from "../assets/ometron/ometron7.png";
 
 import rebzyls1 from "../assets/rebzyls/Rebzy-ls-1.png";
 import rebzyls2 from "../assets/rebzyls/Rebzy-ls-2.png";
