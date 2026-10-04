@@ -163,7 +163,7 @@ import texagam4 from "../assets/texagam500/Texagam-500-4.png";
 import typal1 from "../assets/typal50/Typal-1.png";
 import typal2 from "../assets/typal50/Typal-2.png";
 import typal3 from "../assets/typal50/Typal-3.png";
-import typal4 from "../assets/typal50/Typal-4.png";
+import typal4 from "../assets/typal50/typal-4.png";
 
 import typal1001 from "../assets/typal100/Typal-100-1.png";
 import typal1002 from "../assets/typal100/Typal-100-2.png";
